@@ -1,0 +1,34 @@
+/* 
+  ========================================================================
+  =============================== Root ===================================
+  ======================================================================== 
+*/
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  background-color: var(--md-sys-color-surface);
+  color: var(--md-sys-color-on-surface);
+}
+
+
+/* 
+  ========================================================================
+  ========================== Accessibility ===============================
+  ======================================================================== 
+*/
+/*
+  Class for hiding e.g. headings as they should not be visible in layout.
+  But they should exist for accessibility reasons (Screen Readers)
+*/
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
