@@ -1,11 +1,7 @@
-.theme-switch-wrapper {
-    display: flex;
-    align-items: center;
-}
-
+/* TODO: Optimize look of switch and remove unnessecary CSS Code */
 .theme-switch {
     display: inline-block;
-    height: 34px;
+    height: 30px;
     position: relative;
     width: 60px;
 }
@@ -16,12 +12,12 @@
 
 .slider {
     background-color: #cccccc;
-    bottom: 0;
+    bottom: 0px;
     cursor: pointer;
-    left: 0;
+    left: 0px;
     position: absolute;
-    right: 0;
-    top: 0;
+    right: 0px;
+    top: 0px;
     transition: .4s;
 }
 
@@ -29,7 +25,7 @@
     background-color: #fff;
     bottom: 4px;
     content: "";
-    height: 26px;
+    height: 22px;
     left: 4px;
     position: absolute;
     transition: .4s;

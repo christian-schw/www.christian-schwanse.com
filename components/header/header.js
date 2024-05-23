@@ -5,15 +5,25 @@ class Header extends HTMLElement {
 
   // Lifecycle Callback connectedCallback runs 
   // each time custom element is inserted into DOM
+  // TODO: Format innerHTML-Code when header done
   connectedCallback() {
     this.innerHTML = `
-        <header id="page-header">
-          <nav>
-            <h2 class="visually-hidden">Navigationsmenü</h2>
-            <ul>
-                <li><a href="about-me.html">Über mich</a></li>
-                <li><a href="my-projects.html">Projekte</a></li>
-                <li><a href="contact.html">Kontakt</a></li>
+    <header id="page-header">
+    <nav>
+        <h2 class="visually-hidden">Navigationsmenü</h2>
+
+        <div id="page-header-flex">
+            <ul id="page-header-left">
+                <li>
+                    <a href="index.html"><span id="header-logo">Christian Schwanse</span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul id="page-header-right">
+                <li class="header-button"><a href="about-me.html">Über mich</a></li>
+                <li class="header-button"><a href="my-projects.html">Projekte</a></li>
+                <li class="header-button"><a href="contact.html">Kontakt</a></li>
                 <li>
                     <div class="theme-switch-wrapper">
                         <label class="theme-switch" for="theme-checkbox">
@@ -23,9 +33,10 @@ class Header extends HTMLElement {
                     </div>
                 </li>
             </ul>
-          </nav>
-        </header>
-        `;
+        </div>
+    </nav>
+</header>
+    `;
   }
 }
 

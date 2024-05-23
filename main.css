@@ -3,12 +3,26 @@
   =============================== Root ===================================
   ======================================================================== 
 */
-body {
+html, body {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   font-style: normal;
+  font-size: 16px;
   background-color: var(--md-sys-color-surface);
   color: var(--md-sys-color-on-surface);
+  margin: 0px;
+  padding: 0px;
+}
+/* TODO: Use REM-Unit for remaining font size changes */
+
+
+/* 
+  ========================================================================
+  ============================= Images ===================================
+  ======================================================================== 
+*/
+.circle-img {
+  clip-path: circle();
 }
 
 
