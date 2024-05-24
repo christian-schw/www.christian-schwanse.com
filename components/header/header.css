@@ -9,12 +9,6 @@
   ========================================================================
   ========================== Header Flexbox ==============================
   ======================================================================== 
-*/
-/* #page-header {
-    list-style-type: none;
-    padding: 0px;
-    margin: 0px;
-} */
 
 /* TODO: Fix bug responsiveness and space of list items so that page header right looks nice without big spacing */
 
@@ -54,7 +48,7 @@
 
     list-style-type: none;
     padding: 0px;
-    margin: 0px;
+    margin: 0px 0px 0px 34px;
 }
 
 #page-header-left>* {
@@ -102,13 +96,6 @@
     font-style: normal;
     font-size: 2.5rem;
     white-space: nowrap;
-}
-
-#header-logo a,
-a:hover,
-a:visited,
-a:focus,
-a:-webkit-any-link {
     color: var(--md-sys-color-on-primary-container);
     text-decoration: none;
 }
@@ -131,7 +118,7 @@ a:-webkit-any-link {
 }
 
 .header-button a:hover,
-a:focus {
+.header-button a:focus {
     background-color: var(--md-sys-color-on-primary-container);
     color: var(--md-sys-color-primary-container);
 }

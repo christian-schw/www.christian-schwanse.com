@@ -1,37 +1,69 @@
-/* TODO: Optimize look of switch and remove unnessecary CSS Code */
-.theme-switch {
+/* TODO: Add animation/transition from left to right */
+
+#theme-switch-wrapper {
+    margin-left: 24px;
+    margin-right: 34px;
+}
+
+#theme-switch {
+    position: relative;
     display: inline-block;
     height: 30px;
-    position: relative;
     width: 60px;
+    --slider-icon-border-radius: 34px;
+    --slider-icon-position: absolute;
+    --slider-icon-height: 22px;
+    --slider-icon-width: 26px;
+    --slider-icon-bottom: 4px;
+    --slider-icon-left: 4px;
 }
 
-.theme-switch input {
-    display: none;
-}
-
-.slider {
-    background-color: #cccccc;
-    bottom: 0px;
+#theme-slider {
+    background-color: var(--md-sys-color-secondary);
+    border-radius: 34px;
     cursor: pointer;
-    left: 0px;
     position: absolute;
-    right: 0px;
     top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
     transition: .4s;
 }
 
-.slider:before {
-    background-color: #fff;
-    bottom: 4px;
-    content: "";
-    height: 22px;
-    left: 4px;
-    position: absolute;
-    transition: .4s;
-    width: 26px;
+/* 
+  ========================================================================
+  ============================== Switch: OFF =============================
+  ======================================================================== 
+*/
+#theme-slider::before {
+    content: "🌞";
+    background-color: var(--md-sys-color-on-secondary);
+    border-radius: var(--slider-icon-border-radius);
+    position: var(--slider-icon-position);
+    height: var(--slider-icon-height);
+    width: var(--slider-icon-width);
+    bottom: var(--slider-icon-bottom);
+    left: var(--slider-icon-left);
 }
 
-input:checked+.slider {
-    background-color: #66bb6a;
+
+
+/* 
+  ========================================================================
+  ============================== Switch: ON ==============================
+  ======================================================================== 
+*/
+input:checked+#theme-slider {
+    background-color: var(--md-sys-color-on-primary-container);
+}
+
+input:checked+#theme-slider::after {
+    content: "🌛";
+    background-color: var(--md-sys-color-on-primary);
+    border-radius: var(--slider-icon-border-radius);
+    position: var(--slider-icon-position);
+    height: var(--slider-icon-height);
+    width: var(--slider-icon-width);
+    bottom: var(--slider-icon-bottom);
+    left: var(--slider-icon-left);
 }

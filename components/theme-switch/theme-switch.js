@@ -1,5 +1,5 @@
 export function setTheme(evt) {
-    let themeLink = document.querySelector('#theme-link');
+    const themeLink = document.querySelector('#theme-link');
     let themePath;
 
     if (evt.target.checked) {
