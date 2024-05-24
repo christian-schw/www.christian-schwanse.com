@@ -8,11 +8,20 @@ html, body {
   font-weight: 300;
   font-style: normal;
   font-size: 16px;
+
   background-color: var(--md-sys-color-surface);
   color: var(--md-sys-color-on-surface);
+
+
+  /* To let footer stick to the bottom */
+  min-height: 100vh;
+  min-width: 100vw;
+
+
   margin: 0px;
   padding: 0px;
 }
+
 /* TODO: Use REM-Unit for remaining font size changes */
 
 

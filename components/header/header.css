@@ -26,6 +26,7 @@
     align-items: center;
 
     padding: 15px 20px 15px 20px;
+    margin-bottom: 40px;
 }
 
 #page-header-flex>* {

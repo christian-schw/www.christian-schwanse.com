@@ -1,5 +1,13 @@
-/* TODO: Let footer stick to the bottom. Test empty page as well */
 #page-footer {
     background-color: var(--md-sys-color-primary-container);
     color: var(--md-sys-color-on-primary-container);
+
+
+    /* To let footer stick to bottom */
+    position: sticky;
+    top: 100%;
+
+
+    padding: 15px 20px 15px 20px;
+    margin-top: 40px;
 }
