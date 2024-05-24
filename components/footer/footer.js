@@ -1,3 +1,4 @@
+// Create Footer-Custom-HTML-Element for reusable Footer on each HTML-page
 class Footer extends HTMLElement {
     constructor() {
         super();

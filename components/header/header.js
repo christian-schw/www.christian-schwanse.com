@@ -1,3 +1,4 @@
+// Create Header-Custom-HTML-Element for reusable Header on each HTML-page
 class Header extends HTMLElement {
     constructor() {
         super();
@@ -6,7 +7,6 @@ class Header extends HTMLElement {
     // Lifecycle Callback connectedCallback runs 
     // each time custom element is inserted into DOM
     connectedCallback() {
-        // TODO: Format innerHTML-Code when header done
         this.innerHTML = `
     <header id="page-header">
         <nav>

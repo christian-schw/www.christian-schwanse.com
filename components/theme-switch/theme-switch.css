@@ -1,21 +1,25 @@
-/* TODO: Add animation/transition from left to right */
-
 #theme-switch-wrapper {
     margin-left: 24px;
     margin-right: 34px;
 }
+
+
+/* 
+    Bugfix: Visible slider checkbox
+    Reason for usage of "scale" instead of "display:none":
+        If you set checkbox -> "display:none;", then
+        switch is not perfectly aligned with other header-buttons.
+*/
+#theme-switch-wrapper input {
+    transform: scale(0.0);
+}
+
 
 #theme-switch {
     position: relative;
     display: inline-block;
     height: 30px;
     width: 60px;
-    --slider-icon-border-radius: 34px;
-    --slider-icon-position: absolute;
-    --slider-icon-height: 22px;
-    --slider-icon-width: 26px;
-    --slider-icon-bottom: 4px;
-    --slider-icon-left: 4px;
 }
 
 #theme-slider {
@@ -27,7 +31,6 @@
     right: 0px;
     bottom: 0px;
     left: 0px;
-    transition: .4s;
 }
 
 /* 
@@ -38,12 +41,13 @@
 #theme-slider::before {
     content: "🌞";
     background-color: var(--md-sys-color-on-secondary);
-    border-radius: var(--slider-icon-border-radius);
-    position: var(--slider-icon-position);
-    height: var(--slider-icon-height);
-    width: var(--slider-icon-width);
-    bottom: var(--slider-icon-bottom);
-    left: var(--slider-icon-left);
+    border-radius: 34px;
+    position: absolute;
+    height: 22px;
+    width: 22px;
+    bottom: 4px;
+    left: 4px;
+    transition: 0.5s;
 }
 
 
@@ -57,13 +61,8 @@ input:checked+#theme-slider {
     background-color: var(--md-sys-color-on-primary-container);
 }
 
-input:checked+#theme-slider::after {
+input:checked+#theme-slider::before {
     content: "🌛";
-    background-color: var(--md-sys-color-on-primary);
-    border-radius: var(--slider-icon-border-radius);
-    position: var(--slider-icon-position);
-    height: var(--slider-icon-height);
-    width: var(--slider-icon-width);
-    bottom: var(--slider-icon-bottom);
-    left: var(--slider-icon-left);
+    left: 34px;
+    transition: 0.5s;
 }
