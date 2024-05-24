@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>Christian Schwanse - SAP-Entwickler</title>
     <link rel="icon" type="image/svg+xml" href="assets/images/favicons/favicon_christian_schwanse.svg">
-    <!-- TODO: Add Custom HTML-Element for global head tags (e. g. favicon or font) -->
+    <!-- Improve in future: Add Custom HTML-Element for global head tags (e. g. favicon or font) -->
 
 
     <link rel="stylesheet" href="./main.css">
@@ -19,8 +19,10 @@
     <link rel="stylesheet" href="components/header/header.css">
     <script src="components/header/header.js"></script>
 
-    <link rel="stylesheet" href="/components/theme-switch/theme-light-high-contrast.css" id="theme-link">
+    <link rel="stylesheet" href="components/theme-switch/theme-light-high-contrast.css" id="theme-link">
     <link rel="stylesheet" href="components/theme-switch/theme-switch.css">
+
+    <link rel="stylesheet" href="components/button/button.css">
 
     <link rel="stylesheet" href="components/footer/footer.css">
     <script src="components/footer/footer.js"></script>
@@ -35,16 +37,18 @@
         <article>
             <h2 class="visually-hidden">Informationen über Christian</h2>
 
-            <section id="hero-section">
+            <section id="homepage-hero-section">
                 <h3>Hey. Ich bin Christian. <br>Ein SAP-Entwickler.</h3>
                 <p>Software-Entwicklung, die das Leben von Unternehmen einfacher macht.</p>
-                <a href="/contact.html" target="_blank">Kontakt</a>
+                <div class="button">
+                    <a href="/contact.html" target="_blank">Kontakt</a>
+                </div>
                 <!-- TODO: Remove height from img when css max-/min-height was added -->
                 <img src="/assets/images/temp-img.jpg" height="300"
                     alt="Temporäres Bild für Profilfoto Christian Schwanse"
-                    title="Temporäres Bild für Profilfoto Christian Schwanse"
-                    class="circle-img">
+                    title="Temporäres Bild für Profilfoto Christian Schwanse" class="circle-img">
             </section>
+
 
             <section class="quote-section">
                 <h3>Was macht gute Software-Entwicklung aus?</h3>
@@ -61,8 +65,8 @@
                 </blockquote>
             </section>
 
-            <!-- TODO: Maybe change id to class -->
-            <section id="cv-section">
+
+            <section class="teaser-section">
                 <h3>Sollen wir?</h3>
                 <p>Kurz und knackig meine Fähigkeiten:</p>
                 <ul>
@@ -93,8 +97,14 @@
                     Für mehr Informationen über die Berufserfahrung, Kenntnisse, Zertifikate und Sonstiges in den
                     jeweiligen Bereichen einfach einen Klick auf den &quot;Über mich&quot;-Button.
                 </p>
-                <a href="/contact.html" target="_blank">Kontakt</a>
-                <a href="/about-me.html" target="_blank">Über mich</a>
+
+                <div class="button">
+                    <a href="/contact.html" target="_blank">Kontakt</a>
+                </div>
+
+                <div class="button">
+                    <a href="/about-me.html" target="_blank">Über mich</a>
+                </div>
             </section>
         </article>
     </main>

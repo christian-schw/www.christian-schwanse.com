@@ -66,6 +66,7 @@
 #page-header-right {
     display: flex;
     flex-flow: row;
+    /* TODO: Fix bug scaling space between each item when zooming out */
 
     /* 
       Without align-items, items (e.g. logo or button) would align to 
