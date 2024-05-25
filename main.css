@@ -3,7 +3,8 @@
   =============================== Root ===================================
   ======================================================================== 
 */
-html, body {
+html,
+body {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   font-style: normal;
@@ -18,8 +19,10 @@ html, body {
   min-width: 100vw;
 
 
+  /* Basic Reset for Consistency */
   margin: 0px;
   padding: 0px;
+  box-sizing: border-box;
 }
 
 /* TODO: Use REM-Unit for remaining font size changes */

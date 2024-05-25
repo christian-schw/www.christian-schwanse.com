@@ -1,87 +1,38 @@
 #page-header {
-    background-color: var(--md-sys-color-primary-container);
-    color: var(--md-sys-color-on-primary-container);
+  background-color: var(--md-sys-color-primary-container);
+  color: var(--md-sys-color-on-primary-container);
+
+  display: flex;
+  justify-content: space-between;
+
+  /* 
+    Without align-items, items (e.g. logo or button) would align to 
+    their top edges by default -> looks ugly because they are 
+    of different heights
+  */
+  align-items: center;
+
+  padding: 1rem 2rem 1rem 2rem;
 }
 
 
-
-/* 
-  ========================================================================
-  ========================== Header Flexbox ==============================
-  ======================================================================== 
-
-/* TODO: Fix bug responsiveness and space of list items so that page header right looks nice without big spacing */
-
-/* Whole Header as Flexbox */
-#page-header-flex {
-    display: flex;
-    flex-flow: nowrap;
-    justify-content: space-between;
-
-    /* 
-      Without align-items, items (e.g. logo or button) would align to 
-      their top edges by default -> looks ugly because they are 
-      of different heights
-    */
-    align-items: center;
-
-    padding: 15px 20px 15px 20px;
-    margin-bottom: 40px;
-}
-
-#page-header-flex>* {
-    flex: 1;
+#page-header-nav {
+  flex-grow: 1;
+  text-align: right;
 }
 
 
+#page-header-nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
 
-/* Flexbox in Flexbox: Left Side */
-#page-header-left {
-    display: flex;
-    flex-flow: row;
-
-    /* 
-      Without align-items, items (e.g. logo or button) would align to 
-      their top edges by default -> looks ugly because they are 
-      of different heights
-    */
-    align-items: center;
-
-    list-style-type: none;
-    padding: 0px;
-    margin: 0px 0px 0px 34px;
-}
-
-#page-header-left>* {
-    flex: 1;
-}
-
-#page-header-left li {
-    text-align: left;
-}
-
-
-
-/* Flexbox in Flexbox: Right Side */
-#page-header-right {
-    display: flex;
-    flex-flow: row;
-    /* TODO: Fix bug scaling space between each item when zooming out */
-
-    /* 
-      Without align-items, items (e.g. logo or button) would align to 
-      their top edges by default -> looks ugly because they are 
-      of different heights
-    */
-    align-items: center;
-
-    list-style-type: none;
-    padding: 0px;
-    margin: 0px 0px 0px 738px;
-}
-
-#page-header-right>* {
-    flex: 1;
+  /* 
+    Without align-items, items (e.g. logo or button) would align to 
+    their top edges by default -> looks ugly because they are 
+    of different heights
+  */
+  align-items: center;
 }
 
 
@@ -93,13 +44,13 @@
   ======================================================================== 
 */
 #header-logo {
-    font-family: "Whisper", cursive;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 2.5rem;
-    white-space: nowrap;
-    color: var(--md-sys-color-on-primary-container);
-    text-decoration: none;
+  font-family: "Whisper", cursive;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 2.5rem;
+  white-space: nowrap;
+  color: var(--md-sys-color-on-primary-container);
+  text-decoration: none;
 }
 
 
@@ -110,17 +61,17 @@
   ======================================================================== 
 */
 .header-button a {
-    color: var(--md-sys-color-on-primary-container);
-    font-size: 1.2rem;
-    text-decoration: none;
-    margin: 3px;
-    padding: 18px;
-    border-radius: 8px;
-    white-space: nowrap;
+  color: var(--md-sys-color-on-primary-container);
+  font-size: 1.2rem;
+  text-decoration: none;
+  margin: 3px;
+  padding: 18px;
+  border-radius: 8px;
+  white-space: nowrap;
 }
 
 .header-button a:hover,
 .header-button a:focus {
-    background-color: var(--md-sys-color-on-primary-container);
-    color: var(--md-sys-color-primary-container);
+  background-color: var(--md-sys-color-on-primary-container);
+  color: var(--md-sys-color-primary-container);
 }
