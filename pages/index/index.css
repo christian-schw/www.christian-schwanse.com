@@ -1,0 +1,50 @@
+/* 
+  ========================================================================
+  ============================= Hero Section =============================
+  ======================================================================== 
+*/
+#homepage-hero-section {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 100px 0px 180px 0px;
+}
+
+#homepage-hero-section>* {
+    flex: 1;
+}
+
+
+
+#homepage-hero-section-text {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+
+    margin: 40px 0px 0px 0px;
+    text-align: center;
+}
+
+#homepage-hero-section-text h3 {
+    font-size: 3.5rem;
+    margin: 12px 0px 12px 0px;
+}
+
+#homepage-hero-section-text p {
+    font-size: 1.3rem;
+    margin: 12px 0px 12px 0px;
+}
+
+
+
+#homepage-hero-section-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 40px 0px 0px 0px;
+}
+
+#homepage-hero-section-img img {
+    max-width: 800px;
+}

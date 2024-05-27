@@ -8,7 +8,7 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   font-style: normal;
-  font-size: 16px;
+  font-size: 20px;
 
   background-color: var(--md-sys-color-surface);
   color: var(--md-sys-color-on-surface);
@@ -25,7 +25,14 @@ body {
   box-sizing: border-box;
 }
 
-/* TODO: Use REM-Unit for remaining font size changes */
+main {
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+
+/* NOTE: Use REM-Unit for remaining font size changes */
+
+
 
 
 
@@ -33,6 +40,12 @@ body {
   ========================================================================
   ============================= Images ===================================
   ======================================================================== 
+*/
+
+/*
+  NOTE: Format & size images before uploading it.
+        With CSS, it can be resized. But the browser download full image
+        even if it's displayed smaller than it is.
 */
 .circle-img {
   clip-path: circle();

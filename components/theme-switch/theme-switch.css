@@ -23,6 +23,14 @@
 }
 
 #theme-slider {
+    /* 
+      Fixed / Specific font-size to avoid incorrect
+      placement of switch symbol (e. g. when the
+      root font size is adjusted).
+    */
+    font-size: 16px;
+
+
     background-color: var(--md-sys-color-secondary);
     border-radius: 34px;
     cursor: pointer;

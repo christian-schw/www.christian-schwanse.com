@@ -26,6 +26,11 @@
 
     <link rel="stylesheet" href="components/footer/footer.css">
     <script src="components/footer/footer.js"></script>
+
+
+    <!-- Site specific things -->
+    <link rel="stylesheet" href="pages/index/index.css">
+    <script src="pages/index/index.js"></script>
 </head>
 
 
@@ -38,15 +43,18 @@
             <h2 class="visually-hidden">Informationen über Christian</h2>
 
             <section id="homepage-hero-section">
-                <h3>Hey. Ich bin Christian. <br>Ein SAP-Entwickler.</h3>
-                <p>Software-Entwicklung, die das Leben von Unternehmen einfacher macht.</p>
-                <div class="button">
-                    <a href="/contact.html" target="_blank">Kontakt</a>
+                <div id="homepage-hero-section-text">
+                    <h3>Hey. Ich bin Christian. <br>Ein SAP-Entwickler.</h3>
+                    <p>Software-Entwicklung, die das Leben von Unternehmen einfacher macht.</p>
+                    <div class="button">
+                        <a href="/contact.html" target="_blank">Kontakt</a>
+                    </div>
                 </div>
-                <!-- TODO: Remove height from img when css max-/min-height was added -->
-                <img src="/assets/images/temp-img.jpg" height="300"
-                    alt="Temporäres Bild für Profilfoto Christian Schwanse"
-                    title="Temporäres Bild für Profilfoto Christian Schwanse" class="circle-img">
+
+                <div id="homepage-hero-section-img">
+                    <img src="/assets/images/temp-img.jpg" alt="Temporäres Bild für Profilfoto Christian Schwanse"
+                        title="Temporäres Bild für Profilfoto Christian Schwanse" class="circle-img">
+                </div>
             </section>
 
 

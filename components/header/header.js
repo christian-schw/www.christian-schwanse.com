@@ -9,12 +9,13 @@ class Header extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
     <header id="page-header">
-        <h2 class="visually-hidden">Navigationsmenü</h2>
+        <h2 class="visually-hidden">Page Header - Christian Schwanse</h2>
 
         <a href="index.html" id="header-logo">Christian Schwanse</a>
 
 
         <nav id="page-header-nav">
+            <h2 class="visually-hidden">Navigationsmenü</h2>
             <ul id="page-header-nav-list">
                 <li class="header-button"><a href="about-me.html">Über mich</a></li>
                 <li class="header-button"><a href="my-projects.html">Projekte</a></li>
