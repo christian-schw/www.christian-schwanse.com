@@ -1,0 +1,8 @@
+/*
+  NOTE: Format & size images before uploading it.
+        With CSS, it can be resized. But the browser download full image
+        even if it's displayed smaller than it is.
+*/
+.circle-img {
+    clip-path: circle();
+  }

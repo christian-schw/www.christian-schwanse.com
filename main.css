@@ -34,22 +34,31 @@ main {
 
 
 
+/* 
+  ========================================================================
+  =============================== Headings================================
+  ======================================================================== 
+*/
+h3 {
+  font-size: 3.5rem;
+  margin: 12px 0px 12px 0px;
+  line-height: 1.1;
+  letter-spacing: -0.10rem;
+}
+
 
 
 /* 
   ========================================================================
-  ============================= Images ===================================
+  =============================== Paragraph ==============================
   ======================================================================== 
 */
-
-/*
-  NOTE: Format & size images before uploading it.
-        With CSS, it can be resized. But the browser download full image
-        even if it's displayed smaller than it is.
-*/
-.circle-img {
-  clip-path: circle();
+p {
+  font-size: 1.3rem;
+  margin: 12px 0px 12px 0px;
+  line-height: 1.5;
 }
+
 
 
 /* 
