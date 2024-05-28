@@ -1,0 +1,65 @@
+/* 
+  ========================================================================
+  ================================= Cards1 ===============================
+  ======================================================================== 
+*/
+
+/*
+  NOTE: Cards1 uses Material Symbols / Icons from Google Fonts.
+  Insert the following in <head>-Tag to use the icons:
+
+  <!-- Material Symbols / Icons from Google Fonts -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+  Icons can be found in: https://fonts.google.com/ -> Icons.
+*/
+
+.cards1-box {
+    border: 1px solid var(--md-sys-color-custom-color-1-container);
+    border-radius: 8px;
+}
+
+.cards1-box header {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    background-color: var(--md-sys-color-custom-color-1-container);
+    color: var(--md-sys-color-on-custom-color-1-container);
+    padding: 24px 32px 24px 32px;
+    text-align: center;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.cards1-box .material-symbols-container {
+    background-color: var(--md-sys-color-on-custom-color-1-container);
+    color: var(--md-sys-color-custom-color-1-container);
+    border-radius: 50%;
+    height: 96px;
+    width: 96px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards1-box .material-symbols-container .material-symbols-outlined {
+    font-variation-settings:
+        'FILL' var(--md-sys-color-custom-color-1-container),
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24;
+
+    font-size: 3rem;
+}
+
+
+
+.cards1-box-content-body {
+    padding: 24px 32px 24px 32px;
+}

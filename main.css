@@ -17,19 +17,17 @@ body {
   /* To let footer stick to the bottom */
   min-height: 100vh;
 
-  /* To avoid scrollbar at bottom */
-  max-width: 100vw;
+  /* 
+    To avoid horizontal scrollbar at bottom 
+    Note: With "overflow-x: hidden;", Scroll-Animations don't work anymore.
+  */
+  max-height: 100vw;
 
 
   /* Basic Reset for Consistency */
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-}
-
-main {
-  margin-left: 10vw;
-  margin-right: 10vw;
 }
 
 /* NOTE: Use REM-Unit for remaining font size changes */
@@ -41,11 +39,19 @@ main {
   =============================== Headings================================
   ======================================================================== 
 */
-h3 {
-  font-size: 3.5rem;
+h3,
+h4 {
   margin: 12px 0px 12px 0px;
   line-height: 1.1;
   letter-spacing: -0.10rem;
+}
+
+h3 {
+  font-size: 3.5rem;
+}
+
+h4 {
+  font-size: 2rem;
 }
 
 
@@ -59,6 +65,36 @@ p {
   font-size: 1.3rem;
   margin: 12px 0px 12px 0px;
   line-height: 1.5;
+}
+
+
+
+
+/* 
+  ========================================================================
+  =============================== Sections ===============================
+  ======================================================================== 
+*/
+/*
+  Section itself is not affected by animations such as fade-in,
+  as the background color is also animated. This looks unattractive.
+  The box / background color should be visible from the beginning.
+*/
+.dark-section {
+  background-color: var(--md-sys-color-on-secondary-container);
+  color: var(--md-sys-color-secondary-container);
+}
+
+
+/*
+  Used to place content correctly of all sections after hero section.
+  So that animation events such as “animation-timeline: view();” 
+  and “animation-range: entry;” have better UX 
+  (e.g. earlier start/end of the animation).
+*/
+.content-after-hero-section {
+  padding: 160px 80px 160px 80px;
+  text-align: center;
 }
 
 

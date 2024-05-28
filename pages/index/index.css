@@ -6,7 +6,10 @@
 #homepage-hero-section {
     display: flex;
     flex-flow: row wrap;
-    padding: 100px 0px 180px 0px;
+    padding: 60px 0px 80px 0px;
+
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 #homepage-hero-section>* {
@@ -38,3 +41,18 @@
 #homepage-hero-section-img img {
     max-width: 800px;
 }
+
+
+
+/* 
+  ========================================================================
+  ============================== Grid: Cards =============================
+  ======================================================================== 
+*/
+.grid-cards-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    list-style: none;
+}
+
