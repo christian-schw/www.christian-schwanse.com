@@ -1,6 +1,22 @@
-.btn-highlighted {
+.btn-highlighted,
+.btn-underemphasized {
     margin: 36px;
 }
+
+.btn-highlighted a,
+.btn-highlighted a:hover,
+.btn-highlighted a:focus,
+.btn-underemphasized a,
+.btn-underemphasized a:hover,
+.btn-underemphasized a:focus {
+    font-size: 2.5rem;
+    text-decoration: none;
+    padding: 12px 42px 12px 42px;
+    border-radius: 8px;
+    white-space: nowrap;
+}
+
+
 
 /* 
   ========================================================================
@@ -10,11 +26,6 @@
 .btn-highlighted a {
     background-color: var(--md-sys-color-on-tertiary-container);
     color: var(--md-sys-color-tertiary-container);
-    font-size: 2.5rem;
-    text-decoration: none;
-    padding: 12px 42px 12px 42px;
-    border-radius: 8px;
-    white-space: nowrap;
 }
 
 .btn-highlighted a:hover,
@@ -22,5 +33,24 @@
     background-color: var(--md-sys-color-tertiary-container);
     color: var(--md-sys-color-on-tertiary-container);
     border: 1px solid var(--md-sys-color-on-tertiary-container);
-    border-radius: 8px;
+
+}
+
+
+
+/* 
+  ========================================================================
+  ======================= Underemphasized Button =========================
+  ======================================================================== 
+*/
+.btn-underemphasized a {
+    background-color: transparent;
+    color: var(--md-sys-color-on-tertiary-container);
+    border: 1px solid var(--md-sys-color-on-tertiary-container);
+}
+
+.btn-underemphasized a:hover,
+.btn-underemphasized a:focus {
+    background-color: var(--md-sys-color-on-tertiary-container);
+    color: var(--md-sys-color-tertiary-container);
 }
