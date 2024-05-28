@@ -16,7 +16,9 @@ body {
 
   /* To let footer stick to the bottom */
   min-height: 100vh;
-  min-width: 100vw;
+
+  /* To avoid scrollbar at bottom */
+  max-width: 100vw;
 
 
   /* Basic Reset for Consistency */
