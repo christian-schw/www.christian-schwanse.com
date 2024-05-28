@@ -1,8 +1,13 @@
-.button {
+.btn-highlighted {
     margin: 36px;
 }
 
-.button a {
+/* 
+  ========================================================================
+  =========================== Highlighted Button =========================
+  ======================================================================== 
+*/
+.btn-highlighted a {
     background-color: var(--md-sys-color-on-tertiary-container);
     color: var(--md-sys-color-tertiary-container);
     font-size: 2.5rem;
@@ -12,8 +17,8 @@
     white-space: nowrap;
 }
 
-.button a:hover,
-.button a:focus {
+.btn-highlighted a:hover,
+.btn-highlighted a:focus {
     background-color: var(--md-sys-color-tertiary-container);
     color: var(--md-sys-color-on-tertiary-container);
     border: 1px solid var(--md-sys-color-on-tertiary-container);
