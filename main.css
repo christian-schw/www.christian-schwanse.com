@@ -61,6 +61,45 @@ p {
 
 
 
+
+/* 
+  ========================================================================
+  =============================== Animations =============================
+  ======================================================================== 
+*/
+@keyframes wobble {
+
+  0%,
+  20%,
+  80%,
+  100% {
+    transform: rotate(0deg);
+  }
+
+  40% {
+    transform: rotate(15deg);
+  }
+
+  50% {
+    transform: rotate(5deg);
+  }
+
+  60% {
+    transform: rotate(15deg);
+  }
+}
+
+.wobble {
+  /* So it is able to animate e. g. a span-Tag. */
+  display: inline-block;
+
+
+  animation: wobble 3.2s ease infinite;
+  transform-origin: right bottom;
+}
+
+
+
 /* 
   ========================================================================
   ========================== Accessibility ===============================

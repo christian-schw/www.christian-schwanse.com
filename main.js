@@ -5,7 +5,12 @@ window.onload = init();
 
 function init() {
     console.log('main.js init begins');
+
+
+    // Theme Switching
     let checkBoxTheme = document.querySelector('#theme-checkbox');
     checkBoxTheme.addEventListener('change', themeSwitch.setTheme, false);
+
+
     console.log('main.js init ends');
 }
