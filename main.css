@@ -21,7 +21,7 @@ body {
     To avoid horizontal scrollbar at bottom 
     Note: With "overflow-x: hidden;", Scroll-Animations don't work anymore.
   */
-  max-height: 100vw;
+  max-width: 100vw;
 
 
   /* Basic Reset for Consistency */

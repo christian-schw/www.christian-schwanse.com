@@ -20,6 +20,10 @@
     border-radius: 8px;
 }
 
+.cards1-box:hover {
+    transform: scale(1.03);
+}
+
 .cards1-box header {
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
@@ -34,6 +38,18 @@
     align-items: center;
 }
 
+
+
+.cards1-box-content-body {
+    padding: 24px 32px 24px 32px;
+
+    /* 
+      Align text to left.
+      Because the text in boxes can be long.
+      This makes it difficult to read when centered.
+    */
+    text-align: left;
+}
 
 
 .cards1-box .material-symbols-container {
@@ -60,6 +76,28 @@
 
 
 
-.cards1-box-content-body {
-    padding: 24px 32px 24px 32px;
+
+/* 
+  ========================================================================
+  ================================= Grid =================================
+  ======================================================================== 
+*/
+.grid-cards-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+    gap: 24px;
+
+
+    /* When grid is used with context of a list */
+    list-style: none;
+}
+
+.cards-box-subgrid {
+    /* 
+      Add Subgrid. So that all boxes in the grid look the same - 
+      regardless of the content length.
+    */
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 3;
 }
