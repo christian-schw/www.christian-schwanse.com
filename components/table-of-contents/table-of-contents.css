@@ -1,0 +1,101 @@
+/* 
+  ========================================================================
+  ======================= Table of Contents: Page ========================
+  ======================================================================== 
+*/
+#toc-page {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+#toc-page ul,
+#toc-page ul li {
+    list-style: none;
+    padding-left: 0px;
+}
+
+#toc-page a {
+    text-decoration: none;
+}
+
+#toc-page>ul>li {
+    margin-bottom: 48px;
+}
+
+
+
+/* 
+  ========================================================================
+  ================= Containers / Buttons for ToC-Headings ================
+  ======================================================================== 
+*/
+.btn-toc-heading {
+    margin: 24px;
+}
+
+.btn-toc-subheading {
+    margin: 18px;
+}
+
+.btn-toc-heading a,
+.btn-toc-heading a:hover,
+.btn-toc-heading a:focus,
+.btn-toc-subheading a,
+.btn-toc-subheading a:hover,
+.btn-toc-subheading a:focus {
+    text-decoration: none;
+    border-radius: 8px;
+    white-space: nowrap;
+}
+
+
+
+/* 
+  ========================================================================
+  =========================== ToC-Heading Button =========================
+  ======================================================================== 
+*/
+.btn-toc-heading a,
+.btn-toc-heading a:hover,
+.btn-toc-heading a:focus {
+    font-size: 2.5rem;
+    padding: 12px 42px 12px 42px;
+}
+
+.btn-toc-heading a {
+    background-color: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-primary);
+}
+
+.btn-toc-heading a:hover,
+.btn-toc-heading a:focus {
+    background-color: var(--md-sys-color-primary);
+    color: var(--md-sys-color-primary-container);
+    border: 1px solid var(--md-sys-color-primary-container);
+}
+
+
+
+/* 
+  ========================================================================
+  ======================== ToC-Subheading Button =========================
+  ======================================================================== 
+*/
+.btn-toc-subheading a,
+.btn-toc-subheading a:hover,
+.btn-toc-subheading a:focus {
+    font-size: 1.5rem;
+    padding: 6px 21px 6px 21px;
+}
+
+.btn-toc-subheading a {
+    background-color: var(--md-sys-color-secondary);
+    color: var(--md-sys-color-on-secondary);
+}
+
+.btn-toc-subheading a:hover,
+.btn-toc-subheading a:focus {
+    background-color: var(--md-sys-color-on-secondary);
+    color: var(--md-sys-color-secondary);
+}

@@ -40,8 +40,18 @@
     <script src="components/image/image.js"></script>
 
 
+    <link rel="stylesheet" href="components/table-of-contents/table-of-contents.css">
+    <script src="components/table-of-contents/table-of-contents.js"></script>
+
+
     <link rel="stylesheet" href="components/footer/footer.css">
     <script src="components/footer/footer.js"></script>
+
+
+
+    <!-- Site specific things -->
+    <link rel="stylesheet" href="pages/about-me/about-me.css">
+    <script src="pages/about-me/about-me.js"></script>
 </head>
 
 <body>
@@ -49,7 +59,95 @@
     <header-component></header-component>
 
     <main>
+        <article>
+            <h2 class="visually-hidden">Informationen über Christian</h2>
 
+            <section id="homepage-hero-section">
+                <div id="homepage-hero-section-text">
+                    <h3>Hey. Ich bin Christian. <br>Ein SAP-Entwickler.<span class="wobble">👋</span></h3>
+                    <p>Erfahre mehr über mich, meine Berufserfahrung, Fähigkeiten und Interessen.</p>
+                    <div class="btn-highlighted">
+                        <a href="/contact.html" target="_blank">Kontakt</a>
+                    </div>
+                </div>
+
+                <div id="homepage-hero-section-img">
+                    <img src="/assets/images/temp-img.jpg" alt="Temporäres Bild für Profilfoto Christian Schwanse"
+                        title="Temporäres Bild für Profilfoto Christian Schwanse" class="circle-img">
+                </div>
+            </section>
+
+            <section class="dark-section">
+                <div class="content-after-hero-section fade-in">
+                    <nav id="toc-page">
+                        <header>
+                            <h3>Inhaltsverzeichnis</h3>
+                        </header>
+
+                        <ul>
+                            <!-- TODO: Change href of each button to corresponding section -->
+                            <li>
+                                <div class="btn-toc-heading"><a href="#skills-section">Fähigkeiten</a></div>
+                                <ul>
+                                    <li class="btn-toc-subheading"><a href="#sap-section">SAP</a></li>
+                                    <li class="btn-toc-subheading"><a href="#web-dev-section">Webentwicklung</a></li>
+                                    <li class="btn-toc-subheading"><a href="#languages-section">Sprachen</a></li>
+                                    <li class="btn-toc-subheading"><a href="#other-section">Sonstiges</a></li>
+                                </ul>
+                            </li>
+
+
+                            <li>
+                                <div class="btn-toc-heading"><a href="#work-experience-section">Berufserfahrung</a>
+                                </div>
+                                <ul>
+                                    <li class="btn-toc-subheading"><a href="#todo">blabla</a></li>
+                                </ul>
+                            </li>
+
+
+                            <li>
+                                <div class="btn-toc-heading"><a href="#todo">Bildung</a></div>
+                                <ul>
+                                    <li class="btn-toc-subheading"><a href="#todo">Schulbank drücken</a></li>
+                                    <li class="btn-toc-subheading"><a href="#todo">Bücher</a></li>
+                                    <li class="btn-toc-subheading"><a href="#todo">Zertifikate</a></li>
+                                </ul>
+                            </li>
+
+
+                            <li>
+                                <div class="btn-toc-heading"><a href="#todo">Projekte</a></div>
+                            </li>
+
+
+                            <li>
+                                <div class="btn-toc-heading"><a href="#todo">Interessen &amp; Hobbies</a></div>
+                            </li>
+
+
+                            <li>
+                                <div class="btn-toc-heading"><a href="#todo">Kontakt</a></div>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </section>
+
+            <!-- TODO: Add to all sections button to jump to ToC -->
+            <!-- TODO: Add to end of page, add CTA Contact -->
+            <section id="skills-section">
+                <header>
+                    <h3>Fähigkeiten</h3>
+                </header>
+            </section>
+
+            <section id="work-experience-section">
+                <header>
+                    <h3>Berufserfahrung</h3>
+                </header>
+            </section>
+        </article>
     </main>
 
     <footer-component></footer-component>
