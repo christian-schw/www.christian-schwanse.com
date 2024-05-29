@@ -6,11 +6,10 @@
 #toc-page {
     display: flex;
     flex-flow: column nowrap;
-    justify-content: center;
+    align-items: center;
 }
 
-#toc-page ul,
-#toc-page ul li {
+#toc-page ul {
     list-style: none;
     padding-left: 0px;
 }
@@ -25,51 +24,28 @@
 
 
 
+
 /* 
   ========================================================================
   ================= Containers / Buttons for ToC-Headings ================
   ======================================================================== 
 */
-.btn-toc-heading {
-    margin: 24px;
-}
-
-.btn-toc-subheading {
+.btn-toc-heading,
+.btn-toc-heading:hover,
+.btn-toc-heading:focus,
+.btn-toc-subheading,
+.btn-toc-subheading:hover,
+.btn-toc-subheading:focus {
+    text-decoration: none;
+    white-space: nowrap;
+    border-radius: 8px;
     margin: 18px;
 }
 
-.btn-toc-heading a,
-.btn-toc-heading a:hover,
-.btn-toc-heading a:focus,
-.btn-toc-subheading a,
-.btn-toc-subheading a:hover,
-.btn-toc-subheading a:focus {
-    text-decoration: none;
-    border-radius: 8px;
-    white-space: nowrap;
-}
-
-
-
-/* 
-  ========================================================================
-  =========================== ToC-Heading Button =========================
-  ======================================================================== 
-*/
-.btn-toc-heading a,
-.btn-toc-heading a:hover,
-.btn-toc-heading a:focus {
-    font-size: 2.5rem;
-    padding: 12px 42px 12px 42px;
-}
-
-.btn-toc-heading a {
-    background-color: var(--md-sys-color-primary-container);
-    color: var(--md-sys-color-primary);
-}
-
-.btn-toc-heading a:hover,
-.btn-toc-heading a:focus {
+.btn-toc-heading:hover,
+.btn-toc-heading:focus,
+.btn-toc-subheading:hover,
+.btn-toc-subheading:focus {
     background-color: var(--md-sys-color-primary);
     color: var(--md-sys-color-primary-container);
     border: 1px solid var(--md-sys-color-primary-container);
@@ -79,23 +55,37 @@
 
 /* 
   ========================================================================
+  =========================== ToC-Heading Button =========================
+  ======================================================================== 
+*/
+/* TODO: Fix missing style for a-Tag */
+.btn-toc-heading,
+.btn-toc-heading:hover,
+.btn-toc-heading:focus {
+    font-size: 2rem;
+    padding: 12px 42px 12px 42px;
+}
+
+.btn-toc-heading {
+    background-color: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-primary);
+}
+
+
+
+/* 
+  ========================================================================
   ======================== ToC-Subheading Button =========================
   ======================================================================== 
 */
-.btn-toc-subheading a,
-.btn-toc-subheading a:hover,
-.btn-toc-subheading a:focus {
-    font-size: 1.5rem;
-    padding: 6px 21px 6px 21px;
+.btn-toc-subheading,
+.btn-toc-subheading:hover,
+.btn-toc-subheading:focus {
+    font-size: 1.3rem;
+    padding: 12px 42px 12px 42px;
 }
 
-.btn-toc-subheading a {
+.btn-toc-subheading {
     background-color: var(--md-sys-color-secondary);
-    color: var(--md-sys-color-on-secondary);
-}
-
-.btn-toc-subheading a:hover,
-.btn-toc-subheading a:focus {
-    background-color: var(--md-sys-color-on-secondary);
-    color: var(--md-sys-color-secondary);
+    color: var(--md-sys-color-secondary-container);
 }
