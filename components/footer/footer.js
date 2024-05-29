@@ -18,7 +18,7 @@ class Footer extends HTMLElement {
             </div>
         
             <div id="page-footer-right">
-                <div class="footer-button">
+                <div class="btn-nav btn-nav-small">
                     <a href="#page-header">Gehe zum Seitenanfang &uarr;</a>
                 </div>
             </div>

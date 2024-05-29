@@ -40,26 +40,3 @@
 #page-footer p {
     font-size: 0.9rem;
 }
-
-
-
-/* 
-  ========================================================================
-  ========================== Footer Buttons ==============================
-  ======================================================================== 
-*/
-.footer-button a {
-    color: var(--md-sys-color-on-primary-container);
-    font-size: 0.9rem;
-    text-decoration: none;
-    margin: 3px;
-    padding: 18px;
-    border-radius: 8px;
-    white-space: nowrap;
-}
-
-.footer-button a:hover,
-.footer-button a:focus {
-    background-color: var(--md-sys-color-on-primary-container);
-    color: var(--md-sys-color-primary-container);
-}

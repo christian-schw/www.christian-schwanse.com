@@ -17,9 +17,9 @@ class Header extends HTMLElement {
         <nav id="page-header-nav">
             <h2 class="visually-hidden">Navigationsmenü</h2>
             <ul id="page-header-nav-list">
-                <li class="header-button"><a href="about-me.html">Über mich</a></li>
-                <li class="header-button"><a href="my-projects.html">Projekte</a></li>
-                <li class="header-button"><a href="contact.html">Kontakt</a></li>
+                <li class="btn-nav btn-nav-normal"><a href="about-me.html">Über mich</a></li>
+                <li class="btn-nav btn-nav-normal"><a href="my-projects.html">Projekte</a></li>
+                <li class="btn-nav btn-nav-normal"><a href="contact.html">Kontakt</a></li>
                 <li>
                     <div id="theme-switch-wrapper">
                         <label id="theme-switch" for="theme-checkbox">

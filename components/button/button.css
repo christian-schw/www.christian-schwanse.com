@@ -54,3 +54,33 @@
     background-color: var(--md-sys-color-tertiary-container);
     color: var(--md-sys-color-on-tertiary-container);
 }
+
+
+
+/* 
+  ========================================================================
+  ============================= Nav-Button ===============================
+  ======================================================================== 
+*/
+.btn-nav-small a {
+    font-size: 0.9rem;
+}
+
+.btn-nav-normal a {
+    font-size: 1.2rem;
+}
+
+.btn-nav a {
+    color: var(--md-sys-color-on-primary-container);
+    text-decoration: none;
+    margin: 3px;
+    padding: 18px;
+    border-radius: 8px;
+    white-space: nowrap;
+}
+
+.btn-nav a:hover,
+.btn-nav a:focus {
+    background-color: var(--md-sys-color-on-primary-container);
+    color: var(--md-sys-color-primary-container);
+}
