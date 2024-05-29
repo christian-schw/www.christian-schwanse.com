@@ -9,7 +9,19 @@ class Footer extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
         <footer id="page-footer">
-            <p>pageFooter</p>
+            <div id="page-footer-left">
+                <!-- Insert more information if needed -->
+            </div>
+            
+            <div id="page-footer-middle">
+                <p>&#169; 2024 Christian Schwanse</p>
+            </div>
+        
+            <div id="page-footer-right">
+                <div class="footer-button">
+                    <a href="#page-header">Gehe zum Seitenanfang &uarr;</a>
+                </div>
+            </div>
         </footer>
         `;
     }
