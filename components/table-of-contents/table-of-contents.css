@@ -14,11 +14,16 @@
     padding-left: 0px;
 }
 
-#toc-page a {
+#toc-page a,
+#toc-page a:hover,
+#toc-page a:focus {
+    white-space: nowrap;
     text-decoration: none;
+    color: var(--md-sys-color-primary-container);
 }
 
 #toc-page>ul>li {
+    /* For better readability. Space after one "section" ended */
     margin-bottom: 48px;
 }
 
@@ -36,8 +41,6 @@
 .btn-toc-subheading,
 .btn-toc-subheading:hover,
 .btn-toc-subheading:focus {
-    text-decoration: none;
-    white-space: nowrap;
     border-radius: 8px;
     margin: 18px;
 }
@@ -47,7 +50,6 @@
 .btn-toc-subheading:hover,
 .btn-toc-subheading:focus {
     background-color: var(--md-sys-color-primary);
-    color: var(--md-sys-color-primary-container);
     border: 1px solid var(--md-sys-color-primary-container);
 }
 
@@ -58,7 +60,6 @@
   =========================== ToC-Heading Button =========================
   ======================================================================== 
 */
-/* TODO: Fix missing style for a-Tag */
 .btn-toc-heading,
 .btn-toc-heading:hover,
 .btn-toc-heading:focus {
@@ -67,9 +68,9 @@
 }
 
 .btn-toc-heading {
-    background-color: var(--md-sys-color-primary-container);
-    color: var(--md-sys-color-primary);
+    background-color: var(--md-sys-color-on-surface-variant);
 }
+
 
 
 
@@ -86,6 +87,5 @@
 }
 
 .btn-toc-subheading {
-    background-color: var(--md-sys-color-secondary);
-    color: var(--md-sys-color-secondary-container);
+    background-color: var(--color-on-surface-variant2);
 }
