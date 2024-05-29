@@ -49,8 +49,18 @@
   ============================= Teaser Section ===========================
   ======================================================================== 
 */
+.teaser-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.teaser-section h4 {
+    margin-top: 48px;
+}
+
 .teaser-section footer {
-    text-align: left;
+    margin-top: 48px;
 }
 
 .btn-cta-at-end {

@@ -3,3 +3,18 @@
   ================================= Cards2 ===============================
   ======================================================================== 
 */
+.cards2-box {
+  background-color: var(--md-sys-color-on-secondary-container);
+  color: var(--md-sys-color-on-secondary);
+  border: 1px solid var(--md-sys-color-on-secondary);
+  border-radius: 8px;
+  padding: 24px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards2-box:hover {
+  transform: scale(1.05);
+}

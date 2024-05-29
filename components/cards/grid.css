@@ -1,0 +1,30 @@
+/* 
+  ========================================================================
+  ========================= General Cards Grid ===========================
+  ======================================================================== 
+*/
+.grid-cards-wrapper {
+  display: grid;
+
+
+  /* autofit & minmax for responsiveness */
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+
+
+  gap: 24px;
+  padding: 0px;
+
+
+  /* When grid is used with context of a list */
+  list-style: none;
+}
+
+.cards-box-subgrid {
+  /* 
+    Add Subgrid. So that all boxes in the grid look the same - 
+    regardless of the content length.
+  */
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 3;
+}
