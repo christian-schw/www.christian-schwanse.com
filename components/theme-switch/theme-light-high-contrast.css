@@ -13,43 +13,52 @@
   :root is identical to selector html, except that its specificity is higher 
 */
 :root {
-    --md-sys-color-primary: #3d5f90;
-    --md-sys-color-on-primary: #ffffff;
-    --md-sys-color-primary-container: #d5e3ff;
-    --md-sys-color-on-primary-container: #001c3b;
-    --md-sys-color-secondary: #555f71;
-    --md-sys-color-on-secondary: #ffffff;
-    --md-sys-color-secondary-container: #d9e3f8;
-    --md-sys-color-on-secondary-container: #121c2b;
-    --md-sys-color-tertiary: #6e5676;
-    --md-sys-color-on-tertiary: #ffffff;
-    --md-sys-color-tertiary-container: #f8d8ff;
-    --md-sys-color-on-tertiary-container: #27132f;
-    --md-sys-color-error: #ba1a1a;
-    --md-sys-color-on-error: #ffffff;
-    --md-sys-color-error-container: #ffdad6;
-    --md-sys-color-on-error-container: #410002;
-    --md-sys-color-surface: #f9f9ff;
-    --md-sys-color-on-surface: #191c20;
-    --md-sys-color-surface-variant: #e0e2ec;
-    --md-sys-color-on-surface-variant: #43474e;
-    --color-on-surface-variant2: #555f71;
-    --md-sys-color-outline: #74777f;
-    --md-sys-color-outline-variant: #c4c6cf;
-    --md-sys-color-shadow: #000000;
-    --md-sys-color-scrim: #000000;
-    --md-sys-color-inverse-surface: #2e3035;
-    --md-sys-color-inverse-on-surface: #f0f0f7;
-    --md-sys-color-inverse-primary: #a6c8ff;
-    --md-sys-color-surface-dim: #d9dae0;
-    --md-sys-color-surface-bright: #f9f9ff;
-    --md-sys-color-surface-container-lowest: #ffffff;
-    --md-sys-color-surface-container-low: #f3f3fa;
-    --md-sys-color-surface-container: #ededf4;
-    --md-sys-color-surface-container-high: #e7e8ee;
-    --md-sys-color-surface-container-highest: #e1e2e9;
-    --md-sys-color-custom-color-1: #87521b;
-    --md-sys-color-on-custom-color-1: #ffffff;
-    --md-sys-color-custom-color-1-container: #ffdcc1;
-    --md-sys-color-on-custom-color-1-container: #2e1500;
-  }
+  --md-sys-color-primary: #3d5f90;
+  --md-sys-color-on-primary: #ffffff;
+  --md-sys-color-primary-container: #d5e3ff;
+  --md-sys-color-on-primary-container: #001c3b;
+
+  --md-sys-color-secondary: #555f71;
+  --md-sys-color-on-secondary: #ffffff;
+  --md-sys-color-secondary-container: #d9e3f8;
+  --md-sys-color-on-secondary-container: #121c2b;
+
+  --md-sys-color-tertiary: #6e5676;
+  --md-sys-color-on-tertiary: #ffffff;
+  --md-sys-color-tertiary-container: #f8d8ff;
+  --md-sys-color-on-tertiary-container: #27132f;
+
+  --md-sys-color-error: #ba1a1a;
+  --md-sys-color-on-error: #ffffff;
+  --md-sys-color-error-container: #ffdad6;
+  --md-sys-color-on-error-container: #410002;
+
+  --md-sys-color-surface: #f9f9ff;
+  --md-sys-color-on-surface: #191c20;
+  --md-sys-color-surface-variant: #e0e2ec;
+  --md-sys-color-on-surface-variant: #43474e;
+  --color-on-surface-variant2: #555f71;
+
+  --md-sys-color-outline: #74777f;
+  --md-sys-color-outline-variant: #c4c6cf;
+
+  --md-sys-color-shadow: #000000;
+  --md-sys-color-scrim: #000000;
+
+  --md-sys-color-inverse-surface: #2e3035;
+  --md-sys-color-inverse-on-surface: #f0f0f7;
+  --md-sys-color-inverse-primary: #a6c8ff;
+
+  --md-sys-color-surface-dim: #d9dae0;
+  --md-sys-color-surface-bright: #f9f9ff;
+  --md-sys-color-surface-container-lowest: #ffffff;
+  --md-sys-color-surface-container-low: #f3f3fa;
+  --md-sys-color-surface-container: #ededf4;
+  --md-sys-color-surface-container-high: #e7e8ee;
+  --md-sys-color-surface-container-highest: #e1e2e9;
+
+  --md-sys-color-custom-color-1: #87521b;
+  --md-sys-color-on-custom-color-1: #ffffff;
+  --md-sys-color-custom-color-1-container: #ffdcc1;
+  --md-sys-color-on-custom-color-1-container: #2e1500;
+}
