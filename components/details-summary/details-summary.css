@@ -32,6 +32,17 @@
   color: var(--md-sys-color-on-secondary-container);
 }
 
+.details1 a,
+.details1-sub-details a {
+  color: var(--md-sys-color-custom-color-1-container);
+}
+
+.details1 a,
+.details1-sub-details a {
+  color: var(--md-sys-color-custom-color-1-container);
+}
+
+
 
 .details1-sub-details {
   padding-left: 48px;

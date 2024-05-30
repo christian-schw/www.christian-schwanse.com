@@ -106,13 +106,11 @@
 */
 .btn-jump-to-toc {
   font-size: 1.2rem;
-
   display: flex;
   justify-content: flex-end;
 }
 
 .btn-jump-to-toc a {
-  text-decoration: none;
   color: var(--md-sys-color-on-surface);
 }
 
