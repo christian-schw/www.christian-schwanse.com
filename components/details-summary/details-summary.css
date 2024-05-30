@@ -4,36 +4,41 @@
   ======================================================================== 
 */
 .details1 {
-    background-color: var(--md-sys-color-on-secondary-container);
-    color: var(--md-sys-color-secondary-container);
-    /* 
+  background-color: var(--md-sys-color-on-secondary-container);
+  color: var(--md-sys-color-secondary-container);
+  /* 
       Use of start instead of left for better accessibility for different
       kinds of languages that are not read e. g. from left-to-right
     */
-    text-align: start;
+  text-align: start;
 
-    border-radius: 8px;
-    padding: 12px 42px 12px 42px;
-    margin: 16px 0px 16px 0px;
+  border-radius: 8px;
+  padding: 12px 42px 12px 42px;
+  margin: 16px 0px 16px 0px;
 }
 
 .details1 summary {
-    background-color: var(--md-sys-color-secondary);
-    color: var(--md-sys-color-on-secondary);
-    border-radius: 8px;
-    font-size: 2rem;
-    cursor: pointer;
-    padding: 16px;
+  background-color: var(--md-sys-color-secondary);
+  color: var(--md-sys-color-on-secondary);
+  border-radius: 8px;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 16px;
 }
 
 .details1 summary:hover,
 .details1 summary:focus {
-    background-color: var(--md-sys-color-secondary-container);
-    color: var(--md-sys-color-on-secondary-container);
+  background-color: var(--md-sys-color-secondary-container);
+  color: var(--md-sys-color-on-secondary-container);
 }
 
 
 .details1-sub-details {
-    padding-left: 48px;
-    margin: 16px 0px 16px 0px;
+  padding-left: 48px;
+  margin: 16px 0px 16px 0px;
+}
+
+.details1-sub-details ul {
+  font-size: 1.3rem;
+  line-height: 1.5;
 }
