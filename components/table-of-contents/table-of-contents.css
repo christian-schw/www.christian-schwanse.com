@@ -4,36 +4,36 @@
   ======================================================================== 
 */
 #toc-page {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
 }
 
 #toc-page ul {
-    list-style: none;
-    padding-left: 0px;
+  list-style: none;
+  padding-left: 0px;
 }
 
 #toc-page a,
 #toc-page a:hover,
 #toc-page a:focus {
-    /* 
+  /* 
       So that a-tag envelops the entire container in which it is located.
       This means that the entire container is a link
       and not just the text of the a tag ==> Better Usability.
     */
-    display: block;
+  display: block;
 
 
-    padding: 12px 42px 12px 42px;
-    white-space: nowrap;
-    text-decoration: none;
-    color: var(--md-sys-color-primary-container);
+  padding: 12px 42px 12px 42px;
+  white-space: nowrap;
+  text-decoration: none;
+  color: var(--md-sys-color-primary-container);
 }
 
 #toc-page>ul>li {
-    /* For better readability. Space after one "section" ended */
-    margin-bottom: 48px;
+  /* For better readability. Space after one "section" ended */
+  margin-bottom: 48px;
 }
 
 
@@ -50,16 +50,16 @@
 .btn-toc-subheading,
 .btn-toc-subheading:hover,
 .btn-toc-subheading:focus {
-    border-radius: 8px;
-    margin: 18px;
+  border-radius: 8px;
+  margin: 18px;
 }
 
 .btn-toc-heading:hover,
 .btn-toc-heading:focus,
 .btn-toc-subheading:hover,
 .btn-toc-subheading:focus {
-    background-color: var(--md-sys-color-primary);
-    border: 1px solid var(--md-sys-color-primary-container);
+  background-color: var(--md-sys-color-primary);
+  border: 1px solid var(--md-sys-color-primary-container);
 }
 
 
@@ -72,11 +72,11 @@
 .btn-toc-heading,
 .btn-toc-heading:hover,
 .btn-toc-heading:focus {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 .btn-toc-heading {
-    background-color: var(--md-sys-color-on-surface-variant);
+  background-color: var(--md-sys-color-on-surface-variant);
 }
 
 
@@ -90,9 +90,33 @@
 .btn-toc-subheading,
 .btn-toc-subheading:hover,
 .btn-toc-subheading:focus {
-    font-size: 1.3rem;
+  font-size: 1.3rem;
 }
 
 .btn-toc-subheading {
-    background-color: var(--color-on-surface-variant2);
+  background-color: var(--color-on-surface-variant2);
+}
+
+
+
+/* 
+  ========================================================================
+  ======================== Button to jump to ToC =========================
+  ======================================================================== 
+*/
+.btn-jump-to-toc {
+  font-size: 1.2rem;
+
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-jump-to-toc a {
+  text-decoration: none;
+  color: var(--md-sys-color-on-surface);
+}
+
+.btn-jump-to-toc a:hover,
+.btn-jump-to-toc a:focus {
+  color: var(--md-sys-color-custom-color-1);
 }

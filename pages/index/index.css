@@ -49,16 +49,16 @@
   ============================= Teaser Section ===========================
   ======================================================================== 
 */
-.teaser-section {
+#teaser-section {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.teaser-section h4 {
+#teaser-section h4 {
     margin-top: 48px;
 }
 
-.teaser-section footer {
+#teaser-section footer {
     margin-top: 48px;
 }
