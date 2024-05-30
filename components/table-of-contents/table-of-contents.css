@@ -17,6 +17,15 @@
 #toc-page a,
 #toc-page a:hover,
 #toc-page a:focus {
+    /* 
+      So that a-tag envelops the entire container in which it is located.
+      This means that the entire container is a link
+      and not just the text of the a tag ==> Better Usability.
+    */
+    display: block;
+
+
+    padding: 12px 42px 12px 42px;
     white-space: nowrap;
     text-decoration: none;
     color: var(--md-sys-color-primary-container);
@@ -64,7 +73,6 @@
 .btn-toc-heading:hover,
 .btn-toc-heading:focus {
     font-size: 2rem;
-    padding: 12px 42px 12px 42px;
 }
 
 .btn-toc-heading {
@@ -83,7 +91,6 @@
 .btn-toc-subheading:hover,
 .btn-toc-subheading:focus {
     font-size: 1.3rem;
-    padding: 12px 42px 12px 42px;
 }
 
 .btn-toc-subheading {
