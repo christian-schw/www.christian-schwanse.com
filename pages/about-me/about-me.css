@@ -43,6 +43,25 @@
 }
 
 
+/* 
+  ========================================================================
+  ========================== Details & Summary ===========================
+  ======================================================================== 
+*/
+/* TODO: Add the end, put code in components for reusability */
+.details1 {
+    /* 
+      Use of start instead of left for better accessibility for different
+      kinds of languages that are not read e. g. from left-to-right
+    */
+    text-align: start;
+}
+
+.details1 summary {
+    font-size: 2rem;
+}
+
+
 
 /* 
   ========================================================================

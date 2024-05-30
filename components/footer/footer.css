@@ -27,7 +27,12 @@
 
 #page-footer-right {
     flex: 1;
-    text-align: right;
+
+    /* 
+      Use of start instead of left for better accessibility for different
+      kinds of languages that are not read e. g. from left-to-right
+    */
+    text-align: end;
 }
 
 

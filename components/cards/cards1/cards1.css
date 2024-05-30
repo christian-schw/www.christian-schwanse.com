@@ -43,12 +43,17 @@
 .cards1-box-content-body {
     padding: 24px 32px 24px 32px;
 
+
     /* 
-      Align text to left.
+      Align text to start.
       Because the text in boxes can be long.
       This makes it difficult to read when centered.
+
+      Use of start instead of left for better accessibility
+      for different kinds of languages that are not read e. g.
+      from left-to-right
     */
-    text-align: left;
+    text-align: start;
 }
 
 
