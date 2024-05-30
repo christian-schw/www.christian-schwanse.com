@@ -41,3 +41,16 @@
 #homepage-hero-section-img img {
     max-width: 800px;
 }
+
+
+
+/* 
+  ========================================================================
+  ========================== Contact Section =============================
+  ======================================================================== 
+*/
+#contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
