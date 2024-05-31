@@ -63,8 +63,14 @@ h4 {
 */
 p {
   font-size: 1.3rem;
-  margin: 12px 0px 12px 0px;
   line-height: 1.5;
+
+
+  /* 
+    Margin-bottom should be sufficient so that paragraphs are 
+    clearly distinguishable from each other! For better readability.
+  */
+  margin: 12px 0px 32px 0px;
 
 
   /* 
