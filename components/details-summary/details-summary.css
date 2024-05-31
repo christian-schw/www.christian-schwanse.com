@@ -42,14 +42,15 @@
   color: var(--md-sys-color-custom-color-1-container);
 }
 
+.details1 ul,
+.details1-sub-details ul {
+  font-size: 1.3rem;
+  line-height: 1.5;
+}
+
 
 
 .details1-sub-details {
   padding-left: 48px;
   margin: 48px 0px 48px 0px;
-}
-
-.details1-sub-details ul {
-  font-size: 1.3rem;
-  line-height: 1.5;
 }
