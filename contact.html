@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Kontakt - Christian Schwanse</title>
+    <title>Über mich - Christian Schwanse</title>
     <link rel="icon" type="image/svg+xml" href="assets/images/favicons/favicon_christian_schwanse.svg">
     <!-- Improve in future: Add Custom HTML-Element for global head tags (e. g. favicon or font) -->
 
@@ -36,12 +36,14 @@
     <script src="components/button/button.js"></script>
 
 
-    <link rel="stylesheet" href="components/image/image.css">
-    <script src="components/image/image.js"></script>
-
-
     <link rel="stylesheet" href="components/footer/footer.css">
     <script src="components/footer/footer.js"></script>
+
+
+
+    <!-- Site specific things -->
+    <link rel="stylesheet" href="pages/contact/contact.css">
+    <script src="pages/contact/contact.js"></script>
 </head>
 
 <body>
@@ -49,7 +51,22 @@
     <header-component></header-component>
 
     <main>
+        <article>
+            <h2 class="visually-hidden">Kontakt: Christian Schwanse</h2>
 
+            <section id="contact-hero-section">
+                <div id="contact-hero-section-text">
+                    <h3>Du willst mich kontaktieren?</h3>
+                    <p>Offen für Jobangebote: Ja<br>Am besten erreichst du mich per E-Mail. ✉️<br>Über Anfragen freue ich mich sehr!</p>
+                    <div class="btn-highlighted">
+                        <a href="mailto:Christianschwanse@gmx.de">E-Mail</a>
+                        <!-- TODO: Change E-Mail-Adress to Job E-Mail and test it!! -->
+                    </div>
+
+                    <!-- TODO: Add Github-Account with Symbol -->
+                </div>
+            </section>
+        </article>
     </main>
 
     <footer-component></footer-component>

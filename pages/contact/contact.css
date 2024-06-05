@@ -1,0 +1,29 @@
+/* 
+  ========================================================================
+  ============================= Hero Section =============================
+  ======================================================================== 
+*/
+#contact-hero-section {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 60px 0px 80px 0px;
+
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#contact-hero-section>* {
+    flex: 1;
+}
+
+
+
+#contact-hero-section-text {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+
+    margin: 40px 0px 0px 0px;
+    text-align: center;
+}
