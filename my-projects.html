@@ -40,6 +40,10 @@
     <script src="components/image/image.js"></script>
 
 
+    <link rel="stylesheet" href="components/table-of-contents/table-of-contents.css">
+    <script src="components/table-of-contents/table-of-contents.js"></script>
+
+
     <link rel="stylesheet" href="components/footer/footer.css">
     <script src="components/footer/footer.js"></script>
 
@@ -64,6 +68,54 @@
                     <div class="btn-highlighted">
                         <a href="/contact.html">Kontakt</a>
                     </div>
+                </div>
+            </section>
+
+
+            <section class="dark-section">
+                <div class="content-after-hero-section fade-in">
+                    <h3 class="visually-hidden">Übersicht der Inhalte</h3>
+
+                    <nav id="toc-page">
+                        <header>
+                            <h3>Inhaltsverzeichnis</h3>
+                        </header>
+
+                        <ul>
+                            <!-- Improve in future: Optimize ToC a-Tag # Jump Points -->
+                            <!-- TODO: Update a-hrefs to specific sections -->
+                            <li>
+                                <div class="btn-toc-heading"><a href="#skills-section">SAP-Projekte</a></div>
+                                <ul>
+                                    <li class="btn-toc-subheading"><a href="#sap-section">XXXXX</a></li>
+                                </ul>
+                            </li>
+
+
+                            <li>
+                                <div class="btn-toc-heading"><a
+                                        href="#work-experience-section">Webentwicklungs-Projekte</a>
+                                </div>
+                                <ul>
+                                    <li class="btn-toc-subheading"><a href="#apprenticeship-sap-section">XXXXX</a></li>
+                                </ul>
+                            </li>
+
+
+                            <li>
+                                <div class="btn-toc-heading"><a href="#education-section">Sonstige Projekte</a></div>
+                                <ul>
+                                    <li class="btn-toc-subheading"><a
+                                            href="#study-business-psychology-section">XXXXX</a></li>
+                                </ul>
+                            </li>
+
+
+                            <li>
+                                <div class="btn-toc-heading"><a href="#contact-section">Kontakt</a></div>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
             </section>
         </article>
