@@ -43,7 +43,9 @@
 }
 
 .details1 ul,
-.details1-sub-details ul {
+.details1 ol,
+.details1-sub-details ul,
+.details1-sub-details ol {
   font-size: 1.3rem;
   line-height: 1.5;
 }
