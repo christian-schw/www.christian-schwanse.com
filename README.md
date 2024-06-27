@@ -1,3 +1,6 @@
+TODO: Optimize README.md<br />
+<br />
+<br />
 A portfolio website where I present myself and my projects.<br />
 <br />
 The website itself is a portfolio project.<br />
