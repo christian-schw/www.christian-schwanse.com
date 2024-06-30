@@ -48,6 +48,12 @@
 .details1-sub-details ol {
   font-size: 1.3rem;
   line-height: 1.5;
+
+  /* 
+    Set max width for better UI readability.
+    Wide Paragraphs are difficult to read.
+  */
+  max-width: 50rem;
 }
 
 
