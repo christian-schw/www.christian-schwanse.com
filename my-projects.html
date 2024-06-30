@@ -700,11 +700,41 @@
                         <details class="details1-sub-details">
                             <summary>Wie ich an diesem Projekt gearbeitet habe</summary>
                             <p>
-                                Code soll so geschrieben werden, dass er intuitiv verständlich ist. Vorteile von
-                                Clean
-                                Code sind stabilere und leicht wartbare Programme. Das bedeutet wiederum weniger
-                                Bugs,
-                                weniger Wartungsaufwand und weniger Nervenverlust. 😉
+                                Am Anfang stand die Anforderungsanalyse. Es gab von meinen Vorgängern bereits ein
+                                entwickeltes, unvollständiges Angebots-Formular. Die Daten stammen aus dem gleichen
+                                Druckprogramm wie das Bock-Auftragsbestätigungs-Formular.
+                            </p>
+
+                            <p>
+                                Der Vertrieb definierte anhand der zwei Formulare ihr gewünschtes angepasstes
+                                Angebots-Formular. Dieses besprach ich Schritt für Schritt mit dem Vertrieb und hielt es
+                                in einer Entwicklungsdokumentation fest. Die Entwicklung kann beginnen.
+                            </p>
+
+                            <p>
+                                Das bisherige Angebots-Formular war eine Kopie des SAP-Standard-Angebotsformular und
+                                wurde etwas modifiziert. Es enthielt Bugs, unschönen als auch toten Code. Somit
+                                standen Bugfixing und Code-Refactoring an erster Stelle meiner Todo-Liste.
+                            </p>
+
+                            <p>
+                                Anschließend entwickelte ich neue Funktionalitäten. Es war ein Zyklus aus folgenden
+                                Schritten:
+                            </p>
+
+                            <ol>
+                                <li>Neue Funktionalitäten implementieren</li>
+                                <li>Testen (Ich)</li>
+                                <li>Besprechung mit dem Vertrieb</li>
+                                <li>Testen (Vertrieb)</li>
+                                <li>Feedback einholen. Dokumentieren</li>
+                                <li>Ggfs. Bugfixing</li>
+                            </ol>
+
+                            <p>
+                                Am Ende des Projektes wurde der Code gerefactored. Die Entwicklungsdokumentation wurde
+                                angepasst, formatiert und den Projektbeteiligten als auch dem ganzen SAP-Team zur
+                                Verfügung gestellt.
                             </p>
                         </details>
 
@@ -713,7 +743,28 @@
                             <summary>Warum ich das Projekt auf diese Art &amp; Weise umgesetzt habe
                             </summary>
                             <p>
-                                Dieses Buch vermittelt die Grundlagen für die SAP-Module SD, MM, FI, CO, PP und WM.
+                                Bevor ich viel Zeit in die Entwicklung steckte, war es meiner Meinung nach wichtig, die
+                                Anforderungen gemeinsam schriftlich und übersichtlich festzuhalten. Das hatte mehrere
+                                Vorteile wie:
+                            </p>
+
+                            <ol>
+                                <li>Nachträgliche Änderungen auf ein Minimum reduzieren (Zeitersparnis)</li>
+                                <li>
+                                    Erleichtert die Übergabe an andere Entwickler als auch das mentale Wechseln zwischen
+                                    mehreren SAP-Projekten
+                                </li>
+                                <li>
+                                    Aufgrund der Übersichtlichkeit lasst sich der Stand der vielen Änderungen besser
+                                    besprechen / identifizieren (Was ist fertig? Was hat noch Optimierungsbedarf? Was
+                                    fehlt?)
+                                </li>
+                            </ol>
+
+                            <p>
+                                Auch habe ich viel Wert auf einen Zyklus zwischen Implementierung und Feedback gelegt.
+                                Um eventuelle Kursänderungen frühzeitig erkennen zu können und um das Testen einfacher
+                                zu halten, da Änderungen in Units bzw. Blöcke untergliedert sind.
                             </p>
                         </details>
 
