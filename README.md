@@ -48,7 +48,7 @@ I developed this website without a framework - just the lovely triangle: HTML, C
 <br />
 Reason: It's my first real, self-programmed website. I'm generally a fan of practicing the basics first before venturing into new, "interesting" things.
 <br />
-I also had the thought that I would clearly see the advantages and compromises of frameworks in the future.
+I also had the thought that I would clearly see the advantages and compromises of frameworks in the future.<br />
 <br />
 <br />
 
