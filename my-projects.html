@@ -114,7 +114,7 @@
                                     -->
                                     <li class="btn-toc-subheading"><a
                                             href="#sap-interface-quipsy-section">QM-Schnittstellen-Erweiterung: Quipsy
-                                            Prüfpläne</a></li>
+                                            Skip-Lot-Verfahren</a></li>
                                     <li class="btn-toc-subheading"><a
                                             href="#sap-form-refactoring-section">Code-Refactoring:
                                             Formularentwicklung</a></li>
@@ -178,7 +178,7 @@
                                         <li>Inkscape</li>
                                         <li>Github</li>
                                         <li>MS Visual Studio</li>
-                                        <!-- TOOD: Insert Hosting of Domain -->
+                                        <!-- TOOD: Insert Hosting of Domain and add README.md as well -->
                                     </ul>
                                 </li>
                             </ul>
@@ -261,7 +261,7 @@
                                     um Prototypen von UIs erstellen zu können. So vermeidet man den Fall, dass
                                     lange Zeit etwas programmiert wird und am Ende verworfen, weil es einem doch nicht
                                     gefällt - Ich sag lieber nichts dazu, ob mir das während des Projektes auch passiert
-                                    ist 😉 Ebenfalls ist eine Todo-Verwaltungs-Software wie bspw. Trello hilfreich.
+                                    ist 😉 Ebenfalls ist eine Todo-Verwaltungs-Software wie bspw. Jira hilfreich.
                                 </li>
                             </ol>
                         </details>
@@ -423,56 +423,48 @@
 
 
                     <details id="sap-interface-quipsy-section" class="details1">
-                        <summary>QM-Schnittstellen-Erweiterung: Quipsy Prüfpläne</summary>
+                        <summary>QM-Schnittstellen-Erweiterung: Quipsy Skip-Lot-Verfahren</summary>
                         <p>
-                            Kurzbeschreibung blablablabla
+                            Erweiterung der Schnittstelle zwischen SAP und der externen QM-Software Quipsy.
                         </p>
 
 
                         <details class="details1-sub-details">
                             <summary>Allgemeine Informationen über das Projekt</summary>
-                            <!-- TODO: Change Information. It's just a template now what should be inserted -->
                             <ul>
                                 <li>
-                                    <b>Auftraggeber:</b> <a href="https://www.bockonline.de/de/home"
-                                        target="_blank">Bock 1 GmbH &amp; Co. KG</a>, Mittelstand, > 2.000 Mitarbeiter
-                                    (Stand: 29/06/2024)
+                                    <b>Auftraggeber:</b> Qualitätsmanagement-Abteilung von <a
+                                        href="https://www.bockonline.de/de/home" target="_blank">Bock 1 GmbH &amp; Co.
+                                        KG</a>, Mittelstand, > 2.000 Mitarbeiter (Stand: 29/06/2024)
                                 </li>
                                 <li>
-                                    <b>Projektziel:</b> Umstieg von bisherigen ERP-Software Macola auf SAP. Bisher wurde
-                                    SAP nur in den Werken in Deutschland und Ungarn eingesetzt. Kanada (> 150 MA, Stand:
-                                    01/06/2023) soll zwecks Vereinheitlichung nun ebenfalls SAP benutzen. Vorteil ist u.
-                                    a. einfacheres Controlling bzw. Management von Ressourcen.
+                                    <b>Projektziel:</b> Übermittlung des Skip-Lot-Verfahrens in
+                                    SAP-Wareneingangsprüfungen nach Quipsy, um die Qualitätsmanagement-Abteilung zu
+                                    entlasten. Besonderheit: Es gibt kein Quipsy-Test-System. Deswegen muss im
+                                    Produktiv-System getestet werden.
                                 </li>
                                 <li>
-                                    <b>Anzahl Projektbeteiligte:</b> ~ 40 - 60 MA (&ldquor;Normale&ldquo;
-                                    Kanada-Angestellte ausgeschlossen, nur Führungskräfte bzw. Hauptverantwortliche der
-                                    jeweiligen Abteilungen in Kanada eingeschlossen)
+                                    <b>Anzahl Projektbeteiligte:</b> ~ 8 MA.
                                 </li>
-                                <li><b>Zeitraum:</b> 10/2022 - 10/2023</li>
+                                <li><b>Zeitraum:</b> MM/YYYY - MM/YYYY TOODOOOOOOO</li>
                                 <li><b>Branche / Bereich:</b> Bürostuhl-, Loungemöbel- und Automobilindustrie</li>
                                 <li>
-                                    <b>Rolle:</b> Hauptentwickler für Formulare. Nebenbei Benutzer- &amp;
-                                    Berechtigungsverwaltung sowie diversen, kleineren Tätigkeiten unterstützt
+                                    <b>Rolle:</b> Hauptentwickler (SAP-seitig).
                                 </li>
-                                <li><b>Sprache:</b> Deutsch, Englisch</li>
+                                <li><b>Sprache:</b> Deutsch</li>
                                 <li>
-                                    <b>Ergebnis:</b> Erfolgreiche SAP-Integration in Kanada. Die wichtigsten Prozesse
-                                    laufen reibungslos ab. Alles Go-Live-kritische in allen möglichen SAP-Modulen (PP,
-                                    MM, WM / EWM, SD, FI, CO, ABAP, BASIS) abgedeckt. Im Nachhinein kleinere
-                                    Optimierungen / Schulungen.
+                                    <b>Ergebnis:</b> Erfolgreiche Übermittlung des Skip-Lot-Verfahrens inklusive
+                                    dazugehörigem Prüfplan. Dadurch deutliche Entlastung der QM-Abteilung. Außerdem
+                                    automatische Aktualisierung der Artikelprüfplanzuordnung-Datenbanktabelle
+                                    (SAP-seitig), wodurch Pflegeaufwand als auch Fehler minimiert werden.
                                 </li>
                                 <li>
                                     <b>Tech Stack (in Bezug auf meine Rolle innerhalb des Projektes):</b>
                                     <ul>
-                                        <li>ABAP (Prozedural als auch OO)</li>
-                                        <li>XML</li>
-                                        <li>SAP-Formulartechnologie Adobe Forms</li>
-                                        <li>SAP-Reports (ALV)</li>
-                                        <li>SAP-Druckerverwaltung</li>
-                                        <li>SAP-Berechtigungs- &amp; Benutzerverwaltung</li>
-                                        <li>SAP-Standard-Erweiterungen (Code als auch Customizing für Nachrichtenarten /
-                                            Druckersteuerung)</li>
+                                        <li>ABAP (Prozedural, OO)</li>
+                                        <li>Quipsy-Server (Task Scheduler, Log-, Ini-Files, ...)</li>
+                                        <li>SAP-Datenbank (SE11, SM30)</li>
+                                        <li>SAP-Verzeichnis (AL11)</li>
                                     </ul>
                                 </li>
                             </ul>
