@@ -474,11 +474,72 @@
                         <details class="details1-sub-details">
                             <summary>Wie ich an diesem Projekt gearbeitet habe</summary>
                             <p>
-                                Code soll so geschrieben werden, dass er intuitiv verständlich ist. Vorteile von
-                                Clean
-                                Code sind stabilere und leicht wartbare Programme. Das bedeutet wiederum weniger
-                                Bugs,
-                                weniger Wartungsaufwand und weniger Nervenverlust. 😉
+                                Die Besonderheiten des Projektes, die es deutlich schwieriger gestalten:
+                            </p>
+
+                            <ul>
+                                <li>
+                                    Es gibt kein Test-System. Das heißt, der Datenaustausch zwischen SAP und Quipsy
+                                    musste im Produktiv-System getestet werden. Es musste auf Korrektheit der Daten
+                                    (Bestellung, Wareneingang) geachtet werden. Auch zusätzlicher organisatorischer
+                                    Aufwand, da mehrere Abteilungen inkl. Quipsy-Berater involviert sind.
+                                </li>
+                                <li>
+                                    Kein Inhouse-SAP-QM-Berater vorhanden. Da nicht vollständig klar war, inwiefern man
+                                    Skip-Lot bzw. Prüfpläne in SAP anlegen und steuern kann (inkl. den
+                                    &ldquor;Nebenwirkungen&ldquo;), mussten die Prüfpläne (Artikelprüfplanzuordnung) von
+                                    Quipsy ins SAP exportiert und aktuell gehalten werden.
+                                </li>
+                                <li>
+                                    Fehlendes Wissen über die Schnittstelle. Die Schnittstelle wurde vom
+                                    SAP-Dienstleister <a href="https://de.nttdata.com/" target="_blank">NTT DATA</a>
+                                    entwickelt. Es war nur Dokumentation vorhanden. Keiner der damaligen
+                                    Verantwortlichen war noch angestellt. Dadurch musste ich mir alles
+                                    (Zusammenhänge, Code-Basis, ...) selber beibringen.
+                                </li>
+                            </ul>
+
+                            <p>
+                                Um zu prüfen, ob die Daten richtig in SAP gezogen werden, war es nötig, für jeden Test
+                                den kompletten Wareneingangs-Prozess zu durchlaufen. Das heißt, es muss eine Bestellung
+                                angelegt, eine Anlieferung angelegt, verteilt sowie im EWM gepflegt werden.
+                            </p>
+
+                            <p>
+                                Für Quipsy-seitige Anpassung war ein externer Quipsy-Berater nötig.
+                            </p>
+
+                            <p>
+                                Anfangs sollte nur das Skip-Lot-Verfahren (Skip-Lot-Button im Materialstamm) von SAP ins
+                                Quipsy importiert werden. Da es aber zu Problemen kam, musste zusätzlich auch der
+                                dazugehörige Prüfplan ins Quipsy importiert werden.
+                            </p>
+
+                            <p>
+                                Wie oben schon erwähnt, war es nicht klar, wie aufwendig bzw. machbar die Einführung von
+                                Prüfplänen in SAP ist. Deswegen wurde eigens eine SAP-Datenbanktabelle für die
+                                Artikelprüfplanzuordnung in der SE11 erstellt. Diese wurde per Dateiupload initial
+                                befüllt.
+                            </p>
+
+                            <p>
+                                Damit der Quipsy-Keyuser bei Änderungen die SAP-Datenbanktabelle manuell aktualisieren
+                                kann, wurde ebenfalls eine SM30-Tabelle sowie eine dazugehörige Anwender-Dokumentation
+                                erstellt. Das war nötig, da der automatische Export der
+                                Artikelprüfplanzuordnungs-Datenbanktabelle in Quipsy nach SAP noch nicht implementiert
+                                wurde und sich die Entwicklung auch verzögert hatte.
+                            </p>
+
+                            <p>
+                                Wurde der Export des Skip-Lots inklusive Prüfplan erfolgreich implementiert und
+                                getestet, war der nächste Schritt der automatische Export der
+                                Artikelprüfplanzuordnung-Datenbanktabelle von Quipsy ins SAP, um auch in Zukunft die
+                                korrekten Prüfpläne ermitteln zu können. Somit läuft die Schnittstelle vollautomatisch.
+                            </p>
+
+                            <p>
+                                Zum Schluss wurde der Code gerefactored sowie die bereits vorhandenen Dokumentationen
+                                geupdatet und der eigenen SAP- als auch QM-Abteilung zur Verfügung gestellt.
                             </p>
                         </details>
 
@@ -487,7 +548,16 @@
                             <summary>Warum ich das Projekt auf diese Art &amp; Weise umgesetzt habe
                             </summary>
                             <p>
-                                Dieses Buch vermittelt die Grundlagen für die SAP-Module SD, MM, FI, CO, PP und WM.
+                                Vieles ist im vorherigen Abschnitt schon beschrieben worden. Vielleicht gab es bessere
+                                Lösungen. Auch musste ich mich an die bereits bestehende Code-Basis bzw.
+                                Schnittstelle richten.
+                            </p>
+
+                            <p>
+                                Damit die Entwickler nach mir es einfacher haben, habe ich den kompletten
+                                Wareneingangs-Prozess dokumentiert, wodurch das Testen leichter wird. Außerdem
+                                Code-Refactoring betrieben als auch stets festgehalten, warum etwas genau auf die Art
+                                und Weise umgesetzt werden musste.
                             </p>
                         </details>
 
