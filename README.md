@@ -1,4 +1,6 @@
-TODO: Optimize README.md<br />
+# www.christian-schwanse.com - Portfolio-Webseite
+Auf der Webseite stelle ich mich selbst, meine Fähigkeiten, Berufserfahrung und Projekte vor.
+<br />
 <br />
 <br />
 A portfolio website where I present myself and my projects.<br />
