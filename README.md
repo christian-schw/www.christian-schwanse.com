@@ -11,6 +11,7 @@ The portfolio website itself is also a project.<br />
 - Languages: German, English
 - Result: A website that can be found on the Internet by all kinds of interested parties all over the world. Also a significant improvement in front-end web development skills (HTML, CSS and JavaScript).
 <br />
+
 Tech Stack:
 - HTML
 - CSS
@@ -18,19 +19,10 @@ Tech Stack:
 - Inkscape
 - Github
 - MS Visual Studio
-##How I worked on this project
+
+## How I worked on this project
 Planning at the beginning. Answering questions such as:
-<br />
-<br />
-A portfolio website where I present myself and my projects.<br />
-<br />
-The website itself is a portfolio project.<br />
-Built from scratch - **No** framework or CMS such as WordPress was used.<br />
-Only the dear triangle: HTML, CSS and JavaScript 😉.<br />
-<br />
-To be honest: Sometimes, it's really painful.<br />
-But I wanted to learn a lot.<br />
-I don't regret it one bit!<br />
+
 <br />
 Enjoy it!<br />
 <br />
