@@ -51,6 +51,7 @@ Reason: It's my first real, self-programmed website. I'm generally a fan of prac
 I also had the thought that I would clearly see the advantages and compromises of frameworks in the future.<br />
 <br />
 <br />
+<br />
 
 ## My 3 most important points that I have learned from this project
 1. Create your own components such as headers or footers that can be  can be reused across pages.
@@ -64,5 +65,6 @@ I look forward to you visiting my website and having a look around!
 <br />
 <br />
 Greetings
+<br />
 <br />
 Chris
