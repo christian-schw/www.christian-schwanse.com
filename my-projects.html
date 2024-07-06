@@ -811,8 +811,8 @@
                     <details id="sap-pricing-dynamic-abap-section" class="details1">
                         <summary>Preisfindung-Report: Dynamische Programmierung</summary>
                         <p>
-                            Ein Report über die Preiskonditionen. Das Besondere: Der Selektionsbildschirm, die
-                            Datenbankabfrage und die ALV-Tabelle werden dynamisch (während der Laufzeit) erstellt.
+                            Ein Report über alle Preiskonditionen im Vertrieb. Das Besondere: Der Selektionsbildschirm,
+                            die Datenbankabfrage und die ALV-Tabelle werden dynamisch (während der Laufzeit) erstellt.
                         </p>
 
 
@@ -843,10 +843,10 @@
                                 <li>
                                     <b>Ergebnis:</b> Report, mit dem alle möglichen Preiskonditionen und deren Sätze
                                     angezeigt werden können. Es skaliert schön, da neue Preiskonditionen nicht extra
-                                    programmiert werden müssen. Außerdem bei Löschung oder Änderung von Preiskonditionen
-                                    (inkl. Zugriffsfolge, Zugriffe und Felder) keine Anpassung nötig. Mögliche
-                                    (Laufzeit-)Fehler werden abgefangen und Anwender als auch Entwickler mit
-                                    inhaltsreicher Meldung entsprechend informiert.
+                                    programmiert werden müssen. Auch bei Löschung oder Änderung von bereits
+                                    existierenden Preiskonditionen (inkl. Zugriffsfolge, Zugriffe und Felder) keine
+                                    Anpassung nötig. Mögliche Fehler während der Verwendung werden abgefangen und
+                                    Anwender als auch Entwickler mit inhaltsreicher Meldung entsprechend informiert.
                                 </li>
                                 <li>
                                     <b>Tech Stack:</b>
@@ -904,7 +904,7 @@
                             </summary>
                             <p>
                                 Da jede Preiskondition eine andere Zugriffsfolge inklusive
-                                mehrere Zugriffe mit jeweils unterschiedlicher Datenbanktabelle + Selektionsfelder
+                                mehrerer Zugriffe mit jeweils unterschiedlicher Datenbanktabelle + Selektionsfelder
                                 hat, ist ein manuelles, statisches Programmierung nicht möglich. Das wäre unheimlich
                                 viel Schreibaufwand und würde auch nicht schön skalieren bzw. viel Wartungsaufwand
                                 bei Preiskonditions-Änderungen.
@@ -912,9 +912,9 @@
 
                             <p>
                                 Da auch keiner im Betrieb dynamische Programmierung beherrscht hatte, habe ich viel Wert
-                                auf Dokumentation und Code Refactoring gelegt. Damit die Wartung durch meine Kollegen
-                                möglichst einfach und schnell vonstattengeht - falls ich mir z. B. zu dem Zeitpunkt ein
-                                schönes Leben im Ausland mache 😉
+                                auf Dokumentation und Code Refactoring gelegt. Damit die Programmanpassung durch meine
+                                Kollegen möglichst einfach und schnell vonstattengeht - falls ich mir z. B. zu dem
+                                Zeitpunkt ein schönes Leben im Ausland mache 😉
                             </p>
 
                             <p>
@@ -936,7 +936,7 @@
                                     Selektionsbildschirm, Datenbankabfrage, Ausgabe-Tabelle, ...).
                                 </li>
                                 <li>
-                                    Papierskizzen können Gold wert sein. Durch die Skizzierung des ganzen
+                                    Papiergekritzel kann Gold wert sein. Durch die Skizzierung des ganzen
                                     Preiskondition-Prozesses konnte ich schnell den gemeinsamen Nenner finden, wodurch
                                     die dynamische Programmierung erst möglich wurde.
                                 </li>
