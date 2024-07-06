@@ -648,32 +648,20 @@
 
                         <details class="details1-sub-details">
                             <summary>Wie ich an diesem Projekt gearbeitet habe</summary>
-                            <p>
-                                Code soll so geschrieben werden, dass er intuitiv verständlich ist. Vorteile von
-                                Clean
-                                Code sind stabilere und leicht wartbare Programme. Das bedeutet wiederum weniger
-                                Bugs,
-                                weniger Wartungsaufwand und weniger Nervenverlust. 😉
-                            </p>
+                            <!-- TODO: Implement -->
                         </details>
 
 
                         <details class="details1-sub-details">
                             <summary>Warum ich das Projekt auf diese Art &amp; Weise umgesetzt habe
                             </summary>
-                            <p>
-                                Dieses Buch vermittelt die Grundlagen für die SAP-Module SD, MM, FI, CO, PP und WM.
-                            </p>
+                            <!-- TODO: Implement -->
                         </details>
 
 
                         <details class="details1-sub-details">
                             <summary>Meine 3 wichtigsten Punkte, die ich aus diesem Projekt gelernt habe</summary>
-                            <p>
-                                Ein sehr gutes Buch, um die SAP-Technologien und deren Eigenheiten kennenzulernen.
-                                Es
-                                bietet Grundwissen für Anpassung, Entwicklung als auch Administration.
-                            </p>
+                            <!-- TODO: Implement -->
                         </details>
                     </details>
 
@@ -838,11 +826,9 @@
                                 </li>
                                 <li>
                                     <b>Projektziel:</b> Report über alle möglichen Preisfindungs-Konditionen
-                                    (Transaktion VOK0). Da jede Preiskondition eine andere Zugriffsfolge inklusive
-                                    mehrere Zugriffe mit jeweils unterschiedlicher Datenbanktabelle + Selektionsfelder
-                                    hat, ist ein manuelles, statisches Programmierung nicht möglich. Das wäre unheimlich
-                                    viel Schreibaufwand und würde auch nicht schön skalieren bzw. viel Wartungsaufwand
-                                    bei Preiskonditions-Änderungen.
+                                    (Transaktion VOK0). Jede Konditionsart hat dabei eine Zugriffsfolge mit mehreren
+                                    Zugriffen. Jeder Zugriff hat mehrere Felder inklusive unterschiedlicher
+                                    Datenbanktabelle.
                                 </li>
                                 <li>
                                     <b>Anzahl Projektbeteiligte:</b> ~ 4 MA (SAP-Entwickler, SAP-Berater, 2 Tester aus
@@ -858,7 +844,9 @@
                                     <b>Ergebnis:</b> Report, mit dem alle möglichen Preiskonditionen und deren Sätze
                                     angezeigt werden können. Es skaliert schön, da neue Preiskonditionen nicht extra
                                     programmiert werden müssen. Außerdem bei Löschung oder Änderung von Preiskonditionen
-                                    (inkl. Zugriffsfolge, Zugriffe und Felder) keine Anpassung nötig.
+                                    (inkl. Zugriffsfolge, Zugriffe und Felder) keine Anpassung nötig. Mögliche
+                                    (Laufzeit-)Fehler werden abgefangen und Anwender als auch Entwickler mit
+                                    inhaltsreicher Meldung entsprechend informiert.
                                 </li>
                                 <li>
                                     <b>Tech Stack:</b>
@@ -875,14 +863,66 @@
 
                         <details class="details1-sub-details">
                             <summary>Wie ich an diesem Projekt gearbeitet habe</summary>
-                            <!-- TODO: Implement -->
+                            <p>
+                                Zuerst hatte ich keine Ahnung, wie ich das Projekt umsetzen soll. Wie schreibe ich einen
+                                Report, ohne mindestens 20 Selektionsbildschirme, Datenbankabfragen sowie
+                                Ausgabe-Tabellen erstellen zu müssen?
+                            </p>
+
+                            <p>
+                                Das wäre unheimlicher Aufwand. Und bei neu hinzugefügten Preiskonditionen als auch wenn
+                                neue verändert oder gelöscht werden, ist Wartungsaufwand notwendig.
+                            </p>
+
+                            <p>
+                                Als ich das Vorgehen in der Transaktion VOK0 (Preisfindung Customizing) aus der
+                                Vogelperspektive auf ein Blatt Papier gezeichnet hatte, kam mir die goldene Idee:
+                                Dynamische Programmierung.
+                            </p>
+
+                            <p>
+                                Bisher hatte ich damit nur oberflächlich in der Schulung &ldquor;ABAP für
+                                Fortgeschrittene&ldquo; der TH Brandenburg (siehe <a href="/about-me.html">Über
+                                    mich-Seite, Abschnitt Zertifikate</a> für mehr Informationen) zu tun. Also musste
+                                ich mich erstmal ausführlich einlesen und ausprobieren.
+                            </p>
+
+                            <p>
+                                Während der Entwicklung wurde viel getestet, dokumentiert als auch Code Refactoring
+                                betrieben.
+                            </p>
+
+                            <p>
+                                War der Report fertig, wurden die finalen Tests gemacht und der Code als auch die
+                                Dokumentation verfeinert. Anschließend stellte ich es vor.
+                            </p>
                         </details>
 
 
                         <details class="details1-sub-details">
                             <summary>Warum ich das Projekt auf diese Art &amp; Weise umgesetzt habe
                             </summary>
-                            <!-- TODO: Implement-->
+                            <p>
+                                Da jede Preiskondition eine andere Zugriffsfolge inklusive
+                                mehrere Zugriffe mit jeweils unterschiedlicher Datenbanktabelle + Selektionsfelder
+                                hat, ist ein manuelles, statisches Programmierung nicht möglich. Das wäre unheimlich
+                                viel Schreibaufwand und würde auch nicht schön skalieren bzw. viel Wartungsaufwand
+                                bei Preiskonditions-Änderungen.
+                            </p>
+
+                            <p>
+                                Da auch keiner im Betrieb dynamische Programmierung beherrscht hatte, habe ich viel Wert
+                                auf Dokumentation und Code Refactoring gelegt. Damit die Wartung durch meine Kollegen
+                                möglichst einfach und schnell vonstattengeht - falls ich mir z. B. zu dem Zeitpunkt ein
+                                schönes Leben im Ausland mache 😉
+                            </p>
+
+                            <p>
+                                Im Report wurde einiges an Fehlerbehandlung betrieben. Damit Anwender als auch
+                                Entwickler nicht im Dunkeln gelassen werden. Bei dynamischer Programmierung muss man
+                                auch sein Handwerk verstehen, da es z. B. keine Syntax-Prüfung gibt und der Code erst
+                                zur Laufzeit festgelegt wird.
+                            </p>
                         </details>
 
 
@@ -890,10 +930,10 @@
                             <summary>Meine 3 wichtigsten Punkte, die ich aus diesem Projekt gelernt habe</summary>
                             <ol>
                                 <li>
-                                    Dynamische Programmierung: Zu dem Zeitpunkt beherrschte niemand im Betrieb
-                                    dynamische Programmierung. Das heißt, ich war auf mich alleine gestellt. Durch
-                                    Recherche und Ausprobieren weiß ich nun deutlich mehr über dynamische Programmierung
-                                    (Selektionsbildschirm, Datenbankabfrage &amp; Ausgabe-Tabelle).
+                                    Dynamische Programmierung: Zu dem Zeitpunkt des Projektes beherrschte niemand im
+                                    Betrieb die Technik. Das heißt, ich war auf mich alleine gestellt. Durch
+                                    Recherche und Ausprobieren weiß ich nun deutlich mehr (dynamischer
+                                    Selektionsbildschirm, Datenbankabfrage, Ausgabe-Tabelle, ...).
                                 </li>
                                 <li>
                                     Papierskizzen können Gold wert sein. Durch die Skizzierung des ganzen
