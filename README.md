@@ -1,4 +1,4 @@
-# www.christian-schwanse.com - Portfolio Website
+# [www.christian-schwanse.com](http://www.christian-schwanse.com) - Portfolio Website
 On the website I present myself, my skills, professional experience and projects.<br />
 The portfolio website itself is also a project.<br />
 <br />
