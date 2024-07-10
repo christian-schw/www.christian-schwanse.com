@@ -26,12 +26,14 @@ function greetingsConsole() {
     }
     greetings += 'It has too many bugs.\n';
     greetings += '\n';
-
     greetings += 'That was a really cool joke, wasn\'t it?\n';
     greetings += '\n';
     greetings += 'If you want to find more Easter Eggs, have a look at my Github account!\n';
     greetings += 'https://github.com/CrazyChair69\n';
     greetings += 'Maybe you\'ll find more...\n';
+    greetings += '\n';
+    greetings += 'I am open to job offers!\n';
+    greetings += 'You can reach me at: christian-schwanse@gmx.net\n';
 
     console.log(greetings);
 }
