@@ -829,7 +829,9 @@
                                     <b>Projektziel:</b> Report über alle möglichen Preisfindungs-Konditionen
                                     (Transaktion VOK0). Jede Konditionsart hat dabei eine Zugriffsfolge mit mehreren
                                     Zugriffen. Jeder Zugriff hat mehrere Felder inklusive unterschiedlicher
-                                    Datenbanktabelle.
+                                    Datenbanktabelle. Zur selben Zeit können auch mehrere unterschiedliche
+                                    Konditionsarten
+                                    abgefragt werden.
                                 </li>
                                 <li>
                                     <b>Anzahl Projektbeteiligte:</b> ~ 4 MA (SAP-Entwickler, SAP-Berater, 2 Tester aus
@@ -865,9 +867,9 @@
                         <details class="details1-sub-details">
                             <summary>Wie ich an diesem Projekt gearbeitet habe</summary>
                             <p>
-                                Zuerst hatte ich keine Ahnung, wie ich das Projekt umsetzen soll. Wie schreibe ich einen
-                                Report, ohne mindestens 20 Selektionsbildschirme, Datenbankabfragen sowie
-                                Ausgabe-Tabellen erstellen zu müssen?
+                                Nachdem die Anforderungen klar waren, hatte ich zuerst ich keine Ahnung, wie ich das
+                                Projekt umsetzen soll. Wie schreibe ich einen Report, ohne mindestens 50
+                                Selektionsbildschirme, Datenbankabfragen sowie Ausgabe-Tabellen erstellen zu müssen?
                             </p>
 
                             <p>
@@ -904,15 +906,28 @@
                             <summary>Warum ich das Projekt auf diese Art &amp; Weise umgesetzt habe
                             </summary>
                             <p>
-                                Da jede Preiskondition eine andere Zugriffsfolge inklusive
-                                mehrerer Zugriffe mit jeweils unterschiedlicher Datenbanktabelle + Selektionsfelder
-                                hat, ist ein manuelles, statisches Programmierung nicht möglich. Das wäre unheimlich
-                                viel Schreibaufwand und würde auch nicht schön skalieren bzw. viel Wartungsaufwand
-                                bei Preiskonditions-Änderungen.
+                                Da jede Preiskondition eine andere Zugriffsfolge inklusive mehrerer Zugriffe mit jeweils
+                                unterschiedlicher Datenbanktabelle + Selektionsfelder hat, ist eine manuelle, statische
+                                Programmierung nicht möglich.
                             </p>
 
                             <p>
-                                Da auch keiner im Betrieb dynamische Programmierung beherrscht hatte, habe ich viel Wert
+                                Zusätzlich kommt auch die Anforderung mehrere Konditionsarten gleichzeitig abfragen zu
+                                können. Das wiederum macht das Programm deutlich komplexer (z. B. nur ein Feld namens
+                                &ldquor;Verkaufsorganisation&ldquo; im Selektionsbildschirm dynamisch anzeigen lassen,
+                                obwohl es mehrmals in verschiedenen Datenbanken vorkommt. Zudem muss die
+                                Verkaufsorganisation auch dementsprechend in jeder Datenbanktabelle mitgegeben werden,
+                                falls vorhanden).
+                            </p>
+
+                            <p>
+                                Das wäre unheimlich viel Schreibaufwand, wenn das Programm statisch geschrieben werden
+                                würde. Außerdem würde es auch nicht schön skalieren bzw. bringt bei
+                                Preiskonditions-Änderungen viel Wartungsaufwand mit sich.
+                            </p>
+
+                            <p>
+                                Da keiner im Betrieb dynamische Programmierung beherrscht hatte, habe ich viel Wert
                                 auf Dokumentation und Code Refactoring gelegt. Damit die Programmanpassung durch meine
                                 Kollegen möglichst einfach und schnell vonstattengeht - falls ich mir z. B. zu dem
                                 Zeitpunkt ein schönes Leben im Ausland mache 😉
