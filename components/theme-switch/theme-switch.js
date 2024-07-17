@@ -6,6 +6,9 @@ let themePath = sessionStorage.getItem("themePath");
 export function initTheme() {
     // Use theme which was set by the user in the past.
     // themePath should have a correct value / theme CSS path when the website is loaded!
+
+    const themeLink = document.querySelector('#theme-link');
+
     // If nothing or an invalid value has been set, use default theme ==> lightTheme
     if (themePath !== darkTheme) {
         themePath = lightTheme;

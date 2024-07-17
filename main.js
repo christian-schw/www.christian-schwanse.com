@@ -12,7 +12,7 @@ function init() {
     let checkBoxTheme = document.querySelector('#theme-checkbox');
     checkBoxTheme.addEventListener('change', themeSwitch.setTheme, false);
 
-    themeSwitch.init();
+    themeSwitch.initTheme();
 }
 
 
