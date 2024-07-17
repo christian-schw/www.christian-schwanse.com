@@ -4,12 +4,15 @@ import * as themeSwitch from '/components/theme-switch/theme-switch.js';
 window.onload = init();
 
 
+
 function init() {
     greetingsConsole();
 
     // Theme Switching
     let checkBoxTheme = document.querySelector('#theme-checkbox');
     checkBoxTheme.addEventListener('change', themeSwitch.setTheme, false);
+
+    themeSwitch.init();
 }
 
 
