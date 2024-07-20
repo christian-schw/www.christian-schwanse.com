@@ -15,12 +15,7 @@ export function initTheme() {
         // Set appearance of theme switch as well
         // Otherwise it can happen that Dark Theme is 
         // displayed but the theme switch is still set to Light Theme.
-        //
-        // Note: 
-        // Pseudoelements like ::after and ::before are not part of DOM!
-        // Therefore, cannot be manipulated directly
-        let themeSlider = document.querySelector('#theme-slider');
-        // TODO: Bugfix when initTheme -> set css-pseudoclass night when night theme activated
+        document.querySelector('#theme-checkbox').checked = true;
     }
     else {
         // If nothing or an invalid value has been set, use default theme ==> lightTheme
