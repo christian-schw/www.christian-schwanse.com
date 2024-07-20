@@ -9,8 +9,8 @@ function init() {
     greetingsConsole();
 
     // Theme Switching
-    let checkBoxTheme = document.querySelector('#theme-checkbox');
-    checkBoxTheme.addEventListener('change', themeSwitch.setTheme, false);
+    let themeCheckbox = document.querySelector('#theme-checkbox');
+    themeCheckbox.addEventListener('change', themeSwitch.setTheme, false);
 
     themeSwitch.initTheme();
 }
