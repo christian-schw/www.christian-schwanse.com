@@ -1,4 +1,5 @@
 import * as themeSwitch from '/components/theme-switch/theme-switch.js';
+import * as languageSwitch from '/components/languageSwitch/languageSwitch.js';
 
 // To be sure that JS Code runs only when DOM is ready -> To prevent errors
 window.onload = init();
