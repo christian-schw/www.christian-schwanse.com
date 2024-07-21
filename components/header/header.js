@@ -16,8 +16,7 @@ class Header extends HTMLElement {
      * each time custom element is inserted into DOM.
      */
     connectedCallback() {
-        const lang = languageSwitch.getLanguagePage();
-        if (lang === 'en') {
+        if (languageSwitch.getLanguagePage() === 'en') {
             this.innerHTML = `
             <header id="page-header">
                 <h2 class="visually-hidden">Page Header - Christian Schwanse</h2>
@@ -47,7 +46,7 @@ class Header extends HTMLElement {
             `;
         }
         else {
-            // Use german as default language
+            // Use German as default language
             this.innerHTML = `
             <header id="page-header">
                 <h2 class="visually-hidden">Page Header - Christian Schwanse</h2>
@@ -80,6 +79,3 @@ class Header extends HTMLElement {
 }
 
 customElements.define('header-component', Header);
-
-// TODO: Implement header-component-de and header-component-en in this file
-// TODO: Same goes with footer.
