@@ -48,7 +48,7 @@ export function setLanguagePage(evt, lang, pageURL) {
  * @param {String} lang 
  * @param {String} pageURL 
  * @param {String} domain 
- * @returns {String}
+ * @returns {String} newURL
  */
 function replaceLangDirectoryInURL(lang, pageURL, domain) {
     let newURL = pageURL.replace(domain, '');
@@ -66,4 +66,31 @@ function replaceLangDirectoryInURL(lang, pageURL, domain) {
     newURL = newURL.join('/');
 
     return newURL;
+}
+
+
+
+/**
+ * Get Language of Page for translating header text content.
+ * @returns {String} lang
+ */
+export function getLanguagePage() {
+    // It's good to check if Location object is available to avoid potential pitfalls.
+    if (window.location) {
+        const domain = window.location.origin;
+        const currentURL = window.location.href;
+
+        let languageDirectory = currentURL.replace(domain, '');
+        languageDirectory = languageDirectory.split('/');
+
+        // Delete first value of array produced by split-method because it's empty
+        // Example:
+        // Before split: /de/about-me.html
+        // After split: ['', 'de', 'about-me.html']
+        // Desired value: ['de', 'about-me.html']
+        languageDirectory.shift();
+
+        const lang = languageDirectory[0];
+        return lang;
+    }
 }
