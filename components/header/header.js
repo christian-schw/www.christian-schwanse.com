@@ -20,8 +20,8 @@ class Header extends HTMLElement {
                 <li class="btn-nav btn-nav-normal"><a href="about-me.html">Über mich</a></li>
                 <li class="btn-nav btn-nav-normal"><a href="my-projects.html">Projekte</a></li>
                 <li class="btn-nav btn-nav-normal"><a href="contact.html">Kontakt</a></li>
-                <li class="btn-nav btn-nav-normal"><a href="">DE</a></li>
-                <li class="btn-nav btn-nav-normal"><a href="">EN</a></li>
+                <li class="btn-nav btn-nav-normal" id="btn-lang-de"><a href="">DE</a></li>
+                <li class="btn-nav btn-nav-normal" id="btn-lang-en"><a href="">EN</a></li>
                 <li>
                     <div id="theme-switch-wrapper">
                         <label id="theme-switch" for="theme-checkbox">
@@ -38,3 +38,6 @@ class Header extends HTMLElement {
 }
 
 customElements.define('header-component', Header);
+
+// TODO: Implement header-component-de and header-component-en in this file
+// TODO: Same goes with footer.

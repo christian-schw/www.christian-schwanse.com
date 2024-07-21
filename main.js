@@ -1,5 +1,5 @@
 import * as themeSwitch from '/components/theme-switch/theme-switch.js';
-import * as languageSwitch from '/components/languageSwitch/languageSwitch.js';
+import * as languageSwitch from '/components/language-switch/language-switch.js';
 
 // To be sure that JS Code runs only when DOM is ready -> To prevent errors
 window.onload = init();
@@ -9,15 +9,42 @@ window.onload = init();
 function init() {
     greetingsConsole();
 
+
+
     // Theme Switching
-    let themeCheckbox = document.querySelector('#theme-checkbox');
+    const themeCheckbox = document.querySelector('#theme-checkbox');
     themeCheckbox.addEventListener('change', themeSwitch.setTheme, false);
 
     themeSwitch.initTheme();
+
+
+
+    // Language of Page
+    //
+    // It's good to check if Location object is available to avoid potential pitfalls.
+    if (window.location) {
+        const currentURL = window.location.href;
+
+        // Create additional handles for language event listener.
+        // Otherwise method setLanguagePage is fired endlessly.
+        // Reason: setLanguagePage uses command 'window.location.replace(newURL);' which
+        //         refreshes page with new URL and event listener is fired again.
+        const handleLangDe = function (evt) { languageSwitch.setLanguagePage(evt, 'de', currentURL); };
+        const handleLangEn = function (evt) { languageSwitch.setLanguagePage(evt, 'en', currentURL); };
+
+        const btnLangDe = document.querySelector('#btn-lang-de');
+        btnLangDe.addEventListener('click', handleLangDe, false);
+
+        const btnLangEn = document.querySelector('#btn-lang-en');
+        btnLangEn.addEventListener('click', handleLangEn, false);
+    }
 }
 
 
-// Easter Egg: Welcome visitors who dare to take a look inside the console... ;)
+
+/**
+ * Easter Egg: Welcome visitors who dare to take a look inside the console... ;)
+ */
 function greetingsConsole() {
     let greetings = 'Hello there!\n';
     greetings += '\n';
