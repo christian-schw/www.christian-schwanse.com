@@ -22,6 +22,8 @@ Tech Stack:
 - Inkscape
 - Github
 - MS Visual Studio
+- Domain Hosting: Strato
+- FTP: FileZilla
 <br />
 <br />
 
