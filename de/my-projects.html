@@ -34,18 +34,8 @@
     <link rel="stylesheet" href="/components/footer/footer.css">
 
 
-    <script src="/components/header/header.js" type="module"></script>
-    <script src="/components/footer/footer.js" type="module"></script>
-    <script src="/components/table-of-contents/table-of-contents.js"></script>
-    <script src="/components/details-summary/details-summary.js"></script>
-    <script src="/components/button/button.js"></script>
-    <script src="/components/image/image.js"></script>
-    <script src="/main.js" type="module"></script>
-
-
     <!-- Site specific things -->
     <link rel="stylesheet" href="/pages/my-project/my-project.css">
-    <script src="/pages/my-project/my-project.js"></script>
 </head>
 
 <body>
@@ -1117,6 +1107,22 @@
     </main>
 
     <footer-component></footer-component>
+
+
+    <!--
+        JS-Files at bottom of page to improve (perceived) performance
+        and avoid render blocking
+    -->
+    <script src="/components/header/header.js" type="module"></script>
+    <script src="/components/footer/footer.js" type="module"></script>
+    <script src="/components/table-of-contents/table-of-contents.js"></script>
+    <script src="/components/details-summary/details-summary.js"></script>
+    <script src="/components/button/button.js"></script>
+    <script src="/components/image/image.js"></script>
+    <script src="/main.js" type="module"></script>
+    
+    <!-- Site specific things -->
+    <script src="/pages/my-project/my-project.js"></script>
 </body>
 
 </html>

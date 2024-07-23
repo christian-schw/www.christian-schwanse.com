@@ -31,17 +31,8 @@
     <link rel="stylesheet" href="/components/footer/footer.css">
 
 
-
-    <script src="/components/header/header.js" type="module"></script>
-    <script src="/components/footer/footer.js" type="module"></script>
-    <script src="/components/button/button.js"></script>
-    <script src="/main.js" type="module"></script>
-
-
-
     <!-- Site specific things -->
     <link rel="stylesheet" href="/pages/contact/contact.css">
-    <script src="/pages/contact/contact.js"></script>
 </head>
 
 <body>
@@ -70,6 +61,19 @@
     </main>
 
     <footer-component></footer-component>
+
+    
+    <!--
+        JS-Files at bottom of page to improve (perceived) performance
+        and avoid render blocking
+    -->
+    <script src="/components/header/header.js" type="module"></script>
+    <script src="/components/footer/footer.js" type="module"></script>
+    <script src="/components/button/button.js"></script>
+    <script src="/main.js" type="module"></script>
+    
+    <!-- Site specific things -->
+    <script src="/pages/contact/contact.js"></script>
 </body>
 
 </html>
