@@ -19,6 +19,7 @@ Tech Stack:
 - HTML
 - CSS
 - JavaScript
+- PHP
 - Inkscape
 - Github
 - MS Visual Studio
