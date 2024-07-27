@@ -1,6 +1,6 @@
 <?php
 /*
-    This index.html serves as a placeholder. 
+    This index.php serves as a placeholder. 
     Is only used for a redirect on the server side. 
 
     If I select the directory on Strato (domain hoster) where the index.html is located (directory: /en/), 
@@ -14,6 +14,8 @@
     Example:
     All German pages are in the /de/ directory.
     All English pages are in the /en/ directory.
+
+    German is the main language of this website, hence /de/.index.html as default.
 */
 header("Location: /de/index.html", true, 301);
 die();
