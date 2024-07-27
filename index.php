@@ -5,10 +5,10 @@
 
     If I select the directory on Strato (domain hoster) where the index.html is located (directory: /en/), 
     then the paths of the CSS and JS files are no longer correct. 
-    Loading the files therefore fails.
+    Loading the files in HTML-head-tag therefore fails.
 
     The desired index.html is located in the /de/ directory, 
-    as this is a multilingual site and the language of the individual pages +
+    as this is a multilingual website and the language of the individual pages
     is determined on the basis of the directories.
 
     Example:
