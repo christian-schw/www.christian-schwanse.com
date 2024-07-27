@@ -28,7 +28,7 @@ class Footer extends HTMLElement {
             
                 <div id="page-footer-right">
                     <div class="btn-nav btn-nav-small">
-                        <a href="#page-header">Go to top of page &uarr;</a>
+                        <a href="#page-headline">Go to top of page &uarr;</a>
                     </div>
                 </div>
             </footer>
@@ -48,7 +48,7 @@ class Footer extends HTMLElement {
             
                 <div id="page-footer-right">
                     <div class="btn-nav btn-nav-small">
-                        <a href="#page-header">Gehe zum Seitenanfang &uarr;</a>
+                        <a href="#page-headline">Gehe zum Seitenanfang &uarr;</a>
                     </div>
                 </div>
             </footer>

@@ -13,6 +13,15 @@
   align-items: center;
 
   padding: 1rem 2rem 1rem 2rem;
+
+
+  /* For classy "Sticky Header" */
+  position: sticky;
+  top: 0;
+  /* 
+    So that headers are always displayed in the foreground and are not overlapped by images, for example. 
+  */
+  z-index: 99;
 }
 
 
