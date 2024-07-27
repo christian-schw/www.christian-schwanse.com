@@ -1,3 +1,4 @@
+import * as header from '/components/header/header.js';
 import * as themeSwitch from '/components/theme-switch/theme-switch.js';
 import * as languageSwitch from '/components/language-switch/language-switch.js';
 
@@ -9,6 +10,9 @@ window.onload = init();
 function init() {
     greetingsConsole();
 
+
+    // Sticky Header
+    window.addEventListener('scroll', header.headerScrollAnimation, false);
 
 
     // Theme Switching

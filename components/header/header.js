@@ -79,3 +79,38 @@ class Header extends HTMLElement {
 }
 
 customElements.define('header-component', Header);
+
+
+
+// To save the user's scroll position
+let lastScrollTop = 0;
+
+/**
+ * Classy Scroll Animation of Header:
+ * When scrolling down, it should disappear.
+ * When scrolling up, it should appear.
+ */
+export function headerScrollAnimation(evt) {
+    const header = document.querySelector('#page-header');
+
+    // Height is not hardcoded so that the animation is responsive.
+    const headerHeight = header.offsetHeight;
+
+    /*
+      Use both methods (scrollY and scrollTop) to make sure
+      that code works in variety of browsers - including older
+      browsers that do not support scrollY.
+    */
+    let currentScrollTop = window.scrollY || document.documentElement.scrollTop;
+
+    if (currentScrollTop > lastScrollTop) {
+        // Scroll down
+        header.style.top = -headerHeight + "px";
+    }
+    else {
+        // Scroll up
+        header.style.top = "0px";
+    }
+
+    lastScrollTop = currentScrollTop;
+}
