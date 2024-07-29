@@ -151,6 +151,13 @@ code {
   =============================== Animations =============================
   ======================================================================== 
 */
+/* 
+  NOTE: Add "@media (prefers-reduced-motion: no-preference) {...}" to all
+  CSS animations.
+  Opens possibility to switch off animations.
+  --> If someone is susceptible to movements
+*/
+
 /*
   Prefers-reduced-motion --> Possibility to switch off animations.
   If someone is susceptible to movements.
@@ -227,13 +234,6 @@ code {
   ========================== Accessibility ===============================
   ======================================================================== 
 */
-/* 
-  NOTE: Add "@media (prefers-reduced-motion: no-preference) {...}" to all
-  CSS animations.
-  Opens possibility to switch off animations.
-  --> If someone is susceptible to movements
-*/
-
 /*
   Class for hiding e.g. headings as they should not be visible in layout.
   But they should exist for accessibility reasons (Screen Readers)

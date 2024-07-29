@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="12.5mm"
+   height="12.5mm"
+   viewBox="0 0 12.5 12.5"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   sodipodi:docname="burger_menu_dark_theme.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="8.3553674"
+     inkscape:cx="41.889241"
+     inkscape:cy="24.056393"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="3832"
+     inkscape:window-y="5"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     style="fill:none;stroke:none">
+    <path
+       style="fill:none;stroke:#d5e3ff;stroke-width:0.667919;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+       d="m 1.4405263,2.3339595 c 9.3512637,0 9.3320817,0 9.3320817,0"
+       id="path3616" />
+    <path
+       style="fill:none;stroke:#d5e3ff;stroke-width:0.667919;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+       d="m 1.5839591,6.25 c 9.3512639,0 9.3320819,0 9.3320819,0"
+       id="path3616-6" />
+    <path
+       style="fill:none;stroke:#d5e3ff;stroke-width:0.667919;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+       d="m 1.4405264,10.249959 c 9.3512636,0 9.3320816,0 9.3320816,0"
+       id="path3616-9" />
+  </g>
+</svg>

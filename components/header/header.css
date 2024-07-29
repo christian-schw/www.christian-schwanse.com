@@ -29,7 +29,9 @@
 
 #page-header-nav {
   flex-grow: 1;
-
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 
   /* 
       Use of start instead of left for better accessibility for different
@@ -37,7 +39,6 @@
   */
   text-align: end;
 }
-
 
 #page-header-nav-list {
   list-style: none;
