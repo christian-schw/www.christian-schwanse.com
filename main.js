@@ -15,6 +15,11 @@ function init() {
     window.addEventListener('scroll', header.headerScrollAnimation, false);
 
 
+    // Hamburger Menu for Mobile Responsiveness
+    const hamburgerNav = document.querySelector('#hamburger-nav');
+    hamburgerNav.addEventListener('click', header.showHamburgerMenuNavList, false);
+
+
     // Theme Switching
     const themeCheckbox = document.querySelector('#theme-checkbox');
     themeCheckbox.addEventListener('change', themeSwitch.setTheme, false);

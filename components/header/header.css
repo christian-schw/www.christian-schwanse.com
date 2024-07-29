@@ -38,6 +38,9 @@
       kinds of languages that are not read e. g. from left-to-right
   */
   text-align: end;
+
+  /* This transition is for Burger Menu */
+  transition: all 0.3s ease-in-out;
 }
 
 #page-header-nav-list {
@@ -69,4 +72,72 @@
   white-space: nowrap;
   color: var(--md-sys-color-on-primary-container);
   text-decoration: none;
+}
+
+
+
+/* 
+  ========================================================================
+  =========================== Hamburger Menu =============================
+  ======================================================================== 
+*/
+#hamburger-nav {
+  display: none;
+  cursor: pointer;
+}
+
+.bar-nav {
+  height: 2px;
+  width: 27px;
+  background-color: var(--md-sys-color-on-primary-container);
+  margin: 5px 0 0 0;
+  opacity: 0.8;
+  transition: all 0.3s ease-in-out;
+}
+
+.page-header-nav--open {
+  transform: translate(0) !important;
+}
+
+
+/* Bar classes for hamburger menu animation when user clicks on it */
+.hamburger-nav--open .bar-nav:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger-nav--open .bar-nav:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-nav--open .bar-nav:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+
+@media (max-width: 650px) {
+  #page-header-nav {
+    display: flex;
+    justify-content: center;
+
+    position: fixed;
+    top: 90px;
+    left: 0;
+    width: 100%;
+    padding: 10px 0 10px 0;
+
+    background-color: var(--md-sys-color-primary-container);
+
+    /* Navbar appears with JavaScript */
+    transform: translateX(-100%);
+  }
+
+  #page-header-nav-list {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 30px;
+  }
+
+  #hamburger-nav {
+    display: inline-block;
+  }
 }

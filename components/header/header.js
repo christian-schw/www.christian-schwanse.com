@@ -54,6 +54,13 @@ class Header extends HTMLElement {
                         </ul>
                     </div>
                 </nav>
+
+
+                <div id="hamburger-nav">
+                  <div class="bar-nav"></div>
+                  <div class="bar-nav"></div>
+                  <div class="bar-nav"></div>
+                </div>
             </header>
             `;
         }
@@ -96,6 +103,13 @@ class Header extends HTMLElement {
                         </ul>
                     </div>
                 </nav>
+
+                
+                <div id="hamburger-nav">
+                  <div class="bar-nav"></div>
+                  <div class="bar-nav"></div>
+                  <div class="bar-nav"></div>
+                </div>
             </header>
             `;
         }
@@ -113,6 +127,7 @@ let lastScrollTop = 0;
  * Classy Scroll Animation of Header:
  * When scrolling down, it should disappear.
  * When scrolling up, it should appear.
+ * @param {*} evt 
  */
 export function headerScrollAnimation(evt) {
     const header = document.querySelector('#page-header');
@@ -137,4 +152,19 @@ export function headerScrollAnimation(evt) {
     }
 
     lastScrollTop = currentScrollTop;
+}
+
+
+/**
+ * Hamburger Menu Animation:
+ * When user clicks on Hamburger Menu on e.g. smartphone,
+ * navigation list of header should appear
+ * @param {*} evt 
+ */
+export function showHamburgerMenuNavList(evt) {
+    const pageHeaderNav = document.querySelector('#page-header-nav');
+    const hamburgerNav = document.querySelector('#hamburger-nav');
+
+    pageHeaderNav.classList.toggle('page-header-nav--open');
+    hamburgerNav.classList.toggle('hamburger-nav--open');
 }
