@@ -30,7 +30,21 @@ body {
   box-sizing: border-box;
 }
 
-/* NOTE: Use REM-Unit for remaining font size changes */
+/* 
+  Note: 
+  Use REM-Unit for remaining font size changes. 
+*/
+
+/* 
+  Note: 
+  Media Query Breakpoints variables to control centrally don't work
+  in vanilla CSS.
+
+  Reason: 
+  Media queries aren't conceptually attached to HTML elements at all.
+  These declarations are processed while your CSS is being parsed, 
+  so it won't know to look to the :root and pull in the variable values.
+*/
 
 
 
