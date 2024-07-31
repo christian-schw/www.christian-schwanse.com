@@ -114,13 +114,13 @@
 }
 
 
-@media (max-width: 650px) {
+@media (max-width: 1124px) {
   #page-header-nav {
     display: flex;
     justify-content: center;
 
     position: fixed;
-    top: 90px;
+    top: 100px;
     left: 0;
     width: 100%;
     padding: 10px 0 10px 0;

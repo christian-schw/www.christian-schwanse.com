@@ -32,7 +32,10 @@ body {
 
 /* 
   Note: 
-  Use REM-Unit for remaining font size changes. 
+  Use REM-Unit for remaining font size changes instead of fixed pixel values.
+
+  Reason: 
+  Better font responsiveness as everything is controlled via root element.
 */
 
 /* 
