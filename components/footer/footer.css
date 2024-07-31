@@ -46,3 +46,20 @@
     font-size: 0.9rem;
     margin: 12px 0px 12px 0px;
 }
+
+
+
+/* 
+  ========================================================================
+  ====================== Mobile Responsiveness ===========================
+  ======================================================================== 
+*/
+/* 
+  Media Query Breakpoints are based on the sizes of the devices 
+  in Google developer tools. 
+*/
+@media (max-width: 320px) {
+    #page-footer {
+        gap: 20px;
+    }
+}

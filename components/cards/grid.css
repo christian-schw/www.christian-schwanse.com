@@ -28,3 +28,20 @@
   grid-template-rows: subgrid;
   grid-row: span 3;
 }
+
+
+
+/* 
+  ========================================================================
+  ====================== Mobile Responsiveness ===========================
+  ======================================================================== 
+*/
+/* 
+  Media Query Breakpoints are based on the sizes of the devices 
+  in Google developer tools. 
+*/
+@media (max-width: 320px) {
+  .grid-cards-wrapper {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+}

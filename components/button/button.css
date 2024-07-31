@@ -92,3 +92,30 @@
     background-color: var(--md-sys-color-on-primary-container);
     color: var(--md-sys-color-primary-container);
 }
+
+
+
+/* 
+  ========================================================================
+  ====================== Mobile Responsiveness ===========================
+  ======================================================================== 
+*/
+/* 
+  Media Query Breakpoints are based on the sizes of the devices 
+  in Google developer tools. 
+*/
+@media (max-width: 320px) {
+
+    .btn-highlighted,
+    .btn-underemphasized {
+        margin: 0px;
+    }
+
+    .btn-cta-at-end {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 38px;
+    }
+}

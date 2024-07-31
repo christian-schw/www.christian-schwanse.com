@@ -9,6 +9,8 @@
   border: 1px solid var(--md-sys-color-on-secondary);
   border-radius: 8px;
   padding: 24px;
+  font-size: 1.5rem;
+  font-weight: 500;
 
   display: flex;
   justify-content: center;

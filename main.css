@@ -30,24 +30,18 @@ body {
   box-sizing: border-box;
 }
 
+
+
+
 /* 
   Note: 
   Use REM-Unit for remaining font size changes instead of fixed pixel values.
 
   Reason: 
-  Better font responsiveness as everything is controlled via root element.
+  Better font responsiveness & maintenance as everything is 
+  controlled via root element.
 */
 
-/* 
-  Note: 
-  Media Query Breakpoints variables to control centrally don't work
-  in vanilla CSS.
-
-  Reason: 
-  Media queries aren't conceptually attached to HTML elements at all.
-  These declarations are processed while your CSS is being parsed, 
-  so it won't know to look to the :root and pull in the variable values.
-*/
 
 
 
@@ -265,4 +259,50 @@ code {
   position: absolute;
   white-space: nowrap;
   width: 1px;
+}
+
+
+
+
+/* 
+  ========================================================================
+  ====================== Mobile Responsiveness ===========================
+  ======================================================================== 
+*/
+/* 
+  Media Query Breakpoints are based on the sizes of the devices 
+  in Google developer tools. 
+*/
+
+/* 
+  Note: 
+  Media Query Breakpoints variables to control centrally don't work
+  in vanilla CSS.
+
+  Reason: 
+  Media queries aren't conceptually attached to HTML elements at all.
+  These declarations are processed while your CSS is being parsed, 
+  so it won't know to look to the :root and pull in the variable values.
+*/
+
+@media (max-width: 425px) {
+  html,
+  body {
+    font-size: 12px;
+  }
+
+  .content-after-hero-section {
+    padding: 40px 20px 40px 20px;
+  }
+}
+
+/* 
+  Smallest width of smart phone is usually 320px. 
+  Just to be sure, adjust it below 320px.
+*/
+@media (max-width: 312px) {
+  html,
+  body {
+    font-size: 10px;
+  }
 }

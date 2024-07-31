@@ -5,20 +5,20 @@
 */
 #homepage-hero-section {
     display: flex;
-    flex-flow: row wrap;
-    padding: 60px 0px 80px 0px;
-
-    margin-left: 10%;
-    margin-right: 10%;
-}
-
-#homepage-hero-section>* {
-    flex: 1;
+    /* 
+      No flex wrap because style decision: Image should always be next to introductory text.
+      Exception: Really small devices.
+    */
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 120px 80px 120px;
 }
 
 
 
 #homepage-hero-section-text {
+    flex: 1;
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
@@ -31,6 +31,7 @@
 
 
 #homepage-hero-section-img {
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -56,9 +57,42 @@
 }
 
 #teaser-section h4 {
-    margin-top: 48px;
+    margin-top: 62px;
 }
 
 #teaser-section footer {
     margin-top: 48px;
+}
+
+
+
+/* 
+  ========================================================================
+  ====================== Mobile Responsiveness ===========================
+  ======================================================================== 
+*/
+/* 
+  Media Query Breakpoints are based on the sizes of the devices 
+  in Google developer tools. 
+*/
+
+/* 
+  Max-width: 100% scales to fast for my taste.
+  
+  Result: 
+  Hero Page looks ugly with text beneath the image.
+  With Mobile Device Width = 320px, the image disappears.
+*/
+@media (max-width: 320px) {
+    #homepage-hero-section {
+        display: flex;
+        flex-flow: row wrap-reverse;
+        align-items: center;
+        justify-content: center;
+        padding: 0px 10px 80px 10px;
+    }
+
+    #homepage-hero-section-img img {
+        max-width: 300px;
+    }
 }
