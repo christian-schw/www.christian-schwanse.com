@@ -21,7 +21,7 @@ function init() {
     hamburgerNav.addEventListener('click', header.toggleHamburgerMenuNavList, false);
 
     // Use debouncing to improve performance of scroll-event
-    const debounceHideHamburgerNavList = debounce(header.hideHamburgerMenuNavList, 10);
+    const debounceHideHamburgerNavList = debounce(header.hideHamburgerMenuNavList, 0);
     window.addEventListener('scroll', debounceHideHamburgerNavList, false);
 
 
