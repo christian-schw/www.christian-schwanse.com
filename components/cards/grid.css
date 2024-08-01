@@ -40,7 +40,7 @@
   Media Query Breakpoints are based on the sizes of the devices 
   in Google developer tools. 
 */
-@media (max-width: 320px) {
+@media (max-width: 425px) {
   .grid-cards-wrapper {
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   }
