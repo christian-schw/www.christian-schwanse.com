@@ -26,7 +26,6 @@
 
 
   padding: 12px 42px 12px 42px;
-  white-space: nowrap;
   text-decoration: none;
   color: var(--md-sys-color-primary-container);
 }
@@ -108,6 +107,7 @@
   font-size: 1.2rem;
   display: flex;
   justify-content: flex-end;
+  margin: 12px 0px 12px 0px;
 }
 
 .btn-jump-to-toc a {
@@ -117,4 +117,29 @@
 .btn-jump-to-toc a:hover,
 .btn-jump-to-toc a:focus {
   color: var(--md-sys-color-custom-color-1);
+}
+
+
+/* 
+  ========================================================================
+  ====================== Mobile Responsiveness ===========================
+  ======================================================================== 
+*/
+/* 
+  Media Query Breakpoints are based on the sizes of the devices 
+  in Google developer tools. 
+*/
+@media (max-width: 320px) {
+
+  .btn-toc-heading,
+  .btn-toc-heading:hover,
+  .btn-toc-heading:focus {
+    font-size: 1.8rem;
+  }
+
+  .btn-toc-subheading,
+  .btn-toc-subheading:hover,
+  .btn-toc-subheading:focus {
+    font-size: 1.3rem;
+  }
 }

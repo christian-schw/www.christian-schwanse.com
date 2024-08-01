@@ -10,6 +10,13 @@ body {
   font-style: normal;
   font-size: 20px;
 
+  /* 
+    Declare automatic hyphenation. 
+    Very tedious to use &shy; everywhere.
+    Decreases readability as well.
+  */
+  hyphens: auto;
+
   background-color: var(--md-sys-color-surface);
   color: var(--md-sys-color-on-surface);
 

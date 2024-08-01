@@ -32,6 +32,10 @@
   color: var(--md-sys-color-on-secondary-container);
 }
 
+.details1 p {
+  margin: 16px 0px 16px 0px;
+}
+
 .details1 a,
 .details1-sub-details a {
   color: var(--md-sys-color-custom-color-1-container);
@@ -54,6 +58,7 @@
     Wide Paragraphs are difficult to read.
   */
   max-width: 50rem;
+  margin: 0px 0px 32px 0px;
 }
 
 
@@ -61,4 +66,47 @@
 .details1-sub-details {
   padding-left: 48px;
   margin: 48px 0px 48px 0px;
+}
+
+.details1-sub-details summary {
+  /* Sub-summary should have smaller font-size to make hierarchy more visible for user. */
+  font-size: 1.7rem;
+}
+
+
+
+/* 
+  ========================================================================
+  ====================== Mobile Responsiveness ===========================
+  ======================================================================== 
+*/
+/* 
+  Media Query Breakpoints are based on the sizes of the devices 
+  in Google developer tools. 
+*/
+
+/* 
+  Max-width: 100% scales to fast for my taste.
+  
+  Result: 
+  Hero Page looks ugly with text beneath the image.
+  With Mobile Device Width = 320px, the image disappears.
+*/
+@media (max-width: 320px) {
+  .details1 {
+    padding: 12px 12px 12px 12px;
+  }
+
+  .details1 summary {
+    font-size: 1.8rem;
+  }
+
+  .details1-sub-details {
+    padding: 0px 0px 0px 24px;
+    margin: 16px 0px 16px 0px;
+  }
+
+  .details1-sub-details summary {
+    font-size: 1.5rem;
+  }
 }

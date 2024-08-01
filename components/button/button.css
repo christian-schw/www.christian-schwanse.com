@@ -17,6 +17,15 @@
 .btn-underemphasized a,
 .btn-underemphasized a:hover,
 .btn-underemphasized a:focus {
+    /* 
+      Use display:block.
+      Otherwise it can happen that, for example, 
+      other a tags are positioned within the div tag 
+      of the button and the size of the button is 
+      not taken into account. 
+    */
+    display: block;
+
     font-size: 2.5rem;
     text-decoration: none;
     padding: 12px 42px 12px 42px;
@@ -116,6 +125,6 @@
         flex-flow: column wrap;
         justify-content: center;
         align-items: center;
-        gap: 38px;
+        gap: 16px;
     }
 }
