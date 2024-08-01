@@ -291,11 +291,11 @@ code {
   These declarations are processed while your CSS is being parsed, 
   so it won't know to look to the :root and pull in the variable values.
 */
+@media (max-width: 768px) {
 
-@media (max-width: 425px) {
   html,
   body {
-    font-size: 12px;
+    font-size: 16px;
   }
 
   .content-after-hero-section {
@@ -303,11 +303,22 @@ code {
   }
 }
 
+
+@media (max-width: 425px) {
+
+  html,
+  body {
+    font-size: 12px;
+  }
+}
+
+
 /* 
   Smallest width of smart phone is usually 320px. 
   Just to be sure, adjust it below 320px.
 */
 @media (max-width: 312px) {
+
   html,
   body {
     font-size: 10px;
