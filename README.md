@@ -45,6 +45,10 @@ Once the planning was complete, it was time to get down to business - a cycle co
 - Testing
 - Github Commit / Push
 <br />
+
+As a final step, the website was fine-tuned: mobile responsiveness, code refactoring,
+user-friendliness and SEO.
+<br />
 <br />
 
 ## Why I implemented the project in this way
