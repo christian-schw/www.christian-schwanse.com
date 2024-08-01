@@ -20,7 +20,7 @@
     /* 
       Use display:block.
       Otherwise it can happen that, for example, 
-      other a tags are positioned within the div tag 
+      other a-tags are positioned within the div-tag 
       of the button and the size of the button is 
       not taken into account. 
     */
@@ -113,7 +113,7 @@
   Media Query Breakpoints are based on the sizes of the devices 
   in Google developer tools. 
 */
-@media (max-width: 906px) {
+@media (max-width: 1024px) {
 
     .btn-highlighted,
     .btn-underemphasized {

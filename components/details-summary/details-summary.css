@@ -70,7 +70,7 @@
 
 .details1-sub-details {
   padding: 0px 0px 0px 48px;
-  margin: 48px 0px 48px 0px;
+  margin: 16px 0px 16px 0px;
 }
 
 .details1-sub-details summary {
@@ -96,7 +96,6 @@
 
   .details1-sub-details {
     padding: 0px 0px 0px 24px;
-    margin: 16px 0px 16px 0px;
   }
 
   .details1-sub-details li {
