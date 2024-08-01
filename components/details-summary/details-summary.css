@@ -58,7 +58,7 @@
     Wide Paragraphs are difficult to read.
   */
   max-width: 50rem;
-  margin: 0px 0px 32px 0px;
+  margin: 12px 0px 32px 0px;
 }
 
 
@@ -104,6 +104,10 @@
   .details1-sub-details {
     padding: 0px 0px 0px 24px;
     margin: 16px 0px 16px 0px;
+  }
+
+  .details1-sub-details li {
+    margin-bottom: 10px;
   }
 
   .details1-sub-details summary {
