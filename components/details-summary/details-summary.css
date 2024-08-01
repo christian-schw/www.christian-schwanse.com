@@ -78,6 +78,10 @@
   font-size: 1.7rem;
 }
 
+.details1-sub-details li {
+  margin: 0px 0px 10px 0px;
+}
+
 
 
 /* 
@@ -90,16 +94,13 @@
   in Google developer tools. 
 */
 @media (max-width: 768px) {
+
   .details1 summary {
     font-size: 1.8rem;
   }
 
   .details1-sub-details {
     padding: 0px 0px 0px 24px;
-  }
-
-  .details1-sub-details li {
-    margin: 0px 0px 10px 0px;
   }
 
   .details1-sub-details summary {
