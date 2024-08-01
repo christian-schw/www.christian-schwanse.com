@@ -29,7 +29,7 @@
   border-top-right-radius: 8px;
   background-color: var(--md-sys-color-custom-color-1-container);
   color: var(--md-sys-color-on-custom-color-1-container);
-  padding: 24px 32px 24px 32px;
+  padding: 24px 0px 24px 0px;
   text-align: center;
 
   display: flex;
@@ -41,8 +41,7 @@
 
 
 .cards1-box-content-body {
-  padding: 24px 32px 24px 32px;
-
+  padding: 0px 24px 0px 24px;
 
   /* 
       Align text to start.
@@ -77,25 +76,4 @@
     'opsz' 24;
 
   font-size: 3rem;
-}
-
-
-
-/* 
-  ========================================================================
-  ====================== Mobile Responsiveness ===========================
-  ======================================================================== 
-*/
-/* 
-  Media Query Breakpoints are based on the sizes of the devices 
-  in Google developer tools. 
-*/
-@media (max-width: 1024px) {
-  .cards1-box header {
-    padding: 24px 0px 24px 0px;
-  }
-
-  .cards1-box-content-body {
-    padding: 0px 16px 0px 16px;
-  }
 }
