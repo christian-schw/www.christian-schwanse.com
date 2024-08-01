@@ -13,7 +13,7 @@
   text-align: start;
 
   border-radius: 8px;
-  padding: 12px 42px 12px 42px;
+  padding: 12px 12px 12px 12px;
   margin: 16px 0px 16px 0px;
 }
 
@@ -33,7 +33,11 @@
 }
 
 .details1 p {
-  margin: 16px 0px 16px 0px;
+  margin: 16px 24px 16px 24px;
+}
+
+.details1 h4 {
+  margin: 12px 24px 12px 24px;
 }
 
 .details1 a,
@@ -58,13 +62,14 @@
     Wide Paragraphs are difficult to read.
   */
   max-width: 50rem;
+  padding: 0px 0px 0px 80px;
   margin: 12px 0px 32px 0px;
 }
 
 
 
 .details1-sub-details {
-  padding-left: 48px;
+  padding: 0px 0px 0px 48px;
   margin: 48px 0px 48px 0px;
 }
 
@@ -84,19 +89,7 @@
   Media Query Breakpoints are based on the sizes of the devices 
   in Google developer tools. 
 */
-
-/* 
-  Max-width: 100% scales to fast for my taste.
-  
-  Result: 
-  Hero Page looks ugly with text beneath the image.
-  With Mobile Device Width = 320px, the image disappears.
-*/
-@media (max-width: 425px) {
-  .details1 {
-    padding: 12px 12px 12px 12px;
-  }
-
+@media (max-width: 768px) {
   .details1 summary {
     font-size: 1.8rem;
   }
@@ -107,10 +100,30 @@
   }
 
   .details1-sub-details li {
-    margin-bottom: 10px;
+    margin: 0px 0px 10px 0px;
   }
 
   .details1-sub-details summary {
     font-size: 1.5rem;
+  }
+}
+
+
+
+@media (max-width: 425px) {
+
+  .details1 ul,
+  .details1 ol,
+  .details1-sub-details ul,
+  .details1-sub-details ol {
+    padding: 0px 0px 0px 40px;
+  }
+
+  .details1-sub-details h4 {
+    margin: 12px 0px 12px 0px;
+  }
+
+  .details1 p {
+    margin: 16px 0px 16px 0px;
   }
 }
