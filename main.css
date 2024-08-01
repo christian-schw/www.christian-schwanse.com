@@ -151,7 +151,7 @@ code {
   (e.g. earlier start/end of the animation).
 */
 .content-after-hero-section {
-  padding: 160px 80px 160px 80px;
+  padding: 240px 80px 240px 80px;
   text-align: center;
 }
 
@@ -291,6 +291,22 @@ code {
   These declarations are processed while your CSS is being parsed, 
   so it won't know to look to the :root and pull in the variable values.
 */
+
+
+/* For the big ladies and gentlemen */
+@media (min-width: 1921px) {
+
+  html,
+  body {
+    font-size: 28px;
+  }
+
+  .content-after-hero-section {
+    padding: 320px 40px 320px 40px;
+  }
+}
+
+
 @media (max-width: 1024px) {
 
   html,
@@ -299,7 +315,7 @@ code {
   }
 
   .content-after-hero-section {
-    padding: 100px 40px 100px 40px;
+    padding: 180px 40px 180px 40px;
   }
 }
 
@@ -312,7 +328,7 @@ code {
   }
 
   .content-after-hero-section {
-    padding: 40px 20px 40px 20px;
+    padding: 120px 20px 120px 20px;
   }
 }
 
