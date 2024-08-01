@@ -92,7 +92,7 @@
   Hero Page looks ugly with text beneath the image.
   With Mobile Device Width = 320px, the image disappears.
 */
-@media (max-width: 320px) {
+@media (max-width: 425px) {
   .details1 {
     padding: 12px 12px 12px 12px;
   }

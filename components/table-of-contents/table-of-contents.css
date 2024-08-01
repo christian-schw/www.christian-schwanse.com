@@ -129,7 +129,7 @@
   Media Query Breakpoints are based on the sizes of the devices 
   in Google developer tools. 
 */
-@media (max-width: 320px) {
+@media (max-width: 425px) {
 
   .btn-toc-heading,
   .btn-toc-heading:hover,
