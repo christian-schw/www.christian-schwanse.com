@@ -12,7 +12,8 @@ The portfolio website itself is also a project.<br />
 - Industry / Area: General / Web Development
 - Role: Lead Developer / Website Owner
 - Languages: German, English
-- Result: A website that can be found on the Internet by all kinds of interested parties all over the world. Also a significant improvement in front-end web development skills (HTML, CSS and JavaScript).
+- Result: A website that can be found on the Internet by all kinds of interested parties all over the world.
+The website has been optimized for all possible end devices and is therefore mobile-friendly. Also a significant improvement in front-end web development skills (HTML, CSS and JavaScript).
 <br />
 
 Tech Stack:
@@ -58,7 +59,7 @@ I also had the thought that I would clearly see the advantages and compromises o
 
 ## My 3 most important points that I have learned from this project
 1. Create your own components such as headers or footers that can be  can be reused across pages.
-2. Structuring of a web development project (e.g. file management or components)
+2. Mobile responsiveness. I thought it would be done with Flexbox and Grid - I was very wrong. I had to adapt the design in various places so that it looks good on small, medium-sized and extra-extra-large screens. The testing alone was time-consuming enough.
 3. It is very time-consuming to develop a website (including content) from scratch. Figma would make sense in the long term. A tool for designers and developers to create prototypes of UIs. This avoids the case of programming something for a long time and then discarding it in the end because you don't like it after all - I'd rather not say whether this happened to me during the project 😉 Todo management software such as Jira is also helpful.
 <br />
 <br />
