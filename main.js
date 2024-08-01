@@ -11,16 +11,23 @@ function init() {
     greetingsConsole();
 
 
-    // Sticky Header
+    // ========= Sticky Header =========
     window.addEventListener('scroll', header.headerScrollAnimation, false);
 
 
-    // Hamburger Menu for Mobile Responsiveness
+
+    // ========= Hamburger Menu for Mobile Responsiveness =========
     const hamburgerNav = document.querySelector('#hamburger-nav');
-    hamburgerNav.addEventListener('click', header.showHamburgerMenuNavList, false);
+    hamburgerNav.addEventListener('click', header.toggleHamburgerMenuNavList, false);
+
+    // Use debouncing to improve performance of scroll-event
+    const debounceHideHamburgerNavList = debounce(header.hideHamburgerMenuNavList, 10);
+    window.addEventListener('scroll', debounceHideHamburgerNavList, false);
 
 
-    // Theme Switching
+
+
+    // ========= Theme Switching =========
     const themeCheckbox = document.querySelector('#theme-checkbox');
     themeCheckbox.addEventListener('change', themeSwitch.setTheme, false);
 
@@ -28,16 +35,19 @@ function init() {
 
 
 
-    // Language of Page
-    //
-    // It's good to check if Location object is available to avoid potential pitfalls.
+
+    // ========= Language of Page =========
+    // It's good to check if Location object is available to avoid potential pitfalls
     if (window.location) {
         const currentURL = window.location.href;
 
-        // Create additional handles for language event listener.
-        // Otherwise method setLanguagePage is fired endlessly.
-        // Reason: setLanguagePage uses command 'window.location.replace(newURL);' which
-        //         refreshes page with new URL and event listener is fired again.
+        /*
+          Create additional handles for language event listener.
+          Otherwise method setLanguagePage is fired endlessly.
+
+          Reason: setLanguagePage uses command 'window.location.replace(newURL);' which
+          refreshes page with new URL and event listener is fired again.
+        */
         const handleLangDe = function (evt) { languageSwitch.setLanguagePage(evt, 'de', currentURL); };
         const handleLangEn = function (evt) { languageSwitch.setLanguagePage(evt, 'en', currentURL); };
 
@@ -48,6 +58,34 @@ function init() {
         btnLangEn.addEventListener('click', handleLangEn, false);
     }
 }
+
+
+
+/**
+ * Debounce (= Limiting frequency of function calls) a function.
+ * Helps to improve performance.
+ * 
+ * @param {Function} func 
+ * @param {number} delay
+ * 
+ * @returns {Function}
+ */
+function debounce(func, delay) {
+    let timerID;
+
+
+    // Return anonymous function that takes in any number of arguments
+    return function (...args) {
+        // Clear previous timer to prevent execution of function 'func'
+        clearTimeout(timerID);
+
+        // Set new timer that will execute 'func' after specified delay
+        timerID = setTimeout(() => {
+            func(...args);
+        }, delay);
+    }
+}
+
 
 
 

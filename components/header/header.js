@@ -122,6 +122,8 @@ customElements.define('header-component', Header);
 
 // To save the user's scroll position
 let lastScrollTop = 0;
+const classHamburgerNavOpen = "hamburger-nav--open";
+const classPageHeaderNavOpen = "page-header-nav--open";
 
 /**
  * Classy Scroll Animation of Header:
@@ -161,10 +163,31 @@ export function headerScrollAnimation(evt) {
  * navigation list of header should appear
  * @param {*} evt 
  */
-export function showHamburgerMenuNavList(evt) {
+export function toggleHamburgerMenuNavList(evt) {
     const pageHeaderNav = document.querySelector('#page-header-nav');
     const hamburgerNav = document.querySelector('#hamburger-nav');
 
-    pageHeaderNav.classList.toggle('page-header-nav--open');
-    hamburgerNav.classList.toggle('hamburger-nav--open');
+    pageHeaderNav.classList.toggle(classPageHeaderNavOpen);
+    hamburgerNav.classList.toggle(classHamburgerNavOpen);
+}
+
+
+/**
+ * Hide / Reset Hamburger Menu Animation
+ * 
+ * When scrolling, the menu should also be closed automatically 
+ * - for better user-friendliness. 
+ * 
+ * Otherwise you first have to scroll down again to make the menu 
+ * appear and then click on the hamburger button.
+ * @param {*} evt 
+ */
+export function hideHamburgerMenuNavList(evt) {
+    const pageHeaderNav = document.querySelector('#page-header-nav');
+    const hamburgerNav = document.querySelector('#hamburger-nav');
+
+    if (pageHeaderNav.classList.contains(classPageHeaderNavOpen)) {
+        pageHeaderNav.classList.remove(classPageHeaderNavOpen);
+        hamburgerNav.classList.remove(classHamburgerNavOpen);
+    }
 }
