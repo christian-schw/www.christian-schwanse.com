@@ -113,7 +113,7 @@
   Media Query Breakpoints are based on the sizes of the devices 
   in Google developer tools. 
 */
-@media (max-width: 768px) {
+@media (max-width: 906px) {
 
     .btn-highlighted,
     .btn-underemphasized {

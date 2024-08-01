@@ -83,12 +83,20 @@
   Hero Page looks ugly with text beneath the image.
   With Mobile Device Width = 320px, the image disappears.
 */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   #homepage-hero-section {
-    display: flex;
+    flex-flow: row;
+    padding: 0px 60px 80px 60px;
+  }
+
+  #homepage-hero-section-img img {
+    max-width: 496px;
+  }
+}
+
+@media (max-width: 906px) {
+  #homepage-hero-section {
     flex-flow: column-reverse;
-    align-items: center;
-    justify-content: center;
     padding: 0px 30px 80px 30px;
   }
 
@@ -100,10 +108,7 @@
 
 @media (max-width: 425px) {
   #homepage-hero-section {
-    display: flex;
     flex-flow: column-reverse;
-    align-items: center;
-    justify-content: center;
     padding: 0px 10px 80px 10px;
   }
 

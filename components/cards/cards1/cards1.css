@@ -16,35 +16,35 @@
 */
 
 .cards1-box {
-    border: 1px solid var(--md-sys-color-custom-color-1-container);
-    border-radius: 8px;
+  border: 1px solid var(--md-sys-color-custom-color-1-container);
+  border-radius: 8px;
 }
 
 .cards1-box:hover {
-    transform: scale(1.03);
+  transform: scale(1.03);
 }
 
 .cards1-box header {
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-    background-color: var(--md-sys-color-custom-color-1-container);
-    color: var(--md-sys-color-on-custom-color-1-container);
-    padding: 24px 32px 24px 32px;
-    text-align: center;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  background-color: var(--md-sys-color-custom-color-1-container);
+  color: var(--md-sys-color-on-custom-color-1-container);
+  padding: 24px 32px 24px 32px;
+  text-align: center;
 
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
 }
 
 
 
 .cards1-box-content-body {
-    padding: 24px 32px 24px 32px;
+  padding: 24px 32px 24px 32px;
 
 
-    /* 
+  /* 
       Align text to start.
       Because the text in boxes can be long.
       This makes it difficult to read when centered.
@@ -53,30 +53,30 @@
       for different kinds of languages that are not read e. g.
       from left-to-right
     */
-    text-align: start;
+  text-align: start;
 }
 
 
 .cards1-box .material-symbols-container {
-    background-color: var(--md-sys-color-on-custom-color-1-container);
-    color: var(--md-sys-color-custom-color-1-container);
-    border-radius: 50%;
-    height: 96px;
-    width: 96px;
+  background-color: var(--md-sys-color-on-custom-color-1-container);
+  color: var(--md-sys-color-custom-color-1-container);
+  border-radius: 50%;
+  height: 96px;
+  width: 96px;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .cards1-box .material-symbols-container .material-symbols-outlined {
-    font-variation-settings:
-        'FILL' var(--md-sys-color-custom-color-1-container),
-        'wght' 400,
-        'GRAD' 0,
-        'opsz' 24;
+  font-variation-settings:
+    'FILL' var(--md-sys-color-custom-color-1-container),
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
 
-    font-size: 3rem;
+  font-size: 3rem;
 }
 
 
@@ -90,12 +90,12 @@
   Media Query Breakpoints are based on the sizes of the devices 
   in Google developer tools. 
 */
-@media (max-width: 768px) {
-    .cards1-box header {
-        padding: 24px 0px 24px 0px;
-    }
+@media (max-width: 1024px) {
+  .cards1-box header {
+    padding: 24px 0px 24px 0px;
+  }
 
-    .cards1-box-content-body {
-        padding: 0px 16px 0px 16px;
-    }
+  .cards1-box-content-body {
+    padding: 0px 16px 0px 16px;
+  }
 }

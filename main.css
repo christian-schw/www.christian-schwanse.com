@@ -291,15 +291,15 @@ code {
   These declarations are processed while your CSS is being parsed, 
   so it won't know to look to the :root and pull in the variable values.
 */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
 
   html,
   body {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .content-after-hero-section {
-    padding: 40px 20px 40px 20px;
+    padding: 100px 40px 100px 40px;
   }
 }
 
@@ -309,6 +309,10 @@ code {
   html,
   body {
     font-size: 12px;
+  }
+
+  .content-after-hero-section {
+    padding: 40px 20px 40px 20px;
   }
 }
 

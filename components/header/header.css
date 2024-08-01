@@ -114,7 +114,7 @@
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 906px) {
   #page-header-nav {
     display: flex;
     align-items: center;
