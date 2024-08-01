@@ -3,12 +3,13 @@
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
+    gap: 32px;
 }
 
 
 .btn-highlighted,
 .btn-underemphasized {
-    margin: 36px;
+    margin: 0px;
 }
 
 .btn-highlighted a,
@@ -114,17 +115,8 @@
   in Google developer tools. 
 */
 @media (max-width: 1024px) {
-
-    .btn-highlighted,
-    .btn-underemphasized {
-        margin: 0px;
-    }
-
     .btn-cta-at-end {
-        display: flex;
         flex-flow: column wrap;
-        justify-content: center;
-        align-items: center;
         gap: 16px;
     }
 }
