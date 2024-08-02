@@ -1,8 +1,13 @@
 import * as header from '/components/header/header.js';
 import * as themeSwitch from '/components/theme-switch/theme-switch.js';
 import * as languageSwitch from '/components/language-switch/language-switch.js';
+import * as detailsSummaries from '/components/table-of-contents/table-of-contents.js';
 
-// To be sure that JS Code runs only when DOM is ready -> To prevent errors
+
+/*
+  To be sure that JS Code runs only when DOM is ready.
+  -> To prevent errors when accessing DOM-objects.
+*/
 window.onload = init();
 
 
@@ -20,7 +25,10 @@ function init() {
     const hamburgerNav = document.querySelector('#hamburger-nav');
     hamburgerNav.addEventListener('click', header.toggleHamburgerMenuNavList, false);
 
-    // Use debouncing to improve performance of scroll-event
+    /*
+      Use debouncing to improve performance of scroll-event (if needed)
+      Currently, it's set to 0 to provide smooth user experience.
+    */
     const debounceHideHamburgerNavList = debounce(header.hideHamburgerMenuNavList, 0);
     window.addEventListener('scroll', debounceHideHamburgerNavList, false);
 
@@ -57,6 +65,16 @@ function init() {
         const btnLangEn = document.querySelector('#btn-lang-en');
         btnLangEn.addEventListener('click', handleLangEn, false);
     }
+
+
+
+
+    // ========= Details & Summaries =========
+    const allJumpsToDetails = document.querySelectorAll('.jump-to-details');
+
+    allJumpsToDetails.forEach((JumpToDetail) => {
+        JumpToDetail.addEventListener('click', detailsSummaries.closeAllDetailsSummaries, false);
+    });
 }
 
 

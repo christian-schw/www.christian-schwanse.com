@@ -6,7 +6,7 @@
 
     Original (German):
     Hey. Ich bin Christian. Ein SAP-Entwickler. 👋
-    Translation (English)
+    Translation (English):
     Hey. I'm Christian. A SAP Developer.<span class="wobble">👋</span>
 
     New approach:
