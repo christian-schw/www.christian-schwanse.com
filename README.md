@@ -8,7 +8,7 @@ The portfolio website itself is also a project.<br />
 - Client: Myself
 - Project Goal: Demonstrate my skills, professional experience, projects and learn frontend web development without a framework.
 - Number of Project Participants: 1
-- Time Period: May, 2024 - July, 2024 (+ new implementations from time to time)
+- Time Period: May, 2024 - August, 2024 (+ new implementations from time to time)
 - Industry / Area: General / Web Development
 - Role: Lead Developer / Website Owner
 - Languages: German, English
