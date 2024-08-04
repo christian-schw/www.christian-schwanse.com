@@ -26,6 +26,7 @@ Tech Stack:
 - MS Visual Studio
 - Domain Hosting: Strato
 - FTP: FileZilla
+- Material Design
 <br />
 <br />
 
