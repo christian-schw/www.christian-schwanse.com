@@ -65,16 +65,6 @@ function init() {
         const btnLangEn = document.querySelector('#btn-lang-en');
         btnLangEn.addEventListener('click', handleLangEn, false);
     }
-
-
-
-
-    // ========= Details & Summaries =========
-    const allJumpsToDetails = document.querySelectorAll('.jump-to-details');
-
-    allJumpsToDetails.forEach((JumpToDetail) => {
-        JumpToDetail.addEventListener('click', detailsSummaries.closeAllDetailsSummaries, false);
-    });
 }
 
 

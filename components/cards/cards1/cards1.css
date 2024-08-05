@@ -73,3 +73,21 @@
 
   font-size: 3rem;
 }
+
+
+
+/* 
+  ========================================================================
+  ====================== Mobile Responsiveness ===========================
+  ======================================================================== 
+*/
+/* 
+  Media Query Breakpoints are based on the sizes of the devices 
+  in Google developer tools. 
+*/
+@media (max-width: 768px) {
+  .cards1-box .material-symbols-container {
+    height: 72px;
+    width: 72px;
+  }
+}
