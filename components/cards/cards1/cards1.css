@@ -18,6 +18,7 @@
 .cards1-box {
   border: 1px solid var(--md-sys-color-custom-color-1-container);
   border-radius: 8px;
+  margin: 40px 0px 40px 0px;
 }
 
 .cards1-box header {
