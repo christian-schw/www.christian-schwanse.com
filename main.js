@@ -16,11 +16,6 @@ function init() {
     greetingsConsole();
 
 
-    // ========= Sticky Header =========
-    window.addEventListener('scroll', header.headerScrollAnimation, false);
-
-
-
     // ========= Hamburger Menu for Mobile Responsiveness =========
     const hamburgerNav = document.querySelector('#hamburger-nav');
     hamburgerNav.addEventListener('click', header.toggleHamburgerMenuNavList, false);
