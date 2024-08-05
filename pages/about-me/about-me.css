@@ -75,7 +75,7 @@
 
 @media (max-width: 906px) {
   #homepage-hero-section {
-    flex-flow: column-reverse;
+    flex-flow: column;
     padding: 0px 30px 80px 30px;
   }
 
@@ -87,7 +87,6 @@
 
 @media (max-width: 425px) {
   #homepage-hero-section {
-    flex-flow: column-reverse;
     padding: 0px 10px 80px 10px;
   }
 
