@@ -1,7 +1,7 @@
 .btn-cta-at-end {
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     gap: 32px;
 }
@@ -117,6 +117,8 @@
 @media (max-width: 1024px) {
     .btn-cta-at-end {
         flex-flow: column wrap;
+        justify-content: center;
+        align-items: start;
         gap: 16px;
     }
 }

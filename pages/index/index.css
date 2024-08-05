@@ -22,10 +22,8 @@
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
-  align-items: center;
-
+  align-items: start;
   margin: 40px 0px 0px 0px;
-  text-align: center;
 }
 
 
@@ -47,21 +45,17 @@
 
 /* 
   ========================================================================
-  ============================= Teaser Section ===========================
+  ============================= Contact Section ==========================
   ======================================================================== 
 */
-#teaser-section {
+#contact-section {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#teaser-section h4 {
+#contact-section h4 {
   margin-top: 62px;
-}
-
-#teaser-section footer {
-  margin-top: 48px;
 }
 
 
@@ -107,10 +101,6 @@
 
 
 @media (max-width: 425px) {
-  #homepage-hero-section {
-    padding: 0px 10px 80px 10px;
-  }
-
   #homepage-hero-section-img img {
     max-width: 300px;
   }

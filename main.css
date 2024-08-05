@@ -50,11 +50,9 @@ body {
 */
 
 
-
-
 /* 
   ========================================================================
-  =============================== Headings================================
+  =============================== Headings ================================
   ======================================================================== 
 */
 h3,
@@ -143,16 +141,24 @@ code {
   color: var(--md-sys-color-secondary-container);
 }
 
+.text-align-center {
+  text-align: center;
+}
 
 /*
-  Used to place content correctly of all sections after hero section.
-  So that animation events such as “animation-timeline: view();” 
+  Used to place content correctly of all So that animation events 
+  such as “animation-timeline: view();” 
   and “animation-range: entry;” have better UX 
   (e.g. earlier start/end of the animation).
 */
-.content-after-hero-section {
-  padding: 240px 80px 240px 80px;
-  text-align: center;
+.margin-between-sections {
+  padding-top: 240px;
+  padding-bottom: 240px;
+}
+
+.page-margin-start-end {
+  padding-left: 320px;
+  padding-right: 320px;
 }
 
 
@@ -301,8 +307,14 @@ code {
     font-size: 28px;
   }
 
-  .content-after-hero-section {
-    padding: 320px 40px 320px 40px;
+  .margin-between-sections {
+    padding-top: 320px;
+    padding-bottom: 320px;
+  }
+
+  .page-margin-start-end {
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
 
@@ -314,8 +326,14 @@ code {
     font-size: 14px;
   }
 
-  .content-after-hero-section {
-    padding: 180px 40px 180px 40px;
+  .margin-between-sections {
+    padding-top: 180px;
+    padding-bottom: 180px;
+  }
+
+  .page-margin-start-end {
+    padding-left: 100px;
+    padding-right: 100px;
   }
 }
 
@@ -327,8 +345,14 @@ code {
     font-size: 12px;
   }
 
-  .content-after-hero-section {
-    padding: 120px 20px 120px 20px;
+  .margin-between-sections {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
+  .page-margin-start-end {
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }
 

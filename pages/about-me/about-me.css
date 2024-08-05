@@ -22,10 +22,8 @@
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
-  align-items: center;
-
+  align-items: start;
   margin: 40px 0px 0px 0px;
-  text-align: center;
 }
 
 
@@ -86,10 +84,6 @@
 
 
 @media (max-width: 425px) {
-  #homepage-hero-section {
-    padding: 0px 10px 80px 10px;
-  }
-
   #homepage-hero-section-img img {
     max-width: 300px;
   }
