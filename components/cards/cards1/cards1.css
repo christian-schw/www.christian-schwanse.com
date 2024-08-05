@@ -20,10 +20,6 @@
   border-radius: 8px;
 }
 
-.cards1-box:hover {
-  transform: scale(1.03);
-}
-
 .cards1-box header {
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;

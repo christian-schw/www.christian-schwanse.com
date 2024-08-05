@@ -16,7 +16,3 @@
   justify-content: center;
   align-items: center;
 }
-
-.cards2-box:hover {
-  transform: scale(1.05);
-}
