@@ -20,8 +20,8 @@
 
   --md-sys-color-secondary: #bdc7dc;
   --md-sys-color-on-secondary: #273141;
-  --md-sys-color-secondary-container: #3d4758;
-  --md-sys-color-on-secondary-container: #d9e3f8;
+  --md-sys-color-secondary-container: #d9e3f8;
+  --md-sys-color-on-secondary-container: #273141;
 
   --md-sys-color-tertiary: #dbbde2;
   --md-sys-color-on-tertiary: #3e2846;
@@ -59,6 +59,6 @@
 
   --md-sys-color-custom-color-1: #ffb878;
   --md-sys-color-on-custom-color-1: #4c2700;
-  --md-sys-color-custom-color-1-container: #6b3b04;
+  --md-sys-color-custom-color-1-container: #ffdcc1;
   --md-sys-color-on-custom-color-1-container: #ffdcc1;
 }

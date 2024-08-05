@@ -28,7 +28,7 @@
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   background-color: var(--md-sys-color-custom-color-1-container);
-  color: var(--md-sys-color-on-custom-color-1-container);
+  color: var(--md-sys-color-on-secondary-container);
   padding: 24px 0px 24px 0px;
   text-align: center;
 
@@ -57,7 +57,7 @@
 
 
 .cards1-box .material-symbols-container {
-  background-color: var(--md-sys-color-on-custom-color-1-container);
+  background-color: var(--md-sys-color-on-secondary-container);
   color: var(--md-sys-color-custom-color-1-container);
   border-radius: 50%;
   height: 96px;
