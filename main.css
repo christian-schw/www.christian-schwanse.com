@@ -517,12 +517,12 @@ code {
     font-size: 28px;
   }
 
-  .margin-between-sections {
+  .padding-top-240px-bottom-240px {
     padding-top: 320px;
     padding-bottom: 320px;
   }
 
-  .page-margin-start-end {
+  .padding-left-320px-right-320px {
     padding-left: 240px;
     padding-right: 240px;
   }
@@ -537,12 +537,12 @@ code {
     font-size: 14px;
   }
 
-  .margin-between-sections {
+  .padding-top-240px-bottom-240px {
     padding-top: 180px;
     padding-bottom: 180px;
   }
 
-  .page-margin-start-end {
+  .padding-left-320px-right-320px {
     padding-left: 100px;
     padding-right: 100px;
   }
@@ -564,7 +564,7 @@ code {
     padding: 0px 0px 12px 24px;
   }
 
-  .page-margin-start-end {
+  .padding-left-320px-right-320px {
     padding-left: 80px;
     padding-right: 80px;
   }
@@ -583,12 +583,12 @@ code {
     font-size: 12px;
   }
 
-  .margin-between-sections {
+  .padding-top-240px-bottom-240px {
     padding-top: 120px;
     padding-bottom: 120px;
   }
 
-  .page-margin-start-end {
+  .padding-left-320px-right-320px {
     padding-left: 30px;
     padding-right: 30px;
   }
@@ -611,12 +611,12 @@ code {
     font-size: 10px;
   }
 
-  .margin-between-sections {
+  .padding-top-240px-bottom-240px {
     padding-top: 80px;
     padding-bottom: 80px;
   }
 
-  .page-margin-start-end {
+  .padding-left-320px-right-320px {
     padding-left: 20px;
     padding-right: 20px;
   }
