@@ -5,17 +5,10 @@
 */
 #homepage-hero-section {
   display: flex;
-  /* 
-      No flex wrap because style decision: Image should always be next to introductory text.
-      Exception: Really small devices.
-    */
   flex-flow: row;
   align-items: center;
   justify-content: center;
-  padding: 60px 120px 80px 120px;
 }
-
-
 
 #homepage-hero-section-text {
   flex: 1;
@@ -23,83 +16,12 @@
   flex-flow: column wrap;
   justify-content: center;
   align-items: start;
-  margin: 10px 0px 0px 0px;
 }
 
 #homepage-hero-section-text h3 {
   font-size: 2.5rem;
-  margin: 20px 0px 12px 0px;
 }
 
 #homepage-hero-section-text p {
   font-size: 1.2rem;
-  margin: 0px 0px 24px 0px;
-}
-
-
-
-#homepage-hero-section-img {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  margin: 40px 0px 0px 0px;
-}
-
-#homepage-hero-section-img img {
-  max-width: 70%;
-}
-
-
-
-/* 
-  ========================================================================
-  ====================== Mobile Responsiveness ===========================
-  ======================================================================== 
-*/
-/* 
-  Media Query Breakpoints are based on the sizes of the devices 
-  in Google developer tools. 
-*/
-
-/* 
-  Max-width: XXX% scales to fast for my taste.
-  
-  Result: 
-  Hero Page looks ugly with text beneath the image.
-  With e. g. mobile device Width = 320px, the image disappears.
-*/
-@media (max-width: 1024px) {
-  #homepage-hero-section {
-    flex-flow: row;
-    padding: 0px 60px 80px 60px;
-  }
-
-  #homepage-hero-section-img img {
-    max-width: 496px;
-  }
-}
-
-@media (max-width: 906px) {
-  #homepage-hero-section {
-    flex-flow: column;
-    padding: 0px 80px 80px 80px;
-  }
-
-  #homepage-hero-section-img img {
-    max-width: 400px;
-  }
-}
-
-
-@media (max-width: 425px) {
-  #homepage-hero-section {
-    flex-flow: column;
-    padding: 0px 40px 80px 40px;
-  }
-
-  #homepage-hero-section-img img {
-    max-width: 269px;
-  }
 }
