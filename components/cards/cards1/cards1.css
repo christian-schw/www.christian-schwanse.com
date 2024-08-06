@@ -18,7 +18,7 @@
 .cards1-box {
   border: 1px solid var(--md-sys-color-custom-color-1-container);
   border-radius: 8px;
-  margin: 40px 0px 40px 0px;
+  margin: 20px 0px 20px 0px;
 }
 
 .cards1-box header {
@@ -26,7 +26,7 @@
   border-top-right-radius: 8px;
   background-color: var(--md-sys-color-custom-color-1-container);
   color: var(--md-sys-color-on-secondary-container);
-  padding: 24px 0px 24px 0px;
+  padding: 24px 6px 12px 6px;
   text-align: center;
 
   display: flex;
@@ -57,8 +57,8 @@
   background-color: var(--md-sys-color-on-secondary-container);
   color: var(--md-sys-color-custom-color-1-container);
   border-radius: 50%;
-  height: 96px;
-  width: 96px;
+  height: 72px;
+  width: 72px;
 
   display: flex;
   justify-content: center;
@@ -88,7 +88,7 @@
 */
 @media (max-width: 768px) {
   .cards1-box .material-symbols-container {
-    height: 72px;
-    width: 72px;
+    height: 60px;
+    width: 60px;
   }
 }
