@@ -86,6 +86,15 @@
   Media Query Breakpoints are based on the sizes of the devices 
   in Google developer tools. 
 */
+@media (min-width: 1921px) {
+
+  .cards1-box .material-symbols-container {
+    height: 108px;
+    width: 108px;
+  }
+}
+
+
 @media (max-width: 768px) {
   .cards1-box .material-symbols-container {
     height: 60px;
