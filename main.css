@@ -218,12 +218,12 @@ code {
   and “animation-range: entry;” have better UX 
   (e.g. earlier start/end of the animation).
 */
-.margin-between-sections {
+.padding-top-240px-bottom-240px {
   padding-top: 240px;
   padding-bottom: 240px;
 }
 
-.page-margin-start-end {
+.padding-left-320px-right-320px {
   padding-left: 320px;
   padding-right: 320px;
 }
@@ -309,6 +309,50 @@ code {
 
 
     animation: fade-in linear forwards;
+
+    /*
+      NOTE: 
+      animation-timeline & -range have limited browser
+      compatibility (e.g. Chrome and Explorer work, but not Firefox and Safari).
+    */
+    animation-timeline: view();
+    animation-range: entry;
+  }
+
+
+
+  /* 
+    For the section after the hero section.
+    So that the next section is reasonably 
+    visible and the visitor knows: "Aha, there's more to come!"
+  */
+  @keyframes fade-in-short {
+    50% {
+      scale: 1;
+      opacity: 1;
+    }
+
+    100% {
+      scale: 1;
+      opacity: 1;
+    }
+  }
+
+  .fade-in-short {
+    /*
+    Not implemented in keyframes, but in class. 
+    Otherwise the animation “flashes” at the beginning and end
+    -> no smooth transition.
+
+    IMPORTANT: 
+    Because of that, we need to add animation-fill-mode: forwards.
+    So that the object remains visible in the last frame.
+    */
+    scale: .8;
+    opacity: 0;
+
+
+    animation: fade-in-short linear forwards;
 
     /*
       NOTE: 
