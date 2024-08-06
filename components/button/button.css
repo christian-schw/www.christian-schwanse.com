@@ -60,6 +60,16 @@
   ======================= Underemphasized Button =========================
   ======================================================================== 
 */
+.btn-underemphasized a,
+.btn-underemphasized a:hover,
+.btn-underemphasized a:focus {
+    /* 
+      To ensure that underlined and highlighted buttons are the same size, 
+      the thickness of the border must also be taken into account when padding. 
+    */
+    padding: 15px 27px 15px 27px;
+}
+
 .btn-underemphasized a {
     background-color: transparent;
     color: var(--md-sys-color-on-surface);
@@ -113,11 +123,16 @@
   Media Query Breakpoints are based on the sizes of the devices 
   in Google developer tools. 
 */
-@media (max-width: 1024px) {
+@media (max-width: 425px) {
+    .btn-cta-at-end {
+        gap: 16px;
+    }
+}
+
+@media (max-width: 375px) {
     .btn-cta-at-end {
         flex-flow: column wrap;
         justify-content: center;
         align-items: start;
-        gap: 16px;
     }
 }
