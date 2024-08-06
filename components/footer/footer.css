@@ -1,38 +1,38 @@
 #page-footer {
-    background-color: var(--md-sys-color-primary-container);
-    color: var(--md-sys-color-on-primary-container);
-    padding: 15px 20px 15px 20px;
-    margin-top: 40px;
+  background-color: var(--md-sys-color-primary-container);
+  color: var(--md-sys-color-on-primary-container);
+  padding: 15px 80px 15px 80px;
+  margin-top: 40px;
 
 
-    /* To let footer stick to bottom */
-    position: sticky;
-    top: 100%;
+  /* To let footer stick to bottom */
+  position: sticky;
+  top: 100%;
 
 
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
 }
 
 #page-footer-left {
-    flex: 1;
+  flex: 1;
 }
 
 #page-footer-middle {
-    flex: 1;
-    text-align: center;
+  flex: 1;
+  text-align: center;
 }
 
 #page-footer-right {
-    flex: 1;
+  flex: 1;
 
-    /* 
+  /* 
       Use of start instead of left for better accessibility for different
       kinds of languages that are not read e. g. from left-to-right
     */
-    text-align: end;
+  text-align: end;
 }
 
 
@@ -43,8 +43,8 @@
   ======================================================================== 
 */
 #page-footer p {
-    font-size: 0.9rem;
-    margin: 12px 0px 12px 0px;
+  font-size: 0.9rem;
+  margin: 12px 0px 12px 0px;
 }
 
 
@@ -58,8 +58,9 @@
   Media Query Breakpoints are based on the sizes of the devices 
   in Google developer tools. 
 */
-@media (max-width: 425px) {
-    #page-footer {
-        gap: 20px;
-    }
+@media (max-width: 1024px) {
+  #page-footer {
+    gap: 20px;
+    padding: 15px 30px 15px 30px;
+  }
 }

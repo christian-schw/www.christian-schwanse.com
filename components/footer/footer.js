@@ -19,11 +19,11 @@ class Footer extends HTMLElement {
             this.innerHTML = `
             <footer id="page-footer">
                 <div id="page-footer-left">
-                    <!-- Insert more information if needed -->
+                    <p>&#169; 2024 Christian Schwanse</p>
                 </div>
                 
                 <div id="page-footer-middle">
-                    <p>&#169; 2024 Christian Schwanse</p>
+                    <!-- Insert more information if needed -->
                 </div>
             
                 <div id="page-footer-right">
@@ -39,11 +39,11 @@ class Footer extends HTMLElement {
             this.innerHTML = `
             <footer id="page-footer">
                 <div id="page-footer-left">
-                    <!-- Insert more information if needed -->
+                    <p>&#169; 2024 Christian Schwanse</p>
                 </div>
                 
                 <div id="page-footer-middle">
-                    <p>&#169; 2024 Christian Schwanse</p>
+                    <!-- Insert more information if needed -->
                 </div>
             
                 <div id="page-footer-right">
