@@ -204,6 +204,12 @@ code {
   background: url('/assets/images/statistics-3120x2336.jpg') no-repeat center center/cover;
 }
 
+.background-workplace-3120x2066-img {
+  position: relative;
+  height: 60vh;
+  background: url('/assets/images/workplace-3120x2066.jpg') no-repeat center center/cover;
+}
+
 .background-temp-img {
   position: relative;
   height: 60vh;
