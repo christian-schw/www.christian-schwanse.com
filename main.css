@@ -169,6 +169,30 @@ code {
   color: var(--md-sys-color-custom-color-1-container);
 }
 
+#hero-section {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+}
+
+#hero-section-text {
+  flex: 1;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: start;
+}
+
+#hero-section-text h3 {
+  font-size: 2.5rem;
+}
+
+#hero-section-text p {
+  font-size: 1.2rem;
+}
+
+
 
 /* 
   Note: Create separate class for each image / URL to simplify 
