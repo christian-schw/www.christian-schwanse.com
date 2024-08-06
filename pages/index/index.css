@@ -12,7 +12,6 @@
   flex-flow: row;
   align-items: center;
   justify-content: center;
-  padding: 60px 120px 80px 120px;
 }
 
 
@@ -26,6 +25,13 @@
   margin: 40px 0px 0px 0px;
 }
 
+#homepage-hero-section-text h3 {
+  font-size: 2.5rem;
+}
+
+#homepage-hero-section-text p {
+  font-size: 1.2rem;
+}
 
 
 #homepage-hero-section-img {
@@ -80,7 +86,6 @@
 @media (max-width: 1024px) {
   #homepage-hero-section {
     flex-flow: row;
-    padding: 0px 60px 80px 60px;
   }
 
   #homepage-hero-section-img img {
@@ -91,7 +96,6 @@
 @media (max-width: 906px) {
   #homepage-hero-section {
     flex-flow: column;
-    padding: 0px 30px 80px 30px;
   }
 
   #homepage-hero-section-img img {
@@ -101,6 +105,10 @@
 
 
 @media (max-width: 425px) {
+  #homepage-hero-section {
+    flex-flow: column;
+  }
+
   #homepage-hero-section-img img {
     max-width: 300px;
   }
