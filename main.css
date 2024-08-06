@@ -174,11 +174,30 @@ code {
   reusability and interchangeability. 
 */
 .background-statistics-3120x2336-img {
+  position: relative;
+  height: 60vh;
   background: url('/assets/images/statistics-3120x2336.jpg') no-repeat center center/cover;
 }
 
 .overlay {
-  padding: 160px 140px 160px 140px;
+  /* 
+    Relative position (image) + absolute position (overlay)
+    so overlay fills whole background image 
+  */
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+
+  /* Add border-box so it possible to use padding */
+  box-sizing: border-box;
+  padding: 0px 320px 0px 320px;
+
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+
   background-color: rgba(0, 0, 0, 0.8);
   color: var(--md-sys-color-secondary-container);
 }
@@ -385,6 +404,10 @@ code {
     padding-left: 100px;
     padding-right: 100px;
   }
+
+  .overlay {
+    padding: 0px 120px 0px 120px;
+  }
 }
 
 
@@ -405,7 +428,7 @@ code {
   }
 
   .overlay {
-    padding: 60px 80px 60px 80px;
+    padding: 0px 60px 0px 60px;
   }
 }
 
@@ -429,7 +452,7 @@ code {
   }
 
   .overlay {
-    padding: 60px 30px 60px 30px;
+    padding: 0px 30px 0px 30px;
   }
 }
 

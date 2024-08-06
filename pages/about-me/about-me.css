@@ -11,7 +11,7 @@
     */
   flex-flow: row;
   align-items: center;
-  justify-items: center;
+  justify-content: center;
   padding: 60px 120px 80px 120px;
 }
 
