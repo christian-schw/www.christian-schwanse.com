@@ -309,6 +309,103 @@ code {
 
 
     animation: fade-in linear forwards;
+
+    /*
+      NOTE: 
+      animation-timeline & -range have limited browser
+      compatibility (e.g. Chrome and Explorer work, but not Firefox and Safari).
+    */
+    animation-timeline: view();
+    animation-range: entry;
+  }
+
+
+
+  @keyframes slide-in-from-left {
+    0% {
+      transform: translateX(-100%);
+    }
+
+    /* 
+      Animation should stop earlier than 100%, as otherwise, for example, 
+      large cards will not be visible in time. 
+    */
+    70% {
+      transform: translateX(0);
+      scale: 1;
+      opacity: 1;
+    }
+
+    100% {
+      transform: translateX(0);
+      scale: 1;
+      opacity: 1;
+    }
+  }
+
+  .slide-in-from-left {
+    animation: slide-in-from-left linear forwards;
+
+    /*
+    Not implemented in keyframes, but in class. 
+    Otherwise the animation “flashes” at the beginning and end
+    -> no smooth transition.
+
+    IMPORTANT: 
+    Because of that, we need to add animation-fill-mode: forwards.
+    So that the object remains visible in the last frame.
+    */
+    scale: .8;
+    opacity: 0;
+
+    /*
+      NOTE: 
+      animation-timeline & -range have limited browser
+      compatibility (e.g. Chrome and Explorer work, but not Firefox and Safari).
+    */
+    animation-timeline: view();
+    animation-range: entry;
+  }
+
+
+
+  @keyframes slide-in-from-right {
+    0% {
+      transform: translateX(100%);
+    }
+
+    /* 
+      Animation should stop earlier than 100%, as otherwise, for example, 
+      large cards will not be visible in time. 
+    */
+    70% {
+      transform: translateX(0);
+      scale: 1;
+      opacity: 1;
+    }
+
+    100% {
+      transform: translateX(0);
+      scale: 1;
+      opacity: 1;
+    }
+  }
+
+  .slide-in-from-right {
+    animation: slide-in-from-right linear forwards;
+
+    /*
+    Not implemented in keyframes, but in class. 
+    Otherwise the animation “flashes” at the beginning and end
+    -> no smooth transition.
+
+    IMPORTANT: 
+    Because of that, we need to add animation-fill-mode: forwards.
+    So that the object remains visible in the last frame.
+    */
+    scale: .8;
+    opacity: 0;
+
     /*
       NOTE: 
       animation-timeline & -range have limited browser
@@ -318,6 +415,7 @@ code {
     animation-range: entry;
   }
 }
+
 
 
 
