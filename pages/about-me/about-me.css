@@ -23,15 +23,17 @@
   flex-flow: column wrap;
   justify-content: center;
   align-items: start;
-  margin: 40px 0px 0px 0px;
+  margin: 10px 0px 0px 0px;
 }
 
 #homepage-hero-section-text h3 {
   font-size: 2.5rem;
+  margin: 20px 0px 12px 0px;
 }
 
 #homepage-hero-section-text p {
   font-size: 1.2rem;
+  margin: 0px 0px 24px 0px;
 }
 
 
@@ -46,7 +48,7 @@
 }
 
 #homepage-hero-section-img img {
-  max-width: 100%;
+  max-width: 70%;
 }
 
 
@@ -62,7 +64,7 @@
 */
 
 /* 
-  Max-width: 100% scales to fast for my taste.
+  Max-width: XXX% scales to fast for my taste.
   
   Result: 
   Hero Page looks ugly with text beneath the image.
@@ -86,7 +88,7 @@
   }
 
   #homepage-hero-section-img img {
-    max-width: 425px;
+    max-width: 400px;
   }
 }
 
@@ -98,6 +100,6 @@
   }
 
   #homepage-hero-section-img img {
-    max-width: 300px;
+    max-width: 269px;
   }
 }
