@@ -8,7 +8,7 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   font-style: normal;
-  font-size: 20px;
+  font-size: 16px;
 
   /* 
     Declare automatic hyphenation. 
@@ -168,6 +168,27 @@ code {
   color: var(--md-sys-color-custom-color-1-container);
 }
 
+
+/* 
+  Note: Create separate class for each image / URL to simplify 
+  reusability and interchangeability. 
+*/
+.background-statistics-3120x2336-img {
+  background: url('/assets/images/statistics-3120x2336.jpg') no-repeat center center/cover;
+}
+
+.overlay {
+  padding: 160px 140px 160px 140px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: var(--md-sys-color-secondary-container);
+}
+
+.content-of-overlay {
+  z-index: 1;
+}
+
+
+
 .text-align-center {
   text-align: center;
 }
@@ -280,6 +301,7 @@ code {
 }
 
 
+
 /* 
   ========================================================================
   ========================== Accessibility ===============================
@@ -376,6 +398,15 @@ code {
   .two-columns-ul ul {
     padding: 0px 0px 12px 24px;
   }
+
+  .page-margin-start-end {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+
+  .overlay {
+    padding: 60px 80px 60px 80px;
+  }
 }
 
 
@@ -395,6 +426,10 @@ code {
   .page-margin-start-end {
     padding-left: 30px;
     padding-right: 30px;
+  }
+
+  .overlay {
+    padding: 60px 30px 60px 30px;
   }
 }
 
