@@ -106,6 +106,7 @@ p {
 .two-columns-ul {
   columns: 2;
   padding: 0px 0px 0px 16px;
+  font-size: 1.3rem;
 }
 
 .two-columns-ul li {
@@ -557,7 +558,7 @@ code {
 
   .two-columns-ul {
     columns: 1;
-    padding: 0px;
+    padding: 0px 0px 0px 12px;
   }
 
   .two-columns-ul ul {
