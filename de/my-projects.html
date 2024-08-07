@@ -39,6 +39,17 @@
 
     <!-- Site specific things -->
     <link rel="stylesheet" href="/pages/my-project/my-project.css">
+
+    <!-- 
+      To optimize UX / loading:  
+      Images are only loaded after 1-2 seconds the first time the website 
+      is loaded (simply clear the browser cache to test this). 
+      Before that there is only a dark background.
+
+      To make the whole thing look better, the images should be visible right 
+      from the start.  
+    -->
+    <link rel="preload" as="image" href="/assets/images/workplace-3120x2066.jpg">
 </head>
 
 <body>
