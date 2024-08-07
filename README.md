@@ -22,6 +22,7 @@ Tech Stack:
 - JavaScript
 - PHP
 - Inkscape
+- Gimp
 - Github
 - MS Visual Studio
 - Domain Hosting: Strato
