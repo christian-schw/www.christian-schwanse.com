@@ -2,8 +2,6 @@
   background-color: var(--md-sys-color-primary-container);
   color: var(--md-sys-color-on-primary-container);
   padding: 15px 80px 15px 80px;
-  margin-top: 40px;
-
 
   /* To let footer stick to bottom */
   position: sticky;
