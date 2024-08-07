@@ -279,6 +279,10 @@ code {
   such as “animation-timeline: view();” 
   and “animation-range: entry;” have better UX 
   (e.g. earlier start/end of the animation).
+
+  It must be noted that at the end of a section, 
+  the next section is already slightly visible. 
+  So that the user knows that there is more to come.
 */
 .padding-top-240px {
   padding-top: 240px;
@@ -286,6 +290,14 @@ code {
 
 .padding-bottom-240px {
   padding-bottom: 240px;
+}
+
+.padding-top-80px {
+  padding-top: 80px;
+}
+
+.padding-bottom-80px {
+  padding-bottom: 80px;
 }
 
 .padding-left-320px {
@@ -356,7 +368,12 @@ code {
 
 
   @keyframes fade-in {
-    to {
+    70% {
+      scale: 1;
+      opacity: 1;
+    }
+
+    100% {
       scale: 1;
       opacity: 1;
     }
@@ -585,17 +602,22 @@ code {
     font-size: 28px;
   }
 
-  .padding-top-240px-bottom-240px {
+  .padding-top-240px {
     padding-top: 320px;
+  }
+
+  .padding-bottom-240px {
     padding-bottom: 320px;
   }
 
-  .padding-left-320px-right-320px {
+  .padding-left-320px {
     padding-left: 240px;
+  }
+
+  .padding-right-320px {
     padding-right: 240px;
   }
 }
-
 
 
 @media (max-width: 1024px) {
@@ -605,13 +627,19 @@ code {
     font-size: 14px;
   }
 
-  .padding-top-240px-bottom-240px {
+  .padding-top-240px {
     padding-top: 180px;
+  }
+
+  .padding-bottom-240px {
     padding-bottom: 180px;
   }
 
-  .padding-left-320px-right-320px {
+  .padding-left-320px {
     padding-left: 100px;
+  }
+
+  .padding-right-320px {
     padding-right: 100px;
   }
 
@@ -632,8 +660,11 @@ code {
     padding: 0px 0px 12px 24px;
   }
 
-  .padding-left-320px-right-320px {
+  .padding-left-320px {
     padding-left: 80px;
+  }
+
+  .padding-right-320px {
     padding-right: 80px;
   }
 
@@ -651,13 +682,19 @@ code {
     font-size: 12px;
   }
 
-  .padding-top-240px-bottom-240px {
+  .padding-top-240px {
     padding-top: 120px;
+  }
+
+  .padding-bottom-240px {
     padding-bottom: 120px;
   }
 
-  .padding-left-320px-right-320px {
+  .padding-left-320px {
     padding-left: 30px;
+  }
+
+  .padding-right-320px {
     padding-right: 30px;
   }
 
@@ -679,13 +716,19 @@ code {
     font-size: 10px;
   }
 
-  .padding-top-240px-bottom-240px {
+  .padding-top-240px {
     padding-top: 80px;
+  }
+
+  .padding-bottom-240px {
     padding-bottom: 80px;
   }
 
-  .padding-left-320px-right-320px {
+  .padding-left-320px {
     padding-left: 20px;
+  }
+
+  .padding-right-320px {
     padding-right: 20px;
   }
 }
