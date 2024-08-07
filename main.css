@@ -247,8 +247,30 @@ code {
 
 
 
+/* 
+  ========================================================================
+  ============================ Atomic CSS ================================
+  ======================================================================== 
+*/
+/* Improve in future: Use more Atomic CSS & refactor old CSS code */
 .text-align-center {
   text-align: center;
+}
+
+.margin-top-120px {
+  margin-top: 120px;
+}
+
+.margin-bottom-120px {
+  margin-bottom: 120px;
+}
+
+.margin-top-12px {
+  margin-top: 12px;
+}
+
+.margin-bottom-12px {
+  margin-bottom: 12px;
 }
 
 /*

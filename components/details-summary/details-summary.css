@@ -13,17 +13,17 @@
   text-align: start;
 
   border-radius: 8px;
-  padding: 12px 12px 12px 12px;
-  margin: 16px 0px 16px 0px;
+  padding: 12px 12px 12px 0px;
+  margin: 4px 0px 4px 0px;
 }
 
 .details1 summary {
   background-color: var(--md-sys-color-secondary);
   color: var(--md-sys-color-on-secondary);
   border-radius: 8px;
-  font-size: 2rem;
+  font-size: 1.7rem;
   cursor: pointer;
-  padding: 16px;
+  padding: 16px 16px 16px 32px;
 }
 
 .details1 summary:hover,
