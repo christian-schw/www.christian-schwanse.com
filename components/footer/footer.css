@@ -12,22 +12,15 @@
 
   display: flex;
   flex-flow: row nowrap;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
-#page-footer-left {
+#page-footer>* {
   flex: 1;
-}
-
-#page-footer-middle {
-  flex: 1;
-  text-align: center;
 }
 
 #page-footer-right {
-  flex: 1;
-
   /* 
       Use of start instead of left for better accessibility for different
       kinds of languages that are not read e. g. from left-to-right
@@ -61,6 +54,22 @@
 @media (max-width: 1024px) {
   #page-footer {
     gap: 20px;
-    padding: 15px 30px 15px 30px;
+    padding: 15px 30px 15px 40px;
+  }
+}
+
+@media (max-width: 425px) {
+  #page-footer {
+    padding: 15px 8px 15px 8px;
+  }
+
+  #page-footer p,
+  #page-footer a {
+    font-size: 0.8rem;
+  }
+
+
+  #page-footer-left {
+    padding: 0px 0px 0px 15px;
   }
 }

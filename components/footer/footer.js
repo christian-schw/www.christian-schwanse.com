@@ -21,14 +21,10 @@ class Footer extends HTMLElement {
                 <div id="page-footer-left">
                     <p>&#169; 2024 Christian Schwanse</p>
                 </div>
-                
-                <div id="page-footer-middle">
-                    <!-- Insert more information if needed -->
-                </div>
             
                 <div id="page-footer-right">
                     <div class="btn-nav btn-nav-small">
-                        <a href="#page-headline">Go to top of page &uarr;</a>
+                        <a href="#page-headline">To top of page &uarr;</a>
                     </div>
                 </div>
             </footer>
@@ -41,14 +37,10 @@ class Footer extends HTMLElement {
                 <div id="page-footer-left">
                     <p>&#169; 2024 Christian Schwanse</p>
                 </div>
-                
-                <div id="page-footer-middle">
-                    <!-- Insert more information if needed -->
-                </div>
             
                 <div id="page-footer-right">
                     <div class="btn-nav btn-nav-small">
-                        <a href="#page-headline">Gehe zum Seitenanfang &uarr;</a>
+                        <a href="#page-headline">Zum Seitenanfang &uarr;</a>
                     </div>
                 </div>
             </footer>
