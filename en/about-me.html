@@ -38,6 +38,13 @@
     <link rel="stylesheet" href="/components/cards/cards1/cards1.css">
     <link rel="stylesheet" href="/components/footer/footer.css">
 
+    <!-- 
+      All JS-Files are at bottom. Except: header.js
+      Reason: Header should be visible to users right from the start. 
+      therwise, the content will shift after loading is complete if the user scrolls straight down.
+    -->
+    <script src="/components/header/header.js" type="module"></script>
+
 
     <!-- Site specific things -->
     <link rel="stylesheet" href="/pages/about-me/about-me.css">
@@ -328,7 +335,6 @@
         JS-Files at bottom of page to improve (perceived) performance
         and avoid render blocking
     -->
-    <script src="/components/header/header.js" type="module"></script>
     <script src="/components/footer/footer.js" type="module"></script>
     <script src="/components/table-of-contents/table-of-contents.js" type="module"></script>
     <script src="/main.js" type="module"></script>
