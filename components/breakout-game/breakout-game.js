@@ -12,9 +12,25 @@ function init() {
 
 var breakoutCanvas;
 var breakoutCtx;
-var rightPressed = false;
-var leftPressed = false;
 var interval = 0;
+
+const keyControls = {
+    rightPressed: false,
+    leftPressed: false
+}
+
+const brickGrid = {
+    brickRowCount: 3,
+    brickColumnCount: 5,
+    brickWidth: 75,
+    brickHeight: 20,
+    brickPadding: 10,
+    brickOffsetTop: 30,
+    brickOffsetLeft: 30
+}
+
+
+
 
 class CanvasObject {
     constructor(x, y) {
@@ -37,13 +53,48 @@ class CanvasObject {
     }
 }
 
-
-class Ball extends CanvasObject {
+class Circle extends CanvasObject {
     constructor(x, y, radius) {
         super(x, y);
+        this._radius = radius;
+    }
+
+    get radius() {
+        return this._radius;
+    }
+    set radius(radius) {
+        this._radius = radius;
+    }
+}
+
+class Rectangle extends CanvasObject {
+    constructor(x, y, height, width) {
+        super(x, y);
+        this._height = height;
+        this._width = width;
+    }
+
+    get height() {
+        return this._height;
+    }
+    set height(height) {
+        this._height = height;
+    }
+
+    get width() {
+        return this._width;
+    }
+    set width(width) {
+        this._width = width;
+    }
+}
+
+
+class Ball extends Circle {
+    constructor(x, y, radius) {
+        super(x, y, radius);
         this._dX = 2;
         this._dY = -2;
-        this._radius = radius;
     }
 
     get dX() {
@@ -58,13 +109,6 @@ class Ball extends CanvasObject {
     }
     set dY(dY) {
         this._dY = dY;
-    }
-
-    get radius() {
-        return this._radius;
-    }
-    set radius(radius) {
-        this._radius = radius;
     }
 
 
@@ -127,25 +171,9 @@ class Ball extends CanvasObject {
 
 
 
-class Paddle extends CanvasObject {
+class Paddle extends Rectangle {
     constructor(x, y, height, width) {
-        super(x, y);
-        this._height = height;
-        this._width = width;
-    }
-
-    get height() {
-        return this._height;
-    }
-    set height(height) {
-        this._height = height;
-    }
-
-    get width() {
-        return this._width;
-    }
-    set width(width) {
-        this._width = width;
+        super(x, y, height, width);
     }
 
 
@@ -163,9 +191,9 @@ class Paddle extends CanvasObject {
           Handle movement of paddle e. g. via keyboard.
           Paddle should only move within boundaries of canvas.
         */
-        if (rightPressed) {
+        if (keyControls.rightPressed) {
             this._x = Math.min(this._x + 7, breakoutCanvas.width - this._width);
-        } else if (leftPressed) {
+        } else if (keyControls.leftPressed) {
             this._x = Math.max(this._x - 7, 0);
         }
 
@@ -177,6 +205,13 @@ class Paddle extends CanvasObject {
         breakoutCtx.closePath();
 
         breakoutCtx.restore();
+    }
+}
+
+
+class Brick extends CanvasObject {
+    constructor(x, y) {
+        super(x, y);
     }
 }
 
@@ -233,9 +268,9 @@ function keyDownHandler(evt) {
       You cannot move to the right and left at the same time.
     */
     if (evt.key === 'Right' || evt.key === 'ArrowRight') {
-        rightPressed = true;
+        keyControls.rightPressed = true;
     } else if (evt.key === 'Left' || evt.key === 'ArrowLeft') {
-        leftPressed = true;
+        keyControls.leftPressed = true;
     }
 }
 
@@ -245,8 +280,8 @@ function keyUpHandler(evt) {
       You cannot move to the right and left at the same time.
     */
     if (evt.key === 'Right' || evt.key === 'ArrowRight') {
-        rightPressed = false;
+        keyControls.rightPressed = false;
     } else if (evt.key === 'Left' || evt.key === 'ArrowLeft') {
-        leftPressed = false;
+        keyControls.leftPressed = false;
     }
 }
