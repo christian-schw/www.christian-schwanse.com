@@ -96,10 +96,18 @@ class Ball extends CanvasObject {
         */
         if (this._y + this._dY < this._radius) {
             this._dY = -this._dY;
-        } else if (this._y + this._dY > breakoutCanvas.height - this._radius) {
+        }
+        else if (this._y + this._dY > breakoutCanvas.height - this._radius - paddle.height) {
+            // Ball hit paddle
             if (this._x > paddle.x && this._x < paddle.x + paddle.width) {
                 this._dY = -this._dY;
-            } else {
+            }
+            // Ball didn't hit paddle but also didn't hit bottom yet
+            else if (this._y < breakoutCanvas.height - this._radius) {
+                // Do nothing. Wait for next for frame until it's clear that bottom has been hit.
+            }
+            // Ball hit bottom
+            else {
                 alert('Game Over!');
                 document.location.reload();
                 clearInterval(interval);
