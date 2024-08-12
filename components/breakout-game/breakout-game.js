@@ -212,7 +212,6 @@ class Brick extends Rectangle {
         super(x, y, height, width);
     }
 
-    // TODO: Test brick without draw-method to test throwing an error
     draw() {
         context.beginPath();
         context.rect(this.x, this.y, this.width, this.height);
