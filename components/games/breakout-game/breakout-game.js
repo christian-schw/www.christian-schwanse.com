@@ -121,9 +121,9 @@ class Paddle extends canvasObjects.Rectangle {
           Handle movement of paddle e. g. via keyboard.
           Paddle should only move within boundaries of canvas.
         */
-        if (keyControls.rightPressed) {
+        if (keyControls.KeyControls.rightPressed) {
             this.x = Math.min(this.x + 7, canvas.width - this.width);
-        } else if (keyControls.leftPressed) {
+        } else if (keyControls.KeyControls.leftPressed) {
             this.x = Math.max(this.x - 7, 0);
         }
 
@@ -235,8 +235,8 @@ export function startBreakoutGame() {
         /* So that players cannot (accidentally) restart the game. */
         btnStartBreakoutGame.disabled = true;
 
-        document.addEventListener('keydown', keyControls.keyDownHandler, false);
-        document.addEventListener('keyup', keyControls.keyUpHandler, false);
+        document.addEventListener('keydown', keyControls.KeyControls.keyDownHandler, false);
+        document.addEventListener('keyup', keyControls.KeyControls.keyUpHandler, false);
 
         const paddle = new Paddle((canvas.width - 75) / 2, canvas.height - 10, 10, 75);
         const ball = new Ball(canvas.width / 2, canvas.height - 30, 10);
