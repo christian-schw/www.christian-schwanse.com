@@ -161,16 +161,31 @@ class BrickGrid extends canvasObjects.CanvasObject {
         this._brickWidth = brickWidth;
         this._brickHeight = brickHeight;
         this._brickPadding = brickPadding;
+        this._bricks = this.#getBricks();
+    }
+
+    #getBricks() {
+        const bricks = []
+
+        for (let c = 0; c < this._columnCount; c++) {
+            bricks[c] = [];
+
+            for (let r = 0; r < this._rowCount; r++) {
+                const brickX = c * (this._brickWidth + this._brickPadding) + this._x;
+                const brickY = r * (this._brickHeight + this._brickPadding) + this._y;
+                const brick = new Brick(brickX, brickY, this._brickHeight, this._brickWidth);
+
+                bricks[c][r] = brick;
+            }
+        }
+
+        return bricks;
     }
 
     draw() {
         for (let c = 0; c < this._columnCount; c++) {
             for (let r = 0; r < this._rowCount; r++) {
-                const brickX = c * (this._brickWidth + this._brickPadding) + this._x;
-                const brickY = r * (this._brickHeight + this._brickPadding) + this._y;
-
-                const brick = new Brick(brickX, brickY, this._brickHeight, this._brickWidth);
-                brick.draw();
+                this._bricks[c][r].draw();
             }
         }
     }
@@ -185,6 +200,7 @@ export function startBreakoutGame() {
 
     // It's possible that some pages do not have the Breakout-Game
     if (canvas) {
+        context = canvas.getContext('2d');
         const btnStartBreakoutGame = document.querySelector('#start-breakout-game');
 
         /* So that players cannot (accidentally) restart the game. */
@@ -192,9 +208,6 @@ export function startBreakoutGame() {
 
         document.addEventListener('keydown', keyControls.keyDownHandler, false);
         document.addEventListener('keyup', keyControls.keyUpHandler, false);
-
-
-        context = canvas.getContext('2d');
 
         const paddle = new Paddle((canvas.width - 75) / 2, canvas.height - 10, 10, 75);
         const ball = new Ball(canvas.width / 2, canvas.height - 30, 10);
