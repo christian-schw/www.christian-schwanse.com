@@ -29,6 +29,23 @@ class Ball {
         breakoutCtx.fill();
         breakoutCtx.closePath();
 
+        /*
+          Important:
+          With collision detection, the outer point of an object must always 
+          be taken into account and *not* the center! 
+          This means that the radius must be taken into account for a ball or circle.
+        */
+
+        // Collision Detection: Y-Coordinate (Top & Bottom)
+        if (this.ballY + this.ballDY < this.ballRadius || this.ballY + this.ballDY > breakoutCanvas.height - this.ballRadius) {
+            this.ballDY = -this.ballDY;
+        }
+
+        // Collision Detection: X-Coordinate (Left & Right)
+        if (this.ballX + this.ballDX < this.ballRadius || this.ballX + this.ballDX > breakoutCanvas.width - this.ballRadius) {
+            this.ballDX = -this.ballDX;
+        }
+
         this.ballX += this.ballDX;
         this.ballY += this.ballDY;
     }
@@ -55,6 +72,8 @@ function startBreakoutGame() {
           Create anonymous function so actual function isn't
           executed right away.
           Otherwise setInterval() doesn't work.
+          
+          // TODO: Use requestAPIFrame something like that for animation instead of interval
         */
         setInterval(function () { drawBreakoutGame(ball); }, 10);
     }
