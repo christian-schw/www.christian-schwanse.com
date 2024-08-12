@@ -60,6 +60,15 @@ class CanvasObject {
     set y(y) {
         this._y = y;
     }
+
+
+    /*
+      There is no way to implement abstract methods in JS. 
+      Therefore workaround with throwing an error when not implemented in subclass.
+    */
+    draw() {
+        throw new Error('Method draw() must be implemented in subclass.');
+    }
 }
 
 class Circle extends CanvasObject {
@@ -218,9 +227,18 @@ class Paddle extends Rectangle {
 }
 
 
-class Brick extends CanvasObject {
-    constructor(x, y) {
-        super(x, y);
+class Brick extends Rectangle {
+    constructor(x, y, height, width) {
+        super(x, y, height, width);
+    }
+
+    // TODO: Test brick without draw-method to test throwing an error
+    draw() {
+        context.beginPath();
+        context.rect(this.x, this.y, this.width, this.height);
+        context.fillStyle = "#0095DD";
+        context.fill();
+        context.closePath();
     }
 }
 
