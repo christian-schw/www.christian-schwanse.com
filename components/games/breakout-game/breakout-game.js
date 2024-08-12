@@ -1,3 +1,7 @@
+import * as keyControls from '/components/games/key-controls.js';
+import * as canvasObjects from '/components/games/canvas-basic-objects.js';
+
+
 window.onload = init();
 
 function init() {
@@ -15,110 +19,8 @@ var context;
 var interval = 0;
 
 
-class KeyControls {
-    constructor() {
-        if (this instanceof KeyControls) {
-            throw Error('A static class cannot be instantiated.');
-        }
-    }
 
-    static rightPressed = false;
-    static leftPressed = false;
-
-    static keyDownHandler(evt) {
-        /*
-          If-Else, because only one of the two should be pressed at the same time!
-          You cannot move to the right and left at the same time.
-        */
-        if (evt.key === 'Right' || evt.key === 'ArrowRight') {
-            KeyControls.rightPressed = true;
-        } else if (evt.key === 'Left' || evt.key === 'ArrowLeft') {
-            KeyControls.leftPressed = true;
-        }
-    }
-
-    static keyUpHandler(evt) {
-        /*
-          If-Else, because only one of the two should be pressed at the same time!
-          You cannot move to the right and left at the same time.
-        */
-        if (evt.key === 'Right' || evt.key === 'ArrowRight') {
-            KeyControls.rightPressed = false;
-        } else if (evt.key === 'Left' || evt.key === 'ArrowLeft') {
-            KeyControls.leftPressed = false;
-        }
-    }
-}
-
-
-class CanvasObject {
-    constructor(x, y) {
-        this._x = x;
-        this._y = y;
-    }
-
-    get x() {
-        return this._x;
-    }
-    set x(x) {
-        this._x = x;
-    }
-
-    get y() {
-        return this._y;
-    }
-    set y(y) {
-        this._y = y;
-    }
-
-
-    /*
-      There is no way to implement abstract methods in JS. 
-      Therefore workaround with throwing an error when not implemented in subclass.
-    */
-    draw() {
-        throw Error('Method draw() must be implemented in subclass.');
-    }
-}
-
-class Circle extends CanvasObject {
-    constructor(x, y, radius) {
-        super(x, y);
-        this._radius = radius;
-    }
-
-    get radius() {
-        return this._radius;
-    }
-    set radius(radius) {
-        this._radius = radius;
-    }
-}
-
-class Rectangle extends CanvasObject {
-    constructor(x, y, height, width) {
-        super(x, y);
-        this._height = height;
-        this._width = width;
-    }
-
-    get height() {
-        return this._height;
-    }
-    set height(height) {
-        this._height = height;
-    }
-
-    get width() {
-        return this._width;
-    }
-    set width(width) {
-        this._width = width;
-    }
-}
-
-
-class Ball extends Circle {
+class Ball extends canvasObjects.Circle {
     constructor(x, y, radius) {
         super(x, y, radius);
         this._dX = 2;
@@ -199,7 +101,7 @@ class Ball extends Circle {
 
 
 
-class Paddle extends Rectangle {
+class Paddle extends canvasObjects.Rectangle {
     constructor(x, y, height, width) {
         super(x, y, height, width);
     }
@@ -219,9 +121,9 @@ class Paddle extends Rectangle {
           Handle movement of paddle e. g. via keyboard.
           Paddle should only move within boundaries of canvas.
         */
-        if (KeyControls.rightPressed) {
+        if (keyControls.rightPressed) {
             this._x = Math.min(this._x + 7, canvas.width - this._width);
-        } else if (KeyControls.leftPressed) {
+        } else if (keyControls.leftPressed) {
             this._x = Math.max(this._x - 7, 0);
         }
 
@@ -237,7 +139,7 @@ class Paddle extends Rectangle {
 }
 
 
-class Brick extends Rectangle {
+class Brick extends canvasObjects.Rectangle {
     constructor(x, y, height, width) {
         super(x, y, height, width);
     }
@@ -251,7 +153,7 @@ class Brick extends Rectangle {
     }
 }
 
-class BrickGrid extends CanvasObject {
+class BrickGrid extends canvasObjects.CanvasObject {
     constructor(x, y, rowCount, columnCount, brickWidth, brickHeight, brickPadding) {
         super(x, y);
         this._rowCount = rowCount;
@@ -278,7 +180,6 @@ class BrickGrid extends CanvasObject {
 
 
 
-
 export function startBreakoutGame() {
     canvas = document.querySelector('#breakout-canvas');
 
@@ -289,8 +190,8 @@ export function startBreakoutGame() {
         /* So that players cannot (accidentally) restart the game. */
         btnStartBreakoutGame.disabled = true;
 
-        document.addEventListener('keydown', KeyControls.keyDownHandler, false);
-        document.addEventListener('keyup', KeyControls.keyUpHandler, false);
+        document.addEventListener('keydown', keyControls.keyDownHandler, false);
+        document.addEventListener('keyup', keyControls.keyUpHandler, false);
 
 
         context = canvas.getContext('2d');
