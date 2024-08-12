@@ -14,17 +14,17 @@ var breakoutCanvas;
 var breakoutCtx;
 
 class Ball {
-    constructor(ballX, ballY) {
-        this.ballX = ballX;
-        this.ballY = ballY;
-        this.ballDX = 2;
-        this.ballDY = -2;
-        this.ballRadius = 10;
+    constructor(x, y, radius) {
+        this.x = x;
+        this.y = y;
+        this.dX = 2;
+        this.dY = -2;
+        this.radius = radius;
     }
 
-    drawBall() {
+    draw() {
         breakoutCtx.beginPath();
-        breakoutCtx.arc(this.ballX, this.ballY, this.ballRadius, 0, Math.PI * 2);
+        breakoutCtx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
         breakoutCtx.fillStyle = '#FF0000';
         breakoutCtx.fill();
         breakoutCtx.closePath();
@@ -37,17 +37,34 @@ class Ball {
         */
 
         // Collision Detection: Y-Coordinate (Top & Bottom)
-        if (this.ballY + this.ballDY < this.ballRadius || this.ballY + this.ballDY > breakoutCanvas.height - this.ballRadius) {
-            this.ballDY = -this.ballDY;
+        if (this.y + this.dY < this.radius || this.y + this.dY > breakoutCanvas.height - this.radius) {
+            this.dY = -this.dY;
         }
 
         // Collision Detection: X-Coordinate (Left & Right)
-        if (this.ballX + this.ballDX < this.ballRadius || this.ballX + this.ballDX > breakoutCanvas.width - this.ballRadius) {
-            this.ballDX = -this.ballDX;
+        if (this.x + this.dX < this.radius || this.x + this.dX > breakoutCanvas.width - this.radius) {
+            this.dX = -this.dX;
         }
 
-        this.ballX += this.ballDX;
-        this.ballY += this.ballDY;
+        this.x += this.dX;
+        this.y += this.dY;
+    }
+}
+
+class Paddle {
+    constructor(x, y, height, width) {
+        this.height = height;
+        this.width = width;
+        this.x = x;
+        this.y = y;
+    }
+
+    draw() {
+        breakoutCtx.beginPath();
+        breakoutCtx.rect(this.x, this.y, this.width, this.height);
+        breakoutCtx.fillStyle = "#0095DD";
+        breakoutCtx.fill();
+        breakoutCtx.closePath();
     }
 }
 
@@ -66,21 +83,23 @@ function startBreakoutGame() {
     if (breakoutCanvas) {
         breakoutCtx = breakoutCanvas.getContext('2d');
 
-        const ball = new Ball(breakoutCanvas.width / 2, breakoutCanvas.height - 30);
+        const paddle = new Paddle((breakoutCanvas.width - 75) / 2, breakoutCanvas.height - 10, 10, 75);
+        const ball = new Ball(breakoutCanvas.width / 2, breakoutCanvas.height - 30, 10);
+
 
         /*
           Create anonymous function so actual function isn't
           executed right away.
           Otherwise setInterval() doesn't work.
-          
+
           // TODO: Use requestAPIFrame something like that for animation instead of interval
         */
-        setInterval(function () { drawBreakoutGame(ball); }, 10);
+        setInterval(function () { drawBreakoutGame(paddle, ball); }, 10);
     }
 }
 
 
-function drawBreakoutGame(ball) {
+function drawBreakoutGame(paddle, ball) {
     /*
       Improve in future: 
       Use array of balls to draw multiple balls at once
@@ -88,5 +107,6 @@ function drawBreakoutGame(ball) {
     */
     breakoutCtx.clearRect(0, 0, breakoutCanvas.width, breakoutCanvas.height);
 
-    ball.drawBall();
+    paddle.draw();
+    ball.draw();
 }
