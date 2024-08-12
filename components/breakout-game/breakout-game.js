@@ -89,14 +89,12 @@ class Ball extends CanvasObject {
         */
 
 
-        /*
-          Collision Detection: Y-Coordinate (Top & Bottom)
-          
-          Bottom = Paddle Hit or Game Over
-        */
+
+        // Collision Detection: Y-Coordinate (Top)
         if (this._y + this._dY < this._radius) {
             this._dY = -this._dY;
         }
+        // Collision Detection: Y-Coordinate (Bottom)
         else if (this._y + this._dY > breakoutCanvas.height - this._radius - paddle.height) {
             // Ball hit paddle
             if (this._x + this._radius > paddle.x && this._x - this._radius < paddle.x + paddle.width) {
