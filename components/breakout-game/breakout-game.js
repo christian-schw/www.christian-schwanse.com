@@ -16,17 +16,59 @@ var rightPressed = false;
 var leftPressed = false;
 var interval = 0;
 
-
-class Ball {
-    constructor(x, y, radius) {
-        this.x = x;
-        this.y = y;
-        this.dX = 2;
-        this.dY = -2;
-        this.radius = radius;
+class CanvasObject {
+    constructor(x, y) {
+        this._x = x;
+        this._y = y;
     }
 
-    draw() {
+    get x() {
+        return this._x;
+    }
+    set x(x) {
+        this._x = x;
+    }
+
+    get y() {
+        return this._y;
+    }
+    set y(y) {
+        this._y = y;
+    }
+}
+
+
+class Ball extends CanvasObject {
+    constructor(x, y, radius) {
+        super(x, y);
+        this._dX = 2;
+        this._dY = -2;
+        this._radius = radius;
+    }
+
+    get dX() {
+        return this._dX;
+    }
+    set dX(dX) {
+        this._dX = dX;
+    }
+
+    get dY() {
+        return this._dY;
+    }
+    set dY(dY) {
+        this._dY = dY;
+    }
+
+    get radius() {
+        return this._radius;
+    }
+    set radius(radius) {
+        this._radius = radius;
+    }
+
+
+    draw(paddle) {
         /*
           Best Practice: Save & restore context to restore state
           before e. g. transforming.
@@ -34,7 +76,7 @@ class Ball {
         breakoutCtx.save();
 
         breakoutCtx.beginPath();
-        breakoutCtx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+        breakoutCtx.arc(this._x, this._y, this._radius, 0, Math.PI * 2);
         breakoutCtx.fillStyle = '#FF0000';
         breakoutCtx.fill();
         breakoutCtx.closePath();
@@ -50,24 +92,28 @@ class Ball {
         /*
           Collision Detection: Y-Coordinate (Top & Bottom)
           
-          Bottom = Game Over
+          Bottom = Paddle Hit or Game Over
         */
-        if (this.y + this.dY < this.radius) {
-            this.dY = -this.dY;
-        } else if (this.y + this.dY > breakoutCanvas.height - this.radius) {
-            alert('Game Over!');
-            document.location.reload();
-            clearInterval(interval);
+        if (this._y + this._dY < this._radius) {
+            this._dY = -this._dY;
+        } else if (this._y + this._dY > breakoutCanvas.height - this._radius) {
+            if (this._x > paddle.x && this._x < paddle.x + paddle.width) {
+                this._dY = -this._dY;
+            } else {
+                alert('Game Over!');
+                document.location.reload();
+                clearInterval(interval);
+            }
         }
 
 
         // Collision Detection: X-Coordinate (Left & Right)
-        if (this.x + this.dX < this.radius || this.x + this.dX > breakoutCanvas.width - this.radius) {
-            this.dX = -this.dX;
+        if (this._x + this._dX < this._radius || this._x + this._dX > breakoutCanvas.width - this._radius) {
+            this._dX = -this._dX;
         }
 
-        this.x += this.dX;
-        this.y += this.dY;
+        this._x += this._dX;
+        this._y += this._dY;
 
         breakoutCtx.restore();
     }
@@ -75,13 +121,27 @@ class Ball {
 
 
 
-class Paddle {
+class Paddle extends CanvasObject {
     constructor(x, y, height, width) {
-        this.height = height;
-        this.width = width;
-        this.x = x;
-        this.y = y;
+        super(x, y);
+        this._height = height;
+        this._width = width;
     }
+
+    get height() {
+        return this._height;
+    }
+    set height(height) {
+        this._height = height;
+    }
+
+    get width() {
+        return this._width;
+    }
+    set width(width) {
+        this._width = width;
+    }
+
 
     draw() {
         /*
@@ -98,14 +158,14 @@ class Paddle {
           Paddle should only move within boundaries of canvas.
         */
         if (rightPressed) {
-            this.x = Math.min(this.x + 7, breakoutCanvas.width - this.width);
+            this._x = Math.min(this._x + 7, breakoutCanvas.width - this._width);
         } else if (leftPressed) {
-            this.x = Math.max(this.x - 7, 0);
+            this._x = Math.max(this._x - 7, 0);
         }
 
 
 
-        breakoutCtx.rect(this.x, this.y, this.width, this.height);
+        breakoutCtx.rect(this._x, this._y, this._width, this._height);
         breakoutCtx.fillStyle = '#0095DD';
         breakoutCtx.fill();
         breakoutCtx.closePath();
@@ -157,7 +217,7 @@ function drawBreakoutGame(paddle, ball) {
     breakoutCtx.clearRect(0, 0, breakoutCanvas.width, breakoutCanvas.height);
 
     paddle.draw();
-    ball.draw();
+    ball.draw(paddle);
 }
 
 
