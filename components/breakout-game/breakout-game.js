@@ -14,6 +14,7 @@ var breakoutCanvas;
 var breakoutCtx;
 var rightPressed = false;
 var leftPressed = false;
+var interval = 0;
 
 
 class Ball {
@@ -45,10 +46,20 @@ class Ball {
           This means that the radius must be taken into account for a ball or circle.
         */
 
-        // Collision Detection: Y-Coordinate (Top & Bottom)
-        if (this.y + this.dY < this.radius || this.y + this.dY > breakoutCanvas.height - this.radius) {
+
+        /*
+          Collision Detection: Y-Coordinate (Top & Bottom)
+          
+          Bottom = Game Over
+        */
+        if (this.y + this.dY < this.radius) {
             this.dY = -this.dY;
+        } else if (this.y + this.dY > breakoutCanvas.height - this.radius) {
+            alert('Game Over!');
+            document.location.reload();
+            clearInterval(interval);
         }
+
 
         // Collision Detection: X-Coordinate (Left & Right)
         if (this.x + this.dX < this.radius || this.x + this.dX > breakoutCanvas.width - this.radius) {
@@ -132,7 +143,7 @@ export function startBreakoutGame() {
 
           // TODO: Use requestAPIFrame something like that for animation instead of interval
         */
-        setInterval(function () { drawBreakoutGame(paddle, ball); }, 10);
+        interval = setInterval(function () { drawBreakoutGame(paddle, ball); }, 10);
     }
 }
 
