@@ -9,12 +9,31 @@ function init() {
 
 
 
-var ballX;
-var ballY;
-var ballDX = 2;
-var ballDY = -2;
+
 var breakoutCanvas;
 var breakoutCtx;
+
+class Ball {
+    constructor(ballX, ballY) {
+        this.ballX = ballX;
+        this.ballY = ballY;
+        this.ballDX = 2;
+        this.ballDY = -2;
+        this.ballRadius = 10;
+    }
+
+    drawBall() {
+        breakoutCtx.beginPath();
+        breakoutCtx.arc(this.ballX, this.ballY, this.ballRadius, 0, Math.PI * 2);
+        breakoutCtx.fillStyle = '#FF0000';
+        breakoutCtx.fill();
+        breakoutCtx.closePath();
+
+        this.ballX += this.ballDX;
+        this.ballY += this.ballDY;
+    }
+}
+
 
 
 function startBreakoutGame() {
@@ -30,33 +49,25 @@ function startBreakoutGame() {
     if (breakoutCanvas) {
         breakoutCtx = breakoutCanvas.getContext('2d');
 
-        ballX = breakoutCanvas.width / 2;
-        ballY = breakoutCanvas.height - 30;
+        const ball = new Ball(breakoutCanvas.width / 2, breakoutCanvas.height - 30);
 
         /*
           Create anonymous function so actual function isn't
           executed right away.
           Otherwise setInterval() doesn't work.
         */
-        setInterval(function () { drawBreakoutGame(); }, 10);
+        setInterval(function () { drawBreakoutGame(ball); }, 10);
     }
 }
 
 
-function drawBreakoutGame() {
+function drawBreakoutGame(ball) {
+    /*
+      Improve in future: 
+      Use array of balls to draw multiple balls at once
+      if player wants a harder difficulty.
+    */
     breakoutCtx.clearRect(0, 0, breakoutCanvas.width, breakoutCanvas.height);
 
-    drawBall();
-}
-
-
-function drawBall() {
-    breakoutCtx.beginPath();
-    breakoutCtx.arc(ballX, ballY, 10, 0, Math.PI * 2);
-    breakoutCtx.fillStyle = '#FF0000';
-    breakoutCtx.fill();
-    breakoutCtx.closePath();
-
-    ballX += ballDX;
-    ballY += ballDY;
+    ball.drawBall();
 }
