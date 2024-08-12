@@ -19,26 +19,6 @@ const keyControls = {
     leftPressed: false
 }
 
-const brickGrid = {
-    brickRowCount: 3,
-    brickColumnCount: 5,
-    brickWidth: 75,
-    brickHeight: 20,
-    brickPadding: 10,
-    brickOffsetTop: 30,
-    brickOffsetLeft: 30,
-    bricks: []
-}
-
-for (let c = 0; c < brickGrid.brickColumnCount; c++) {
-    brickGrid.bricks[c] = [];
-
-    for (let r = 0; r < brickGrid.brickRowCount; r++) {
-        brickGrid.bricks[c][r] = { x: 0, y: 0 };
-    }
-}
-
-
 
 
 class CanvasObject {
@@ -263,6 +243,16 @@ export function startBreakoutGame() {
         const paddle = new Paddle((canvas.width - 75) / 2, canvas.height - 10, 10, 75);
         const ball = new Ball(canvas.width / 2, canvas.height - 30, 10);
 
+        const brickGrid = {
+            brickRowCount: 3,
+            brickColumnCount: 5,
+            brickWidth: 75,
+            brickHeight: 20,
+            brickPadding: 10,
+            brickOffsetTop: 30,
+            brickOffsetLeft: 30,
+        }
+
 
         /*
           Create anonymous function so actual function isn't
@@ -271,12 +261,12 @@ export function startBreakoutGame() {
 
           // TODO: Use requestAPIFrame something like that for animation instead of interval
         */
-        interval = setInterval(function () { drawBreakoutGame(paddle, ball); }, 10);
+        interval = setInterval(function () { drawBreakoutGame(paddle, ball, brickGrid); }, 10);
     }
 }
 
 
-function drawBreakoutGame(paddle, ball) {
+function drawBreakoutGame(paddle, ball, brickGrid) {
     /*
       Improve in future: 
       Use array of balls to draw multiple balls at once
@@ -286,6 +276,17 @@ function drawBreakoutGame(paddle, ball) {
 
     paddle.draw();
     ball.draw(paddle);
+
+
+    for (let c = 0; c < brickGrid.brickColumnCount; c++) {
+        for (let r = 0; r < brickGrid.brickRowCount; r++) {
+            const brickX = c * (brickGrid.brickWidth + brickGrid.brickPadding) + brickGrid.brickOffsetLeft;
+            const brickY = r * (brickGrid.brickHeight + brickGrid.brickPadding) + brickGrid.brickOffsetTop;
+
+            const brick = new Brick(brickX, brickY, brickGrid.brickHeight, brickGrid.brickWidth);
+            brick.draw();
+        }
+    }
 }
 
 
