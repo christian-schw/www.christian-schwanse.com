@@ -3,7 +3,8 @@ window.onload = init();
 function init() {
 
     // ========= Breakout Game =========
-    startBreakoutGame();
+    const btnStartBreakoutGame = document.querySelector('#start-breakout-game');
+    btnStartBreakoutGame.addEventListener('click', startBreakoutGame, false);
 }
 
 
@@ -17,6 +18,12 @@ var breakoutCtx;
 
 
 function startBreakoutGame() {
+    const btnStartBreakoutGame = document.querySelector('#start-breakout-game');
+
+    /* So that players cannot (accidentally) restart the game. */
+    btnStartBreakoutGame.disabled = true;
+
+
     breakoutCanvas = document.querySelector('#breakout-canvas');
 
     // It's possible that some pages do not have the Breakout-Game

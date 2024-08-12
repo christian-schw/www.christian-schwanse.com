@@ -109,6 +109,14 @@
     color: var(--md-sys-color-on-secondary-container);
 }
 
+.btn-highlighted-button-tag:disabled {
+    opacity: 0.5;
+    cursor: default;
+
+    background-color: var(--md-sys-color-custom-color-1-container);
+    color: var(--md-sys-color-on-secondary-container);
+}
+
 
 
 
