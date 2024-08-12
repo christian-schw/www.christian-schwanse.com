@@ -251,22 +251,21 @@ class Brick extends Rectangle {
     }
 }
 
-class BrickGrid {
-    constructor(rowCount, columnCount, brickWidth, brickHeight, brickPadding, brickOffsetTop, brickOffsetLeft) {
+class BrickGrid extends CanvasObject {
+    constructor(x, y, rowCount, columnCount, brickWidth, brickHeight, brickPadding) {
+        super(x, y);
         this._rowCount = rowCount;
         this._columnCount = columnCount;
         this._brickWidth = brickWidth;
         this._brickHeight = brickHeight;
         this._brickPadding = brickPadding;
-        this._brickOffsetTop = brickOffsetTop;
-        this._brickOffsetLeft = brickOffsetLeft;
     }
 
     draw() {
         for (let c = 0; c < this._columnCount; c++) {
             for (let r = 0; r < this._rowCount; r++) {
-                const brickX = c * (this._brickWidth + this._brickPadding) + this._brickOffsetLeft;
-                const brickY = r * (this._brickHeight + this._brickPadding) + this._brickOffsetTop;
+                const brickX = c * (this._brickWidth + this._brickPadding) + this._x;
+                const brickY = r * (this._brickHeight + this._brickPadding) + this._y;
 
                 const brick = new Brick(brickX, brickY, this._brickHeight, this._brickWidth);
                 brick.draw();
@@ -298,7 +297,7 @@ export function startBreakoutGame() {
 
         const paddle = new Paddle((canvas.width - 75) / 2, canvas.height - 10, 10, 75);
         const ball = new Ball(canvas.width / 2, canvas.height - 30, 10);
-        const brickGrid = new BrickGrid(3, 5, 75, 20, 10, 30, 30);
+        const brickGrid = new BrickGrid(30, 30, 3, 5, 75, 20, 10);
 
 
 
