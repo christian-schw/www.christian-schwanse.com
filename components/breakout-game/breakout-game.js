@@ -10,8 +10,8 @@ function init() {
 
 
 
-var breakoutCanvas;
-var breakoutCtx;
+var canvas;
+var context;
 var interval = 0;
 
 const keyControls = {
@@ -26,7 +26,16 @@ const brickGrid = {
     brickHeight: 20,
     brickPadding: 10,
     brickOffsetTop: 30,
-    brickOffsetLeft: 30
+    brickOffsetLeft: 30,
+    bricks: []
+}
+
+for (let c = 0; c < brickGrid.brickColumnCount; c++) {
+    brickGrid.bricks[c] = [];
+
+    for (let r = 0; r < brickGrid.brickRowCount; r++) {
+        brickGrid.bricks[c][r] = { x: 0, y: 0 };
+    }
 }
 
 
@@ -117,13 +126,13 @@ class Ball extends Circle {
           Best Practice: Save & restore context to restore state
           before e. g. transforming.
         */
-        breakoutCtx.save();
+        context.save();
 
-        breakoutCtx.beginPath();
-        breakoutCtx.arc(this._x, this._y, this._radius, 0, Math.PI * 2);
-        breakoutCtx.fillStyle = '#FF0000';
-        breakoutCtx.fill();
-        breakoutCtx.closePath();
+        context.beginPath();
+        context.arc(this._x, this._y, this._radius, 0, Math.PI * 2);
+        context.fillStyle = '#FF0000';
+        context.fill();
+        context.closePath();
 
         /*
           Important:
@@ -139,13 +148,13 @@ class Ball extends Circle {
             this._dY = -this._dY;
         }
         // Collision Detection: Y-Coordinate (Bottom)
-        else if (this._y + this._dY > breakoutCanvas.height - this._radius - paddle.height) {
+        else if (this._y + this._dY > canvas.height - this._radius - paddle.height) {
             // Ball hit paddle
             if (this._x + this._radius > paddle.x && this._x - this._radius < paddle.x + paddle.width) {
                 this._dY = -this._dY;
             }
             // Ball didn't hit paddle but also didn't hit bottom yet
-            else if (this._y + this._dY < breakoutCanvas.height - this._radius) {
+            else if (this._y + this._dY < canvas.height - this._radius) {
                 // Do nothing. Wait for next for frame until it's clear that bottom has been hit.
             }
             // Ball hit bottom
@@ -158,14 +167,14 @@ class Ball extends Circle {
 
 
         // Collision Detection: X-Coordinate (Left & Right)
-        if (this._x + this._dX < this._radius || this._x + this._dX > breakoutCanvas.width - this._radius) {
+        if (this._x + this._dX < this._radius || this._x + this._dX > canvas.width - this._radius) {
             this._dX = -this._dX;
         }
 
         this._x += this._dX;
         this._y += this._dY;
 
-        breakoutCtx.restore();
+        context.restore();
     }
 }
 
@@ -182,9 +191,9 @@ class Paddle extends Rectangle {
           Best Practice: Save & restore context to restore state
           before e. g. transforming.
         */
-        breakoutCtx.save();
+        context.save();
 
-        breakoutCtx.beginPath();
+        context.beginPath();
 
 
         /*
@@ -192,19 +201,19 @@ class Paddle extends Rectangle {
           Paddle should only move within boundaries of canvas.
         */
         if (keyControls.rightPressed) {
-            this._x = Math.min(this._x + 7, breakoutCanvas.width - this._width);
+            this._x = Math.min(this._x + 7, canvas.width - this._width);
         } else if (keyControls.leftPressed) {
             this._x = Math.max(this._x - 7, 0);
         }
 
 
 
-        breakoutCtx.rect(this._x, this._y, this._width, this._height);
-        breakoutCtx.fillStyle = '#0095DD';
-        breakoutCtx.fill();
-        breakoutCtx.closePath();
+        context.rect(this._x, this._y, this._width, this._height);
+        context.fillStyle = '#0095DD';
+        context.fill();
+        context.closePath();
 
-        breakoutCtx.restore();
+        context.restore();
     }
 }
 
@@ -218,10 +227,10 @@ class Brick extends CanvasObject {
 
 
 export function startBreakoutGame() {
-    breakoutCanvas = document.querySelector('#breakout-canvas');
+    canvas = document.querySelector('#breakout-canvas');
 
     // It's possible that some pages do not have the Breakout-Game
-    if (breakoutCanvas) {
+    if (canvas) {
         const btnStartBreakoutGame = document.querySelector('#start-breakout-game');
 
         /* So that players cannot (accidentally) restart the game. */
@@ -231,10 +240,10 @@ export function startBreakoutGame() {
         document.addEventListener('keyup', keyUpHandler, false);
 
 
-        breakoutCtx = breakoutCanvas.getContext('2d');
+        context = canvas.getContext('2d');
 
-        const paddle = new Paddle((breakoutCanvas.width - 75) / 2, breakoutCanvas.height - 10, 10, 75);
-        const ball = new Ball(breakoutCanvas.width / 2, breakoutCanvas.height - 30, 10);
+        const paddle = new Paddle((canvas.width - 75) / 2, canvas.height - 10, 10, 75);
+        const ball = new Ball(canvas.width / 2, canvas.height - 30, 10);
 
 
         /*
@@ -255,7 +264,7 @@ function drawBreakoutGame(paddle, ball) {
       Use array of balls to draw multiple balls at once
       if player wants a harder difficulty.
     */
-    breakoutCtx.clearRect(0, 0, breakoutCanvas.width, breakoutCanvas.height);
+    context.clearRect(0, 0, canvas.width, canvas.height);
 
     paddle.draw();
     ball.draw(paddle);
