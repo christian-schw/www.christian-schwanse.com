@@ -167,11 +167,19 @@ class Brick extends canvasObjects.Rectangle {
     }
 
     draw() {
+        /*
+          Best Practice: Save & restore context to restore state
+          before e. g. transforming.
+        */
+        context.save();
+
         context.beginPath();
         context.rect(this.x, this.y, this.width, this.height);
         context.fillStyle = "#0095DD";
         context.fill();
         context.closePath();
+
+        context.restore();
     }
 }
 
