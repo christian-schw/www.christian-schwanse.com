@@ -14,11 +14,41 @@ var canvas;
 var context;
 var interval = 0;
 
-const keyControls = {
-    rightPressed: false,
-    leftPressed: false
-}
 
+class KeyControls {
+    constructor() {
+        if (this instanceof KeyControls) {
+            throw Error('A static class cannot be instantiated.');
+        }
+    }
+
+    static rightPressed = false;
+    static leftPressed = false;
+
+    static keyDownHandler(evt) {
+        /*
+          If-Else, because only one of the two should be pressed at the same time!
+          You cannot move to the right and left at the same time.
+        */
+        if (evt.key === 'Right' || evt.key === 'ArrowRight') {
+            KeyControls.rightPressed = true;
+        } else if (evt.key === 'Left' || evt.key === 'ArrowLeft') {
+            KeyControls.leftPressed = true;
+        }
+    }
+
+    static keyUpHandler(evt) {
+        /*
+          If-Else, because only one of the two should be pressed at the same time!
+          You cannot move to the right and left at the same time.
+        */
+        if (evt.key === 'Right' || evt.key === 'ArrowRight') {
+            KeyControls.rightPressed = false;
+        } else if (evt.key === 'Left' || evt.key === 'ArrowLeft') {
+            KeyControls.leftPressed = false;
+        }
+    }
+}
 
 
 class CanvasObject {
@@ -47,7 +77,7 @@ class CanvasObject {
       Therefore workaround with throwing an error when not implemented in subclass.
     */
     draw() {
-        throw new Error('Method draw() must be implemented in subclass.');
+        throw Error('Method draw() must be implemented in subclass.');
     }
 }
 
@@ -189,9 +219,9 @@ class Paddle extends Rectangle {
           Handle movement of paddle e. g. via keyboard.
           Paddle should only move within boundaries of canvas.
         */
-        if (keyControls.rightPressed) {
+        if (KeyControls.rightPressed) {
             this._x = Math.min(this._x + 7, canvas.width - this._width);
-        } else if (keyControls.leftPressed) {
+        } else if (KeyControls.leftPressed) {
             this._x = Math.max(this._x - 7, 0);
         }
 
@@ -221,6 +251,33 @@ class Brick extends Rectangle {
     }
 }
 
+class BrickGrid {
+    constructor(rowCount, columnCount, brickWidth, brickHeight, brickPadding, brickOffsetTop, brickOffsetLeft) {
+        this._rowCount = rowCount;
+        this._columnCount = columnCount;
+        this._brickWidth = brickWidth;
+        this._brickHeight = brickHeight;
+        this._brickPadding = brickPadding;
+        this._brickOffsetTop = brickOffsetTop;
+        this._brickOffsetLeft = brickOffsetLeft;
+    }
+
+    draw() {
+        for (let c = 0; c < this._columnCount; c++) {
+            for (let r = 0; r < this._rowCount; r++) {
+                const brickX = c * (this._brickWidth + this._brickPadding) + this._brickOffsetLeft;
+                const brickY = r * (this._brickHeight + this._brickPadding) + this._brickOffsetTop;
+
+                const brick = new Brick(brickX, brickY, this._brickHeight, this._brickWidth);
+                brick.draw();
+            }
+        }
+    }
+}
+
+
+
+
 
 
 export function startBreakoutGame() {
@@ -233,24 +290,16 @@ export function startBreakoutGame() {
         /* So that players cannot (accidentally) restart the game. */
         btnStartBreakoutGame.disabled = true;
 
-        document.addEventListener('keydown', keyDownHandler, false);
-        document.addEventListener('keyup', keyUpHandler, false);
+        document.addEventListener('keydown', KeyControls.keyDownHandler, false);
+        document.addEventListener('keyup', KeyControls.keyUpHandler, false);
 
 
         context = canvas.getContext('2d');
 
         const paddle = new Paddle((canvas.width - 75) / 2, canvas.height - 10, 10, 75);
         const ball = new Ball(canvas.width / 2, canvas.height - 30, 10);
+        const brickGrid = new BrickGrid(3, 5, 75, 20, 10, 30, 30);
 
-        const brickGrid = {
-            brickRowCount: 3,
-            brickColumnCount: 5,
-            brickWidth: 75,
-            brickHeight: 20,
-            brickPadding: 10,
-            brickOffsetTop: 30,
-            brickOffsetLeft: 30,
-        }
 
 
         /*
@@ -275,40 +324,5 @@ function drawBreakoutGame(paddle, ball, brickGrid) {
 
     paddle.draw();
     ball.draw(paddle);
-
-
-    for (let c = 0; c < brickGrid.brickColumnCount; c++) {
-        for (let r = 0; r < brickGrid.brickRowCount; r++) {
-            const brickX = c * (brickGrid.brickWidth + brickGrid.brickPadding) + brickGrid.brickOffsetLeft;
-            const brickY = r * (brickGrid.brickHeight + brickGrid.brickPadding) + brickGrid.brickOffsetTop;
-
-            const brick = new Brick(brickX, brickY, brickGrid.brickHeight, brickGrid.brickWidth);
-            brick.draw();
-        }
-    }
-}
-
-
-function keyDownHandler(evt) {
-    /*
-      If-Else, because only one of the two should be pressed at the same time!
-      You cannot move to the right and left at the same time.
-    */
-    if (evt.key === 'Right' || evt.key === 'ArrowRight') {
-        keyControls.rightPressed = true;
-    } else if (evt.key === 'Left' || evt.key === 'ArrowLeft') {
-        keyControls.leftPressed = true;
-    }
-}
-
-function keyUpHandler(evt) {
-    /*
-      If-Else, because only one of the two should be pressed at the same time!
-      You cannot move to the right and left at the same time.
-    */
-    if (evt.key === 'Right' || evt.key === 'ArrowRight') {
-        keyControls.rightPressed = false;
-    } else if (evt.key === 'Left' || evt.key === 'ArrowLeft') {
-        keyControls.leftPressed = false;
-    }
+    brickGrid.draw();
 }
