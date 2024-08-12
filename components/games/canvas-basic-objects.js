@@ -1,7 +1,7 @@
 export class CanvasObject {
     constructor(x, y) {
-        this._x = x;
-        this._y = y;
+        this.x = x;
+        this.y = y;
     }
 
     get x() {
@@ -31,7 +31,7 @@ export class CanvasObject {
 export class Circle extends CanvasObject {
     constructor(x, y, radius) {
         super(x, y);
-        this._radius = radius;
+        this.radius = radius;
     }
 
     get radius() {
@@ -45,8 +45,8 @@ export class Circle extends CanvasObject {
 export class Rectangle extends CanvasObject {
     constructor(x, y, height, width) {
         super(x, y);
-        this._height = height;
-        this._width = width;
+        this.height = height;
+        this.width = width;
     }
 
     get height() {

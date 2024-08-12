@@ -23,8 +23,8 @@ var interval = 0;
 class Ball extends canvasObjects.Circle {
     constructor(x, y, radius) {
         super(x, y, radius);
-        this._dX = 2;
-        this._dY = -2;
+        this.dX = 2;
+        this.dY = -2;
     }
 
     get dX() {
@@ -50,7 +50,7 @@ class Ball extends canvasObjects.Circle {
         context.save();
 
         context.beginPath();
-        context.arc(this._x, this._y, this._radius, 0, Math.PI * 2);
+        context.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
         context.fillStyle = '#FF0000';
         context.fill();
         context.closePath();
@@ -65,17 +65,17 @@ class Ball extends canvasObjects.Circle {
 
 
         // Collision Detection: Y-Coordinate (Top)
-        if (this._y + this._dY < this._radius) {
-            this._dY = -this._dY;
+        if (this.y + this.dY < this.radius) {
+            this.dY = -this.dY;
         }
         // Collision Detection: Y-Coordinate (Bottom)
-        else if (this._y + this._dY > canvas.height - this._radius - paddle.height) {
+        else if (this.y + this.dY > canvas.height - this.radius - paddle.height) {
             // Ball hit paddle
-            if (this._x + this._radius > paddle.x && this._x - this._radius < paddle.x + paddle.width) {
-                this._dY = -this._dY;
+            if (this.x + this.radius > paddle.x && this.x - this.radius < paddle.x + paddle.width) {
+                this.dY = -this.dY;
             }
             // Ball didn't hit paddle but also didn't hit bottom yet
-            else if (this._y + this._dY < canvas.height - this._radius) {
+            else if (this.y + this.dY < canvas.height - this.radius) {
                 // Do nothing. Wait for next for frame until it's clear that bottom has been hit.
             }
             // Ball hit bottom
@@ -88,12 +88,12 @@ class Ball extends canvasObjects.Circle {
 
 
         // Collision Detection: X-Coordinate (Left & Right)
-        if (this._x + this._dX < this._radius || this._x + this._dX > canvas.width - this._radius) {
-            this._dX = -this._dX;
+        if (this.x + this.dX < this.radius || this.x + this.dX > canvas.width - this.radius) {
+            this.dX = -this.dX;
         }
 
-        this._x += this._dX;
-        this._y += this._dY;
+        this.x += this.dX;
+        this.y += this.dY;
 
         context.restore();
     }
@@ -122,14 +122,14 @@ class Paddle extends canvasObjects.Rectangle {
           Paddle should only move within boundaries of canvas.
         */
         if (keyControls.rightPressed) {
-            this._x = Math.min(this._x + 7, canvas.width - this._width);
+            this.x = Math.min(this.x + 7, canvas.width - this.width);
         } else if (keyControls.leftPressed) {
-            this._x = Math.max(this._x - 7, 0);
+            this.x = Math.max(this.x - 7, 0);
         }
 
 
 
-        context.rect(this._x, this._y, this._width, this._height);
+        context.rect(this.x, this.y, this.width, this.height);
         context.fillStyle = '#0095DD';
         context.fill();
         context.closePath();
@@ -140,8 +140,34 @@ class Paddle extends canvasObjects.Rectangle {
 
 
 class Brick extends canvasObjects.Rectangle {
-    constructor(x, y, height, width) {
-        super(x, y, height, width);
+    /*
+      Status of Brick:
+      0 = Hidden
+      1 = Visible
+    
+      Further statuses can be added in the future, 
+      such as "2 = Indestructible" to make it even
+      harder for the user.
+    */
+    #possibleStatus = {
+        0: "Hidden",
+        1: "Visible"
+    };
+
+    constructor(x, y, height, width, status) {
+        super(x, y, height, width, status);
+        this.status = status;
+    }
+
+    get status() {
+        return this._status;
+    }
+    set status(status) {
+        if (status in this.#possibleStatus) {
+            this._status = status;
+        } else {
+            throw Error('Imported status value is not intended.');
+        }
     }
 
     draw() {
@@ -156,24 +182,24 @@ class Brick extends canvasObjects.Rectangle {
 class BrickGrid extends canvasObjects.CanvasObject {
     constructor(x, y, rowCount, columnCount, brickWidth, brickHeight, brickPadding) {
         super(x, y);
-        this._rowCount = rowCount;
-        this._columnCount = columnCount;
-        this._brickWidth = brickWidth;
-        this._brickHeight = brickHeight;
-        this._brickPadding = brickPadding;
-        this._bricks = this.#getBricks();
+        this.rowCount = rowCount;
+        this.columnCount = columnCount;
+        this.brickWidth = brickWidth;
+        this.brickHeight = brickHeight;
+        this.brickPadding = brickPadding;
+        this.bricks = this.#initBricks();
     }
 
-    #getBricks() {
+    #initBricks() {
         const bricks = []
 
-        for (let c = 0; c < this._columnCount; c++) {
+        for (let c = 0; c < this.columnCount; c++) {
             bricks[c] = [];
 
-            for (let r = 0; r < this._rowCount; r++) {
-                const brickX = c * (this._brickWidth + this._brickPadding) + this._x;
-                const brickY = r * (this._brickHeight + this._brickPadding) + this._y;
-                const brick = new Brick(brickX, brickY, this._brickHeight, this._brickWidth);
+            for (let r = 0; r < this.rowCount; r++) {
+                const brickX = c * (this.brickWidth + this.brickPadding) + this.x;
+                const brickY = r * (this.brickHeight + this.brickPadding) + this.y;
+                const brick = new Brick(brickX, brickY, this.brickHeight, this.brickWidth, 1);
 
                 bricks[c][r] = brick;
             }
@@ -183,9 +209,16 @@ class BrickGrid extends canvasObjects.CanvasObject {
     }
 
     draw() {
-        for (let c = 0; c < this._columnCount; c++) {
-            for (let r = 0; r < this._rowCount; r++) {
-                this._bricks[c][r].draw();
+        for (let c = 0; c < this.columnCount; c++) {
+            for (let r = 0; r < this.rowCount; r++) {
+                const brick = this.bricks[c][r]
+
+                if (brick.status === 1) {
+                    brick.draw();
+                } else {
+                    // TODO: Implement hidden status
+                }
+
             }
         }
     }
