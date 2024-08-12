@@ -141,10 +141,6 @@ class Paddle extends canvasObjects.Rectangle {
 
 class Brick extends canvasObjects.Rectangle {
     /*
-      Status of Brick:
-      0 = Hidden
-      1 = Visible
-    
       Further statuses can be added in the future, 
       such as "2 = Indestructible" to make it even
       harder for the user.
