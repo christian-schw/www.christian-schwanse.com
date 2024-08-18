@@ -1,6 +1,6 @@
 ---
-name: 'Template: Issues'
-about: Template for new issues. Uses Gherkin Syntax for BDD.
+name: 'Template: Issue - User Story'
+about: Template for new issues. Uses Gherkin Syntax for BDD / User Stories.
 title: ''
 labels: ''
 assignees: ''
