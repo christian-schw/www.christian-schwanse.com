@@ -1,3 +1,37 @@
+/*
+                                       Table of Contents: main.css
+
+  Notes: 
+  - Component-specific CSS: Is in the "components" folder in the respective components.
+  E. g. header-CSS is in "components/header".
+
+  - Page-specific CSS: Is in the "pages" folder in the respective page folder.
+  E. g. index.html-CSS is in "pages/index".
+
+  - Precedence: It should always be main.css first and then page- or component-specific CSS.
+
+  - The number of HTTP requests or page load time are not taken into account. 
+  The page already loads quickly anyway. Therefore, optimization is classified as unimportant.
+  Priority rather placed on readability / splitted CSS files.
+
+
+  Table of Contents:
+  Root
+  Headings
+  Pargraph
+  Lists
+  Links
+  Code
+  Sections
+  Atomic CSS
+  Animations
+  Accessibility
+  Mobile Responsiveness
+*/
+
+
+
+
 /* 
   ========================================================================
   =============================== Root ===================================
@@ -52,7 +86,7 @@ body {
 
 /* 
   ========================================================================
-  =============================== Headings ================================
+  ============================== Headings ================================
   ======================================================================== 
 */
 h3,
