@@ -1,7 +1,6 @@
 import * as header from '/components/header/header.js';
 import * as themeSwitch from '/components/theme-switch/theme-switch.js';
 import * as languageSwitch from '/components/language-switch/language-switch.js';
-import * as detailsSummaries from '/components/table-of-contents/table-of-contents.js';
 
 
 /*
