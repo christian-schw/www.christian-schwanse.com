@@ -2,6 +2,7 @@
 On the website I present myself, my skills, professional experience and projects.<br />
 The portfolio website itself is also a project.<br />
 <br />
+![image](https://github.com/user-attachments/assets/63d11641-5d8e-4768-959e-9dca472f0e21)
 <br />
 
 ## General Information about the Project
