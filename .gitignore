@@ -1,0 +1,13 @@
+# There's a saying: Never add dependencies to source control!
+# Reasons are e. g.:
+# Size: Dependencies can significantly increase the size of the repository, 
+#       which leads to longer clone and pull times.
+# Redundance: If dependencies are managed in a package manager such as npm, pip or yarn, 
+#       it is redundant to also store them in the repository.
+# Conflicts: Changes to dependencies can cause conflicts if they are managed manually.
+# Security: Sensitive information such as API keys or passwords should never be stored in a public repository.
+
+
+# Ignore Node.js
+node_modules/
+package-lock.json
