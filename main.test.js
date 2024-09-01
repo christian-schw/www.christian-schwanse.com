@@ -5,15 +5,9 @@
 // TODO: theme-switch.js => Add Unit Tests
 
 // TODO: Finish watching the video before tests are created (https://www.youtube.com/watch?v=x6NUZ8dc9Qg).
+import { debounce } from './main';
 
-/* const main = require('./main'); */
-
-// TODO: Rewrite whole import structure etc. as I can't find another way.
-//       Add "./" instead of just "/" to all modules 
-//       and if it works => test page with local server.
-//       If that doesn't work, remove ESM Support & rewrite whole imports and test it.
-import { testBrrrrr } from './main';
-
-test('Brrr brrr', () => {
-    expect(testBrrrrr(1, 4)).toBe(5);
+// TODO: Add describe () -> look up video
+test('Debounce 2 seconds', () => {
+    //expect(debounce(1, 4)).toBe(5);
 });

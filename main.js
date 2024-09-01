@@ -4,12 +4,6 @@ import * as languageSwitch from './components/language-switch/language-switch.js
 
 
 /*
-  Use old export-syntax instead of export/import
-  to use Jest. Jest doesn't support esm syntax.
-*/
-
-
-/*
   To be sure that JS Code runs only when DOM is ready.
   -> To prevent errors when accessing DOM-objects.
 */
@@ -78,7 +72,7 @@ function init() {
  * 
  * @returns {Function}
  */
-function debounce(func, delay) {
+export function debounce(func, delay) {
     let timerID;
 
 
@@ -93,12 +87,6 @@ function debounce(func, delay) {
         }, delay);
     }
 }
-
-// TODO: Delete test method afterwards when Jest is configured for ESM
-export function testBrrrrr(a, b) {
-    return a + b;
-}
-
 
 
 
