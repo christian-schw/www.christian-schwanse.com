@@ -5,3 +5,10 @@
 // TODO: theme-switch.js => Add Unit Tests
 
 // TODO: Finish watching the video before tests are created (https://www.youtube.com/watch?v=x6NUZ8dc9Qg).
+
+/* const main = require('./main'); */
+import { testBrrrrr } from './main';
+
+test('Brrr brrr', () => {
+    expect(testBrrrrr(1, 4)).toBe(5);
+});
