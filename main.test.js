@@ -1,7 +1,8 @@
 // TODO: main.test.js => Add Unit Test debounce-func. 
-//   If no solution found to ReferenceError (only) in Unit Test
-//   then refactor debounce method to different file (maybe utilities-folder with utilities.js?)
+//   Refactor debounce method to different file (maybe utilities-folder with utilities.js?)
 //   In this case, main.test.js is not necessary anymore.
+//   Same goes with greetingsConsole function! Should also be in utilities-folder.
+//   
 // TODO: language-switch.js => Add Unit Tests
 // TODO: theme-switch.js => Add Unit Tests
 

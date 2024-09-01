@@ -7,7 +7,9 @@
 # Conflicts: Changes to dependencies can cause conflicts if they are managed manually.
 # Security: Sensitive information such as API keys or passwords should never be stored in a public repository.
 
-
 # Ignore Node.js
 /node_modules/
 package-lock.json
+
+# Ignore Coverage Directory of Jest
+/coverage/
