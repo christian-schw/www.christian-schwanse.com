@@ -1,4 +1,4 @@
-import * as languageSwitch from '/components/language-switch/language-switch.js';
+import * as languageSwitch from '../language-switch/language-switch.js';
 
 
 /**
