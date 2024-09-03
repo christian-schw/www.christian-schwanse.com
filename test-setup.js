@@ -1,23 +1,20 @@
 /**
  * @jest-environment jsdom
  */
-import { jest } from '@jest/globals';
+
+
+// ====== Setup Jest test environment for all files ======
+
+// Uncomment line below for jest-mocking (e. g. function-mocking "jest.fn();")
+// import { jest } from '@jest/globals';
+
 
 /*
-  To test sessionStorage in Jest, you have to mock the sessionStorage
-  in unit test to be able to call it.
-  Also jsdom is needed for window-Object.
-*/
-const mockSessionStorage = {
-    mockGetItem: jest.fn(),
-    mockSetItem: jest.fn(),
-    mockRemoveItem: jest.fn()
-}
+  Note: 
+  Mocking the local or session storage is not necessary.
+  Simply use e. g. "window.sessionStorage" instead of just "sessionStorage"
+  and the tests will work!
 
-Object.defineProperty(window, 'sessionStorage', {
-    value: {
-        getItem: (...args) => mockSessionStorage.mockGetItem(...args),
-        setItem: (...args) => mockSessionStorage.mockSetItem(...args),
-        removeItem: (...args) => mockSessionStorage.mockRemoveItem(...args)
-    }
-});
+  Normally you can leave "window" out. 
+  However, this is required for Jest Unit Tests.
+*/
