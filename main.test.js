@@ -6,7 +6,7 @@
 // TODO: language-switch.js => Add Unit Tests
 // TODO: theme-switch.js => Add Unit Tests
 
-import { debounce } from './main';
+import { debounce } from './utilities/debounce.js';
 
 // TODO: Add describe () -> look up video
 test('Debounce 2 seconds', () => {
