@@ -1,7 +1,7 @@
 import * as header from './components/header/header.js';
 import * as themeSwitch from './components/theme-switch/theme-switch.js';
 import * as languageSwitch from './components/language-switch/language-switch.js';
-import * as debounce from './utilities/debounce.js';
+import * as debounce from './utilities/debounce/debounce.js';
 import * as greetings from './utilities/greetings.js';
 
 
