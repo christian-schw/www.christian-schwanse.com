@@ -42,6 +42,7 @@ describe('Language Switch', () => {
     });
 
 
+
     describe('Func getURLWithReplacedLangDir', () => {
         test('Lang = En, pageURL = https://www.christian-schwanse.com/de/index.html, domain = https://www.christian-schwanse.com', () => {
             let lang = 'en';
@@ -74,7 +75,32 @@ describe('Language Switch', () => {
     });
 
 
+
     describe('Func getLanguagePage', () => {
-        // TODO: Implement
+        test('Get lang = de, pageURL = https://127.0.0.1:5000/de/contact.html', () => {
+            window.location.href = 'https://127.0.0.1:5000/de/contact.html';
+            window.location.origin = 'https://127.0.0.1:5000';
+            let expectedOutput = 'de';
+
+            expect(languageSwitch.getLanguagePage()).toBe(expectedOutput);
+        });
+
+
+        test('Get lang = en, pageURL = https://www.christian-schwanse.com/en/my-projects.html', () => {
+            window.location.href = 'https://www.christian-schwanse.com/en/my-projects.html';
+            window.location.origin = 'https://www.christian-schwanse.com';
+            let expectedOutput = 'en';
+
+            expect(languageSwitch.getLanguagePage()).toBe(expectedOutput);
+        });
+
+
+        test('Get lang = de, pageURL = https://www.christian-schwanse.com/de/about-me.html', () => {
+            window.location.href = 'https://www.christian-schwanse.com/de/about-me.html';
+            window.location.origin = 'https://www.christian-schwanse.com';
+            let expectedOutput = 'de';
+
+            expect(languageSwitch.getLanguagePage()).toBe(expectedOutput);
+        });
     });
 });
