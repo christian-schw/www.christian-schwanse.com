@@ -1,5 +1,7 @@
-const darkTheme = '/components/theme-switch/theme-dark-high-contrast.css';
-const lightTheme = '/components/theme-switch/theme-light-high-contrast.css';
+const themes = {
+    darkTheme: '/components/theme-switch/theme-dark-high-contrast.css',
+    lightTheme: '/components/theme-switch/theme-light-high-contrast.css'
+};
 
 const storageKeyThemePath = 'themePath';
 
@@ -18,7 +20,7 @@ export function initTheme() {
     const themeLink = document.querySelector('#theme-link');
 
 
-    if (themePath === darkTheme) {
+    if (themePath === themes.darkTheme) {
         // Set appearance of theme switch as well.
         // Otherwise it can happen that Dark Theme is 
         // displayed but the theme switch is still set to Light Theme.
@@ -27,7 +29,7 @@ export function initTheme() {
     else {
         // If nothing or an invalid value has been set, use default theme (lightTheme)
         // and default appearance of theme switch as well.
-        themePath = lightTheme;
+        themePath = themes.lightTheme;
     }
 
 
@@ -50,11 +52,11 @@ export function setTheme(evt) {
 
     if (evt.target.checked) {
         // Dark Theme
-        themePath = darkTheme;
+        themePath = themes.darkTheme;
     }
     else {
         // Light Theme
-        themePath = lightTheme;
+        themePath = themes.lightTheme;
     }
 
 
