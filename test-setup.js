@@ -1,9 +1,7 @@
-/**
- * @jest-environment jsdom
- */
-
-
+// =======================================================
 // ====== Setup Jest test environment for all files ======
+// =======================================================
+
 
 // Uncomment line below for jest-mocking (e. g. function-mocking "jest.fn();")
 // import { jest } from '@jest/globals';
