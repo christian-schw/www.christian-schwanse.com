@@ -3,7 +3,7 @@
 // =======================================================
 
 
-// Uncomment line below for jest-mocking (e. g. function-mocking "jest.fn();")
+// For jest-mocking (e. g. function-mocking "jest.fn();")
 // import { jest } from '@jest/globals';
 
 
