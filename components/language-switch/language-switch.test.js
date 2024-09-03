@@ -1,5 +1,22 @@
 /**
  * @jest-environment jsdom
  */
+import * as languageSwitch from './language-switch.js';
 
-// TODO: Implement Unit Tests
+
+describe('Language Switch', () => {
+
+    describe('Func setLanguagePage', () => {
+        // TODO: Implement
+    });
+
+
+    describe('Func replaceLangDirectoryInURL', () => {
+        // TODO: Implement
+    });
+
+
+    describe('Func getLanguagePage', () => {
+        // TODO: Implement
+    });
+});

@@ -28,7 +28,7 @@ export function setLanguagePage(evt, lang, pageURL) {
     // It's good to check if Location object is available to avoid potential pitfalls.
     if (window.location) {
         const domain = window.location.origin;
-        const newURL = replaceLangDirectoryInURL(lang, pageURL, domain);
+        const newURL = getURLWithReplacedLangDir(lang, pageURL, domain);
 
         // URL will not be replaced if default behavior is not deactivated!
         evt.preventDefault();
@@ -40,7 +40,7 @@ export function setLanguagePage(evt, lang, pageURL) {
 
 
 /**
- * Get new URL where the language directory has been replaced.
+ * Return new URL where the language directory has been replaced.
  * Language directory *always* comes directly after the domain!
  * Example URL:
  * http://www.christian-schwanse.com/de/about-me.html
@@ -50,7 +50,7 @@ export function setLanguagePage(evt, lang, pageURL) {
  * @param {String} domain 
  * @returns {String} newURL
  */
-function replaceLangDirectoryInURL(lang, pageURL, domain) {
+export function getURLWithReplacedLangDir(lang, pageURL, domain) {
     let newURL = pageURL.replace(domain, '');
     newURL = newURL.split('/');
 

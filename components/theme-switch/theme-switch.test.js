@@ -15,13 +15,6 @@ const storageKeyThemePath = 'themePath';
 
 describe('Theme Switch', () => {
     /*
-      Improve in future: Unit Tests can be improved 
-      when UI-Elements and head-tag data of HTML is tested as well.
-      Currently, I don't know how to test that in Jest Test-Framework.
-    */
-
-
-    /*
       Mocking HTML elements to prevent errors with undefined objects 
       within the “real” functions that are tested with Jest.
       E. g. "TypeError: Cannot read properties of null (reading 'setAttribute')."
