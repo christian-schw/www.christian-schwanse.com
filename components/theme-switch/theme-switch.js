@@ -30,6 +30,8 @@ export function initTheme() {
         // If nothing or an invalid value has been set, use default theme (lightTheme)
         // and default appearance of theme switch as well.
         themePath = themes.lightTheme;
+
+        document.querySelector('#theme-checkbox').checked = false;
     }
 
 

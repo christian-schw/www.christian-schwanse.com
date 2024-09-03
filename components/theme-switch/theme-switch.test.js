@@ -21,39 +21,52 @@ describe('Theme Switch', () => {
     */
 
 
+    /*
+      Mocking HTML elements to prevent errors with undefined objects 
+      within the “real” functions that are tested with Jest.
+      E. g. "TypeError: Cannot read properties of null (reading 'setAttribute')."
+    */
+    document.head.innerHTML += '<link rel="stylesheet" href="/components/theme-switch/theme-light-high-contrast.css" id="theme-link">';
+    document.body.innerHTML += '<input type="checkbox" name="theme-checkbox" id="theme-checkbox" />';
+
+
+
     describe('Func initTheme', () => {
-        /*
-          Mocking HTML elements to prevent errors with undefined objects 
-          within the “real” functions that are tested with Jest.
-          E. g. "TypeError: Cannot read properties of null (reading 'setAttribute')."
-        */
-        document.body.innerHTML += '<p id="theme-link">Mock</p>';
-        document.body.innerHTML += '<p id="theme-checkbox">Mock</p>';
-
-
         test('DarkTheme in sessionStorage', () => {
             window.sessionStorage.setItem(storageKeyThemePath, themes.darkTheme);
             themeSwitch.initTheme();
             let actualTheme = window.sessionStorage.getItem(storageKeyThemePath);
+
             expect(actualTheme).toBe(themes.darkTheme);
+            expect(document.querySelector('#theme-checkbox').checked).toBe(true);
+            expect(document.querySelector('#theme-link').getAttribute('href')).toBe(themes.darkTheme);
         });
+
 
         test('LightTheme in sessionStorage', () => {
             window.sessionStorage.setItem(storageKeyThemePath, themes.lightTheme);
             themeSwitch.initTheme();
             let actualTheme = window.sessionStorage.getItem(storageKeyThemePath);
+
             expect(actualTheme).toBe(themes.lightTheme);
+            expect(document.querySelector('#theme-checkbox').checked).toBe(false);
+            expect(document.querySelector('#theme-link').getAttribute('href')).toBe(themes.lightTheme);
         });
+
 
         test('No theme in sessionStorage', () => {
             themeSwitch.initTheme();
             let actualTheme = window.sessionStorage.getItem(storageKeyThemePath);
+
             expect(actualTheme).toBe(themes.lightTheme);
+            expect(document.querySelector('#theme-checkbox').checked).toBe(false);
+            expect(document.querySelector('#theme-link').getAttribute('href')).toBe(themes.lightTheme);
         });
     });
 
 
-    describe('Func setTheme', () => {
 
+    describe('Func setTheme', () => {
+        // TODO: Implement
     });
 });
