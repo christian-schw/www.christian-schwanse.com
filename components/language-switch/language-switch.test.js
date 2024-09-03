@@ -5,9 +5,40 @@ import * as languageSwitch from './language-switch.js';
 
 
 describe('Language Switch', () => {
+    /*
+      Mocking HTML elements to prevent errors with undefined objects 
+      within the “real” functions that are tested with Jest.
+      E. g. "TypeError: Cannot read properties of null (reading 'setAttribute')."
+    */
+    document.body.innerHTML += `
+        <ul>
+            <li class="btn-nav btn-nav-normal" id="btn-lang-de" role="menuitem" aria-label="Deutsche Sprache">
+            <a href="">DE</a>
+            </li>
+            <li class="btn-nav btn-nav-normal" id="btn-lang-en" role="menuitem" aria-label="English Language">
+            <a href="">EN</a>
+            </li>
+        </ul>`;
+
+
 
     describe('Func setLanguagePage', () => {
-        // TODO: Implement
+        // TODO: Implement Unit Tests.
+        // Haven't done it yet because I don't know how to mock window.location.replace().
+
+        /*         test('Set EN-Language, currentURL = https://www.christian-schwanse.com/de/index.html', () => {
+                    let currentURL = 'https://www.christian-schwanse.com/de/index.html';
+                    let expectedOutput = 'https://www.christian-schwanse.com/en/index.html';
+                    let btnLangEN = document.querySelector('#btn-lang-de');
+        
+                    btnLangEN.addEventListener('click', function (evt) {
+                        languageSwitch.setLanguagePage(evt, 'en', currentURL)
+                    });
+        
+                    btnLangEN.dispatchEvent(new Event('click'));
+        
+                    expect(window.location.href).toBe(expectedOutput);
+                }); */
     });
 
 

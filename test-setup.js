@@ -16,3 +16,13 @@
   Normally you can leave "window" out. 
   However, this is required for Jest Unit Tests.
 */
+
+
+// Mock location of window-object
+Object.defineProperty(window, 'location', {
+  value: {
+    origin: 'https://www.christian-schwanse.com'
+  },
+  // Enable overriding origin because normally you can only get (not set!) this value.
+  writable: true
+})
