@@ -67,6 +67,37 @@ describe('Theme Switch', () => {
 
 
     describe('Func setTheme', () => {
-        // TODO: Implement
+        test('Switch from LightTheme to DarkTheme', () => {
+            let themeCheckbox = document.querySelector('#theme-checkbox');
+
+            // Light Theme
+            themeCheckbox.checked = false;
+
+            themeCheckbox.addEventListener('change', themeSwitch.setTheme, false);
+
+            // Dark Theme
+            themeCheckbox.checked = true;
+
+            themeCheckbox.dispatchEvent(new Event('change'));
+
+            expect(document.querySelector('#theme-link').getAttribute('href')).toBe(themes.darkTheme);
+        });
+
+
+        test('Switch from DarkTheme to LightTheme', () => {
+            let themeCheckbox = document.querySelector('#theme-checkbox');
+
+            // Dark Theme
+            themeCheckbox.checked = true;
+
+            themeCheckbox.addEventListener('change', themeSwitch.setTheme, false);
+
+            // Light Theme
+            themeCheckbox.checked = false;
+
+            themeCheckbox.dispatchEvent(new Event('change'));
+
+            expect(document.querySelector('#theme-link').getAttribute('href')).toBe(themes.lightTheme);
+        });
     });
 });
