@@ -58,16 +58,22 @@ user-friendliness and SEO.
 <br />
 
 === Update: 04/09/24 ===
+<br />
 As I have learned about new technologies, my usual approach has changed over time:
 I plan my projects with the Kanban board function in Github Projects.
 <br />
+<br />
 Desired changes are created with the help of a self-created Github issue template. Within the template, the Gherkin syntax for Behavior-Driven Development (BDD) is used.
+<br />
 <br />
 The issues are sorted by priority. I use the Scrum methodology and define the sprints for what should be done next in the near future. Issues with the highest priority are completed first.
 <br />
+<br />
 Once it is clear what needs to be done, I use the Jest testing framework to create the tests that need to be fulfilled afterwards (test-driven development, TDD).
 <br />
+<br />
 After a sprint, I reflect on what could be done better. The next sprint is then planned and implemented.
+<br />
 <br />
 
 ## Why I implemented the project in this way
@@ -79,6 +85,7 @@ I also had the thought that I would clearly see the advantages and compromises o
 <br />
 
 === Update: 04/09/24 ===
+<br />
 Testing Framework Jest for unit testing added. I chose Jest because it is a well-known testing framework and I was told that it is easy to set up.
 <br />
 <br />
