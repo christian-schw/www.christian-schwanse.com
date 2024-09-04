@@ -23,6 +23,8 @@ Tech Stack:
 - CSS
 - JavaScript
 - PHP
+- Node.js
+- Testing Framework: Jest
 - Inkscape
 - Gimp
 - Github
@@ -55,6 +57,19 @@ user-friendliness and SEO.
 <br />
 <br />
 
+=== Update: 04/09/24 ===
+As I have learned about new technologies, my usual approach has changed over time:
+I plan my projects with the Kanban board function in Github Projects.
+<br />
+Desired changes are created with the help of a self-created Github issue template. Within the template, the Gherkin syntax for Behavior-Driven Development (BDD) is used.
+<br />
+The issues are sorted by priority. I use the Scrum methodology and define the sprints for what should be done next in the near future. Issues with the highest priority are completed first.
+<br />
+Once it is clear what needs to be done, I use the Jest testing framework to create the tests that need to be fulfilled afterwards (test-driven development, TDD).
+<br />
+After a sprint, I reflect on what could be done better. The next sprint is then planned and implemented.
+<br />
+
 ## Why I implemented the project in this way
 I developed this website without a framework - just the lovely triangle: HTML, CSS and JavaScript.
 <br />
@@ -62,13 +77,18 @@ Reason: It's my first real, self-programmed website. I'm generally a fan of prac
 <br />
 I also had the thought that I would clearly see the advantages and compromises of frameworks in the future.<br />
 <br />
+
+=== Update: 04/09/24 ===
+Testing Framework Jest for unit testing added. I chose Jest because it is a well-known testing framework and I was told that it is easy to set up.
 <br />
 <br />
 
-## My 3 most important points that I have learned from this project
+## My most important points that I have learned from this project
 1. Create your own components such as headers or footers that can be  can be reused across pages.
 2. Mobile responsiveness. I thought it would be done with Flexbox and Grid - I was very wrong. I had to adapt the design in various places so that it looks good on small, medium-sized and extra-extra-large screens. The testing alone was time-consuming enough.
 3. It is very time-consuming to develop a website (including content) from scratch. Figma would make sense in the long term. A tool for designers and developers to create prototypes of UIs. This avoids the case of programming something for a long time and then discarding it in the end because you don't like it after all - I'd rather not say whether this happened to me during the project 😉 Todo management software such as Jira is also helpful.
+4. Testing Framework Jest: It was unclear to me how to carry out unit tests in JavaScript. So I familiarized myself with the topic from scratch.
+5. Kanban board in Github Projects: I didn't know that there was such a function in Github. It helps me to keep track of projects and todos. It also allows me to use BDD as well as document important notes.
 <br />
 <br />
 <br />
