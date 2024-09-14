@@ -23,7 +23,6 @@ Tech Stack:
 - CSS
 - JavaScript
 - PHP
-- Node.js
 - Testing Framework: Jest
 - Inkscape
 - Gimp
