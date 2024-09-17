@@ -102,7 +102,6 @@ Testing Framework Jest for unit testing added. I chose Jest because it is a well
 5. Kanban board in Github Projects: I didn't know that there was such a function in Github. It helps me to keep track of projects and todos. It also allows me to use BDD as well as document important notes.
 <br />
 <br />
-<br />
 
 
 ## Contact
