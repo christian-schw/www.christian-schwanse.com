@@ -1,6 +1,7 @@
 /**
  * @jest-environment jsdom
  */
+import { logoImage, logoImageSRC } from '../header/header.js';
 import * as themeSwitch from './theme-switch.js';
 
 
@@ -82,6 +83,40 @@ describe('Theme Switch', () => {
 
             themeCheckbox.dispatchEvent(new Event('change'));
 
+            expect(document.querySelector('#theme-link').getAttribute('href')).toBe(themes.lightTheme);
+        });
+    });
+
+
+    describe('Func setLogoImageTheme', () => {
+        test('DarkTheme in sessionStorage', () => {
+            window.sessionStorage.setItem(storageKeyThemePath, themes.darkTheme);
+            themeSwitch.initTheme();
+            let actualTheme = window.sessionStorage.getItem(storageKeyThemePath);
+
+            expect(actualTheme).toBe(themes.darkTheme);
+            expect(document.querySelector('#' + logoImage.id).src).toBe(logoImage.src.darkTheme);
+            expect(document.querySelector('#theme-link').getAttribute('href')).toBe(themes.darkTheme);
+        });
+
+
+        test('LightTheme in sessionStorage', () => {
+            window.sessionStorage.setItem(storageKeyThemePath, themes.lightTheme);
+            themeSwitch.initTheme();
+            let actualTheme = window.sessionStorage.getItem(storageKeyThemePath);
+
+            expect(actualTheme).toBe(themes.lightTheme);
+            expect(document.querySelector('#' + logoImage.id).src).toBe(logoImage.src.lightTheme);
+            expect(document.querySelector('#theme-link').getAttribute('href')).toBe(themes.lightTheme);
+        });
+
+
+        test('No theme in sessionStorage', () => {
+            themeSwitch.initTheme();
+            let actualTheme = window.sessionStorage.getItem(storageKeyThemePath);
+
+            expect(actualTheme).toBe(themes.lightTheme);
+            expect(document.querySelector('#' + logoImage.id).src).toBe(logoImage.src.lightTheme);
             expect(document.querySelector('#theme-link').getAttribute('href')).toBe(themes.lightTheme);
         });
     });

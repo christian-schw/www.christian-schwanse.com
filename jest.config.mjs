@@ -72,16 +72,13 @@ const config = {
       lightTheme: '/components/theme-switch/theme-light-high-contrast.css'
     },
     storageKeyThemePath: 'themePath',
-    logoImageSRC: {
-      de: {
+    logoImage: {
+      id: 'header-logo-image',
+      src: {
           lightTheme: "/assets/images/svg/logo-cs-white-de.svg",
           darkTheme: "/assets/images/svg/logo-cs-black-de.svg"
-      },
-      en: {
-          lightTheme: "/assets/images/svg/logo-cs-white-en.svg",
-          darkTheme: "/assets/images/svg/logo-cs-black-en.svg"
       }
-    }
+  }
   },
 
   // The maximum amount of workers used to run your tests. Can be specified as % or a number. E.g. maxWorkers: 10% will use 10% of your CPU amount + 1 as the maximum worker number. maxWorkers: 2 will use a maximum of 2 workers.

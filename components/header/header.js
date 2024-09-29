@@ -12,14 +12,11 @@ const classes = {
   Improve in future: Replace hardcoded text in connectedCallback() with JS-Variable.
     Tried it with '+'. HTML code is correct in DevConsole, but logo is still not displayed.
 */
-export const logoImageSRC = {
-    de: {
+export const logoImage = {
+    id: 'header-logo-image',
+    src: {
         lightTheme: "/assets/images/svg/logo-cs-white-de.svg",
         darkTheme: "/assets/images/svg/logo-cs-black-de.svg"
-    },
-    en: {
-        lightTheme: "/assets/images/svg/logo-cs-white-en.svg",
-        darkTheme: "/assets/images/svg/logo-cs-black-en.svg"
     }
 }
 
