@@ -92,6 +92,7 @@ describe('Theme Switch', () => {
             window.sessionStorage.setItem(storageKeyThemePath, themes.darkTheme);
             themeSwitch.initTheme();
             let actualTheme = window.sessionStorage.getItem(storageKeyThemePath);
+            themeSwitch.setLogoImageTheme(actualTheme);
 
             expect(actualTheme).toBe(themes.darkTheme);
             expect(document.querySelector('#' + logoImage.id).src).toBe(logoImage.src.darkTheme);
@@ -103,6 +104,7 @@ describe('Theme Switch', () => {
             window.sessionStorage.setItem(storageKeyThemePath, themes.lightTheme);
             themeSwitch.initTheme();
             let actualTheme = window.sessionStorage.getItem(storageKeyThemePath);
+            themeSwitch.setLogoImageTheme(actualTheme);
 
             expect(actualTheme).toBe(themes.lightTheme);
             expect(document.querySelector('#' + logoImage.id).src).toBe(logoImage.src.lightTheme);
@@ -113,6 +115,7 @@ describe('Theme Switch', () => {
         test('No theme in sessionStorage', () => {
             themeSwitch.initTheme();
             let actualTheme = window.sessionStorage.getItem(storageKeyThemePath);
+            themeSwitch.setLogoImageTheme(actualTheme);
 
             expect(actualTheme).toBe(themes.lightTheme);
             expect(document.querySelector('#' + logoImage.id).src).toBe(logoImage.src.lightTheme);
