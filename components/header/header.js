@@ -1,6 +1,29 @@
 import * as languageSwitch from '../language-switch/language-switch.js';
 
 
+// To save the user's scroll position
+let lastScrollTop = 0;
+const classes = {
+    classHamburgerNavOpen: "hamburger-nav--open",
+    classPageHeaderNavOpen: "page-header-nav--open"
+}
+
+/* 
+  Improve in future: Replace hardcoded text in connectedCallback() with JS-Variable.
+    Tried it with '+'. HTML code is correct in DevConsole, but logo is still not displayed.
+*/
+export const logoImageSRC = {
+    de: {
+        lightTheme: "/assets/images/svg/logo-cs-white-de.svg",
+        darkTheme: "/assets/images/svg/logo-cs-black-de.svg"
+    },
+    en: {
+        lightTheme: "/assets/images/svg/logo-cs-white-en.svg",
+        darkTheme: "/assets/images/svg/logo-cs-black-en.svg"
+    }
+}
+
+
 /**
  * Create Header-Custom-HTML-Element for reusable Header on each HTML-page.
  */
@@ -21,8 +44,9 @@ class Header extends HTMLElement {
             <header id="page-header">
                 <h2 class="visually-hidden">Page Header - Christian Schwanse</h2>
 
-                <a href="index.html" id="header-logo-text">Christian Schwanse</a>
-
+                <a href="index.html">
+                    <img id="header-logo-image" src="/assets/images/svg/logo-cs-black-en.svg" alt="Logo" title="Christian Schwanse" role="img" />
+                </a>
 
                 <nav id="page-header-nav" tabindex="0">
                     <h2 class="visually-hidden">Navigation menu</h2>
@@ -57,7 +81,7 @@ class Header extends HTMLElement {
 
 
                 <div id="hamburger-nav">
-                  <div class="bar-nav"></div>
+                  <div id="bar-nav-first" class="bar-nav"></div>
                   <div class="bar-nav"></div>
                   <div class="bar-nav"></div>
                 </div>
@@ -71,7 +95,7 @@ class Header extends HTMLElement {
                 <h2 class="visually-hidden">Page Header - Christian Schwanse</h2>
 
                 <a href="index.html">
-                    <img id="header-logo-image" src="/assets/images/svg/logo-cs-black.svg" alt="Logo" title="Christian Schwanse" role="img" />
+                    <img id="header-logo-image" src="/assets/images/svg/logo-cs-black-de.svg" alt="Logo" title="Christian Schwanse" role="img" />
                 </a>
 
                 <nav id="page-header-nav" tabindex="0">
@@ -121,10 +145,8 @@ customElements.define('header-component', Header);
 
 
 
-// To save the user's scroll position
-let lastScrollTop = 0;
-const classHamburgerNavOpen = "hamburger-nav--open";
-const classPageHeaderNavOpen = "page-header-nav--open";
+
+
 
 /**
  * Classy Scroll Animation of Header:

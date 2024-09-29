@@ -70,3 +70,13 @@ export function setTheme(evt) {
 
 
 
+/**
+ * Set the theme of the logo image requested by the user.
+ * @param {*} evt 
+ */
+export function setLogoImageTheme(evt) {
+    
+}
+
+
+

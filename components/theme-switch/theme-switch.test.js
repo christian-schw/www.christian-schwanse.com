@@ -4,14 +4,6 @@
 import * as themeSwitch from './theme-switch.js';
 
 
-const themes = {
-    darkTheme: '/components/theme-switch/theme-dark-high-contrast.css',
-    lightTheme: '/components/theme-switch/theme-light-high-contrast.css'
-};
-
-const storageKeyThemePath = 'themePath';
-
-
 
 describe('Theme Switch', () => {
     /*
