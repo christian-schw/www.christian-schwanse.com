@@ -15,8 +15,8 @@ const classes = {
 export const logoImage = {
     id: 'header-logo-image',
     src: {
-        lightTheme: "/assets/images/svg/logo-cs-white-de.svg",
-        darkTheme: "/assets/images/svg/logo-cs-black-de.svg"
+        lightTheme: "/assets/images/svg/logo-cs-black-de.svg",
+        darkTheme: "/assets/images/svg/logo-cs-white-de.svg"
     }
 }
 
