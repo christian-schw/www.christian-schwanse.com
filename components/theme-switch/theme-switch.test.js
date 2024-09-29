@@ -1,7 +1,6 @@
 /**
  * @jest-environment jsdom
  */
-import { logoImage, logoImageSRC } from '../header/header.js';
 import * as themeSwitch from './theme-switch.js';
 
 
