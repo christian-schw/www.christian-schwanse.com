@@ -21,7 +21,7 @@ class Header extends HTMLElement {
             <header id="page-header">
                 <h2 class="visually-hidden">Page Header - Christian Schwanse</h2>
 
-                <a href="index.html" id="header-logo">Christian Schwanse</a>
+                <a href="index.html" id="header-logo-text">Christian Schwanse</a>
 
 
                 <nav id="page-header-nav" tabindex="0">
@@ -70,8 +70,9 @@ class Header extends HTMLElement {
             <header id="page-header">
                 <h2 class="visually-hidden">Page Header - Christian Schwanse</h2>
 
-                <a href="index.html" id="header-logo">Christian Schwanse</a>
-
+                <a href="index.html">
+                    <img id="header-logo-image" src="/assets/images/svg/logo-cs-black.svg" alt="Logo" title="Christian Schwanse" role="img" />
+                </a>
 
                 <nav id="page-header-nav" tabindex="0">
                     <h2 class="visually-hidden">Navigationsmenü</h2>
@@ -106,7 +107,7 @@ class Header extends HTMLElement {
 
                 
                 <div id="hamburger-nav">
-                  <div class="bar-nav"></div>
+                  <div id="bar-nav-first" class="bar-nav"></div>
                   <div class="bar-nav"></div>
                   <div class="bar-nav"></div>
                 </div>
