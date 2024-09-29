@@ -19,7 +19,21 @@ export default [
 
     rules: {
       "no-unused-vars": "warn",
-      "no-undef": "warn"
+      "no-undef": "warn",
+      "n/no-unsupported-features/node-builtins": "warn",
+      "func-style": [
+        "error",
+        "declaration",
+        {
+          "allowArrowFunctions": true
+        }
+      ],
+      "jsdoc/check-tag-names": [
+        "error",
+        {
+          "definedTags": ["jest-environment"]
+        }
+      ]
     }
   },
 ];

@@ -1,21 +1,18 @@
-import * as languageSwitch from '../language-switch/language-switch.js';
+import * as languageSwitch from "../language-switch/language-switch.js";
 
 
 /**
  * Create Footer-Custom-HTML-Element for reusable Footer on each HTML-page.
  */
 class Footer extends HTMLElement {
-    constructor() {
-        super();
-    }
-
 
     /**
-     * Lifecycle Callback connectedCallback runs 
+     * Lifecycle Callback connectedCallback runs
      * each time custom element is inserted into DOM.
+     * @returns {void}
      */
     connectedCallback() {
-        if (languageSwitch.getLanguagePage() === 'en') {
+        if (languageSwitch.getLanguagePage() === "en") {
             this.innerHTML = `
             <footer id="page-footer">
                 <div id="page-footer-left">
@@ -29,8 +26,8 @@ class Footer extends HTMLElement {
                 </div>
             </footer>
             `;
-        }
-        else {
+        } else {
+
             // Use German as default language
             this.innerHTML = `
             <footer id="page-footer">
@@ -49,4 +46,4 @@ class Footer extends HTMLElement {
     }
 }
 
-customElements.define('footer-component', Footer);
+customElements.define("footer-component", Footer);
