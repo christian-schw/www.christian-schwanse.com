@@ -24,6 +24,18 @@ describe("Check Window Location", () => {
             expect(checkWindowLocation.isURLValid(pageURL)).toBe(true);
         });
 
+        test("Valid URL: pageURL = https://www.christian-schwanse.com/de/about-me.html", () => {
+            const pageURL = "https://www.christian-schwanse.com/de/about-me.html";
+
+            expect(checkWindowLocation.isURLValid(pageURL)).toBe(true);
+        });
+
+        test("Valid URL: pageURL = https://www.christian-schwanse.com/en/my-projects.html", () => {
+            const pageURL = "https://www.christian-schwanse.com/en/my-projects.html";
+
+            expect(checkWindowLocation.isURLValid(pageURL)).toBe(true);
+        });
+
         test("Valid URL: pageURL = http://www.christian-schwanse.com", () => {
             const pageURL = "http://www.christian-schwanse.com";
 
