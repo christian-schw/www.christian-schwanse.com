@@ -1,10 +1,30 @@
 # [www.christian-schwanse.com](http://www.christian-schwanse.com) - Portfolio Website
-On the website I present myself, my skills, professional experience and projects.<br />
-The portfolio website itself is also a project.<br />
-<br />
-![image](https://github.com/user-attachments/assets/63d11641-5d8e-4768-959e-9dca472f0e21)
-![image](https://github.com/user-attachments/assets/630597b9-8241-44eb-ae1b-98b61a3194b1)
-<br />
+On the website I present myself, my skills, professional experience and projects.<br>
+The portfolio website itself is also a project.<br>
+<br>
+No front-end framework such as React or Angular was intentionally used for the website in order to understand the native HTML, CSS and JavaScript very well!<br>
+Only one framework was used for unit tests / TDD: Jest.<br>
+<br>
+![image](https://github.com/user-attachments/assets/5d5ce904-c1f6-4673-b5a3-1624aad3fb8f)
+
+
+The website is mobile responsive as well (e. g. burger menu):<br>
+
+![image](https://github.com/user-attachments/assets/06cb14ae-5ff9-4fdc-9bb4-1b088776bf55)
+
+
+The website has also been optimized for accessibility (multilingual, motion sickness, screen reader, ...).<br>
+
+Example: Preventing motion sickness by allowing the user to set whether animations should be used or not.<br>
+
+![image](https://github.com/user-attachments/assets/0fcea5fd-cae1-4e7c-96ab-d6d5a1bac6de)
+
+Another example: The language of the website can be changed to English.<br>
+
+![image](https://github.com/user-attachments/assets/5830b66d-7afd-4e86-81be-8eb20e9f2390)
+
+<br>
+<br>
 
 
 ## Information about the Project
