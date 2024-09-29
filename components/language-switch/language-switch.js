@@ -1,3 +1,6 @@
+import * as checkWindowLocation from "../../utilities/check-window-location/check-window-location.js";
+
+
 /*
     Note:
     Translation via JSON-Files doesn't work properly.
@@ -65,7 +68,10 @@ export function setLanguagePage(evt, lang, pageURL) {
         // URL will not be replaced if default behavior is not deactivated!
         evt.preventDefault();
 
-        window.location.replace(newURL);
+        // To avoid Open Redirect Vulnerabilites
+        if (checkWindowLocation.isURLValid(newURL)) {
+            window.location.replace(newURL);
+        }
     }
 }
 
