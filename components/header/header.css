@@ -76,7 +76,7 @@
 }
 
 #header-logo-image {
-  height: 48px;
+  height: 66px;
 }
 
 /* 
@@ -127,14 +127,14 @@
 
 @media (max-width: 1440px) {
   #header-logo-image {
-    height: 32px;
+    height: 50px;
   }
 }
 
 
 @media (max-width: 906px) {
   #header-logo-image {
-    height: 24px;
+    height: 40px;
   }
   
   #page-header-nav {
@@ -168,9 +168,9 @@
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 375px) {
   #header-logo-image {
-    height: 20px;
+    height: 32px;
   }
 
   #page-header-nav {

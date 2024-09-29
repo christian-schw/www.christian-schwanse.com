@@ -75,8 +75,8 @@ const config = {
     logoImage: {
       id: 'header-logo-image',
       src: {
-        lightTheme: "/assets/images/svg/logo-cs-black-de.svg",
-        darkTheme: "/assets/images/svg/logo-cs-white-de.svg"
+        lightTheme: "/assets/images/svg/logo-cs-black.svg",
+        darkTheme: "/assets/images/svg/logo-cs-white.svg"
       }
     }
   },

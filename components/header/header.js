@@ -15,8 +15,8 @@ const classes = {
 export const logoImage = {
     id: 'header-logo-image',
     src: {
-        lightTheme: "/assets/images/svg/logo-cs-black-de.svg",
-        darkTheme: "/assets/images/svg/logo-cs-white-de.svg"
+        lightTheme: "/assets/images/svg/logo-cs-black.svg",
+        darkTheme: "/assets/images/svg/logo-cs-white.svg"
     }
 }
 
@@ -42,7 +42,7 @@ class Header extends HTMLElement {
                 <h2 class="visually-hidden">Page Header - Christian Schwanse</h2>
 
                 <a href="index.html">
-                    <img id="header-logo-image" src="/assets/images/svg/logo-cs-black-en.svg" alt="Logo" title="Christian Schwanse" role="img" />
+                    <img id="header-logo-image" src="/assets/images/svg/logo-cs-black.svg" alt="Logo" title="Christian Schwanse" role="img" />
                 </a>
 
                 <nav id="page-header-nav" tabindex="0">
@@ -92,7 +92,7 @@ class Header extends HTMLElement {
                 <h2 class="visually-hidden">Page Header - Christian Schwanse</h2>
 
                 <a href="index.html">
-                    <img id="header-logo-image" src="/assets/images/svg/logo-cs-black-de.svg" alt="Logo" title="Christian Schwanse" role="img" />
+                    <img id="header-logo-image" src="/assets/images/svg/logo-cs-black.svg" alt="Logo" title="Christian Schwanse" role="img" />
                 </a>
 
                 <nav id="page-header-nav" tabindex="0">

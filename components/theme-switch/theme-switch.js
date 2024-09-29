@@ -83,7 +83,7 @@ export function setTheme(evt) {
  * @param {string} themePath
  */
 export function setLogoImageTheme(themePath) {
-    let headerLogoImage = document.querySelector('#header-logo-image');
+    let headerLogoImage = document.querySelector('#' + logoImage.id);
 
     if (themePath == themes.darkTheme) {
         headerLogoImage.src = logoImage.src.darkTheme
