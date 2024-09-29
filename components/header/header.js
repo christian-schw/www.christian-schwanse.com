@@ -3,6 +3,7 @@ import * as languageSwitch from '../language-switch/language-switch.js';
 
 // To save the user's scroll position
 let lastScrollTop = 0;
+
 const classes = {
     classHamburgerNavOpen: "hamburger-nav--open",
     classPageHeaderNavOpen: "page-header-nav--open"
@@ -187,8 +188,8 @@ export function toggleHamburgerMenuNavList(evt) {
     const pageHeaderNav = document.querySelector('#page-header-nav');
     const hamburgerNav = document.querySelector('#hamburger-nav');
 
-    pageHeaderNav.classList.toggle(classPageHeaderNavOpen);
-    hamburgerNav.classList.toggle(classHamburgerNavOpen);
+    pageHeaderNav.classList.toggle(classes.classPageHeaderNavOpen);
+    hamburgerNav.classList.toggle(classes.classHamburgerNavOpen);
 }
 
 
@@ -206,8 +207,8 @@ export function hideHamburgerMenuNavList(evt) {
     const pageHeaderNav = document.querySelector('#page-header-nav');
     const hamburgerNav = document.querySelector('#hamburger-nav');
 
-    if (pageHeaderNav.classList.contains(classPageHeaderNavOpen)) {
-        pageHeaderNav.classList.remove(classPageHeaderNavOpen);
-        hamburgerNav.classList.remove(classHamburgerNavOpen);
+    if (pageHeaderNav.classList.contains(classes.classPageHeaderNavOpen)) {
+        pageHeaderNav.classList.remove(classes.classPageHeaderNavOpen);
+        hamburgerNav.classList.remove(classes.classHamburgerNavOpen);
     }
 }
