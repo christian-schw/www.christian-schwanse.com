@@ -26,6 +26,7 @@ The website has been optimized for all possible end devices and is therefore mob
 - JavaScript
 - PHP
 - Testing Framework: Jest
+- Static Code Analysis: ESLint (Same configuration used by the ESLint Team)
 - Inkscape
 - Gimp
 - Github
