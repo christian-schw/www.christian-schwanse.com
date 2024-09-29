@@ -60,16 +60,17 @@ export function getURLWithReplacedLangDir(lang, pageURL, domain) {
  */
 export function setLanguagePage(evt, lang, pageURL) {
 
-    // It's good to check if Location object is available to avoid potential pitfalls.
-    if (window.location) {
-        const domain = window.location.origin;
-        const newURL = getURLWithReplacedLangDir(lang, pageURL, domain);
+    // To avoid Open Redirect Vulnerabilites
+    if (checkWindowLocation.isURLValid(pageURL)) {
 
-        // URL will not be replaced if default behavior is not deactivated!
-        evt.preventDefault();
+        // It's good to check if Location object is available to avoid potential pitfalls.
+        if (window.location) {
+            const domain = window.location.origin;
+            const newURL = getURLWithReplacedLangDir(lang, pageURL, domain);
 
-        // To avoid Open Redirect Vulnerabilites
-        if (checkWindowLocation.isURLValid(newURL)) {
+            // URL will not be replaced if default behavior is not deactivated!
+            evt.preventDefault();
+
             window.location.replace(newURL);
         }
     }
