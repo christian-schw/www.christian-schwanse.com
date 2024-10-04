@@ -1,0 +1,209 @@
+<!-- 
+  Code snippets that are not currently used 
+  and can be reinstalled in the appropriate place if required. 
+-->
+
+
+<!--
+    ======================================================================
+    Code snippets - /de/my-projects.html
+    ======================================================================
+-->
+
+<!--
+    Always include in first section-tag 
+    in my-projects.html CSS class 'class="margin-top-120px"',
+    so it looks beautiful.
+-->
+<section>
+    <header>
+        <h4>QM-Schnittstelle: Quipsy - Prüfplan inklusive Skip-Lot-Verfahren</h4>
+    </header>
+
+    <p class="margin-top-12px margin-bottom-12px">
+        Erweiterung der Schnittstelle zwischen SAP und der externen QM-Software Quipsy. Dabei wurden
+        Daten aus SAP ins Quipsy geschickt (Prüfplan inklusive Skip-Lot-Verfahren). Als auch
+        umgekehrt Daten aus Quipsy ins SAP (Quipsy-Datenbankänderungen der
+        Artikel-Prüfplan-Zuordnung).
+    </p>
+
+    <details class="details1">
+        <summary>Allgemeine Informationen über das Projekt</summary>
+        <ul>
+            <li>
+                <b>Auftraggeber:</b> Führender Hersteller in Bürostuhl-, Loungemöbel- und
+                Automobilindustrie, > 2.000 Mitarbeiter
+            </li>
+            <li>
+                <b>Projektziel:</b> Übermittlung des Prüfplans inklusive Skip-Lot-Verfahren in
+                SAP-Wareneingangsprüfungen von SAP ins Quipsy, um die Qualitätsmanagement-Abteilung
+                zu entlasten. Besonderheiten: Es gibt kein Quipsy-Test-System. Deswegen muss im
+                Produktiv-System getestet werden. Auch gibt es keinen QM-SAP-Berater, welcher sich
+                mit dem QM-Modul in SAP auskennt.
+            </li>
+            <li>
+                <b>Anzahl Projektbeteiligte:</b> ~ 8 MA.
+            </li>
+            <li><b>Zeitraum:</b> 10/2023 - 12/2023</li>
+            <li><b>Branche / Bereich:</b> Bürostuhl-, Loungemöbel- und Automobilindustrie</li>
+            <li>
+                <b>Rolle:</b> Hauptentwickler (SAP-seitig).
+            </li>
+            <li><b>Sprache:</b> Deutsch</li>
+            <li>
+                <b>Ergebnis:</b> Erfolgreiche Übermittlung des Skip-Lot-Verfahrens inklusive
+                dazugehörigem Prüfplan. Dadurch deutliche Entlastung der QM-Abteilung. Außerdem
+                automatische Aktualisierung der Artikelprüfplanzuordnungs-Datenbanktabelle
+                (SAP-seitig), wodurch Pflegeaufwand als auch Fehler minimiert werden. Mögliche
+                Fehler werden abgefangen und in ein Fehlerprotokoll geschrieben. Da fehlerhafte
+                Datenbankänderungen möglicherweise erst zu spät auffallen, werden bei neuen
+                Einträgen im Fehlerprotokoll Benachrichtigungen an entsprechende Mitarbeiter
+                versendet.
+            </li>
+            <li>
+                <b>Tech Stack (in Bezug auf meine Rolle innerhalb des Projektes):</b>
+                <ul>
+                    <li>ABAP (Prozedural, OO)</li>
+                    <li>ABAP Eclipse</li>
+                    <li>Quipsy-Server (Task Scheduler, Log-, Ini-Files, ...)</li>
+                    <li>SAP-Datenbank (SE11, SM30)</li>
+                    <li>SAP-Verzeichnis (AL11)</li>
+                </ul>
+            </li>
+        </ul>
+    </details>
+
+
+    <details class="details1">
+        <summary>Wie ich an diesem Projekt gearbeitet habe</summary>
+        <p>
+            Die Besonderheiten des Projektes, die es deutlich schwieriger gestalten:
+        </p>
+
+        <ul>
+            <li>
+                Es gibt kein Quipsy-Test-System. Das heißt, der Datenaustausch zwischen SAP und
+                Quipsy musste im Produktiv-System getestet werden. Es musste auf Korrektheit der
+                Daten (Bestellung, Wareneingang) geachtet werden. Auch zusätzlicher
+                organisatorischer Aufwand, da mehrere Abteilungen inkl. Quipsy-Berater involviert
+                sind.
+            </li>
+            <li>
+                Kein Inhouse-SAP-QM-Berater vorhanden. Da nicht vollständig klar war, inwiefern man
+                Skip-Lot bzw. Prüfpläne in SAP anlegen und steuern kann (inkl. den
+                &ldquor;Nebenwirkungen&ldquo;), mussten die Prüfpläne (Artikelprüfplanzuordnung) von
+                Quipsy ins SAP exportiert und aktuell gehalten werden.
+            </li>
+            <li>
+                Fehlendes Wissen über die Schnittstelle. Die Schnittstelle wurde vom
+                SAP-Dienstleister <a href="https://de.nttdata.com/" target="_blank">NTT DATA</a>
+                entwickelt. Es war nur Dokumentation vorhanden. Keiner der damaligen
+                Verantwortlichen war noch angestellt. Dadurch musste ich mir alles
+                (Zusammenhänge, Code-Basis, ...) selber beibringen.
+            </li>
+        </ul>
+
+        <p>
+            Um zu prüfen, ob die Daten (Prüfplan inkl. Skip-Lot) richtig in SAP gezogen werden, war
+            es nötig, für jeden Test den kompletten Wareneingangs-Prozess zu durchlaufen. Das heißt,
+            es muss eine Bestellung angelegt, eine Anlieferung angelegt, verteilt sowie im EWM
+            gepflegt werden.
+        </p>
+
+        <p>
+            Für Quipsy-seitige Anpassungen war ein externer Quipsy-Berater nötig.
+        </p>
+
+        <p>
+            Anfangs sollte nur das Skip-Lot-Verfahren (Skip-Lot-Button im Materialstamm) von SAP ins
+            Quipsy importiert werden. Da es aber zu Problemen kam, musste zusätzlich auch der
+            dazugehörige Prüfplan ins Quipsy importiert werden.
+        </p>
+
+        <p>
+            Wie oben schon erwähnt, war es nicht klar, wie aufwendig bzw. machbar die Einführung von
+            Prüfplänen in SAP ist. Deswegen wurde eigens eine SAP-Datenbanktabelle für die
+            Artikelprüfplanzuordnung in der SE11 erstellt. Diese wurde per Dateiupload initial
+            befüllt.
+        </p>
+
+        <p>
+            Damit der Quipsy-Keyuser bei Änderungen die SAP-Datenbanktabelle manuell aktualisieren
+            kann, wurde ebenfalls eine SM30-Tabelle sowie eine dazugehörige Anwender-Dokumentation
+            erstellt. Das war nötig, da der automatische Export der
+            Artikelprüfplanzuordnungs-Datenbanktabelle in Quipsy nach SAP noch nicht implementiert
+            wurde und sich die Entwicklung auch verzögert hatte.
+        </p>
+
+        <p>
+            Wurde der Export des Skip-Lots inklusive Prüfplan erfolgreich implementiert und
+            getestet, war der nächste Schritt der automatische Export der
+            Artikelprüfplanzuordnung-Datenbanktabelle von Quipsy ins SAP, um auch in Zukunft die
+            korrekten Prüfpläne ermitteln zu können. Somit läuft die Schnittstelle vollautomatisch.
+        </p>
+
+        <p>
+            Laut Quipsy ist es nicht möglich, einzelne Datenbankänderungen zu exportieren. Es musste
+            immer die komplette Datenbanktabelle ins SAP übermittelt werden. Diese Txt-Datei musste
+            im ABAP-Code aufbereitet werden (z. B. Trennzeichen entfernen oder prüfen, ob
+            Materialnummer in Quipsy überhaupt in SAP vorhanden ist).
+        </p>
+
+        <p>
+            Damit die Fehlerbehebung möglichst einfach ist, wurde ebenfalls ein Fehlerprotokoll mit
+            den fehlerhaften Datenbankänderungen implementiert, welches eine Txt-Datei ins
+            SAP-Verzeichnis hochlädt.
+        </p>
+
+        <p>
+            Damit diese Fehler nicht im dunklen Kämmerchen &ldquor;verrotten&ldquo;, sondern diese
+            gleich behoben werden, wird bei einem neuen Eintrag im Fehlerprotokoll eine
+            Benachrichtigung an die entsprechenden Mitarbeitern versendet.
+        </p>
+
+        <p>
+            Zum Schluss wurde der Code gerefactored sowie die bereits vorhandenen Dokumentationen
+            geupdatet und der eigenen SAP- als auch QM-Abteilung zur Verfügung gestellt.
+        </p>
+    </details>
+
+
+    <details class="details1">
+        <summary>Warum ich das Projekt auf diese Art &amp; Weise umgesetzt habe
+        </summary>
+        <p>
+            Vieles ist im vorherigen Abschnitt schon beschrieben worden. Vielleicht gab es bessere
+            Lösungen. Auch musste ich mich an die bereits bestehende Code-Basis bzw.
+            Schnittstelle richten.
+        </p>
+
+        <p>
+            Damit die Entwickler nach mir es einfacher haben, habe ich den kompletten
+            Wareneingangs-Prozess dokumentiert, wodurch das Testen leichter wird. Außerdem
+            Code-Refactoring betrieben als auch stets festgehalten, warum etwas genau auf die Art
+            und Weise umgesetzt werden musste.
+        </p>
+    </details>
+
+
+    <details class="details1">
+        <summary>Meine 3 wichtigsten Punkte, die ich aus diesem Projekt gelernt habe</summary>
+        <ol>
+            <li>
+                Wareneingangs-Prozess: Sehr viel über die funktionale Seite gelernt. Zusammenhänge
+                wurden deutlich klarer. Auch besser kennengelernt, wie man Bestellungen und
+                Anlieferungen anlegt und pflegt sowie die QM-Software Quipsy.
+            </li>
+            <li>
+                Es ist sehr interessant, wie ein führender SAP-Dienstleister eine Schnittstelle
+                implementiert als auch dokumentiert.
+            </li>
+            <li>
+                Technisch ebenfalls enorm viel gelernt: Wie lege ich eine Datenbanktabelle an (SE11
+                als auch SM30)? Was ist ein SAP-Verzeichnis? Wie entwickle ich den Upload von
+                Dateien (via SAP GUI als auch AL11)? Wie funktioniert die Quipsy-Schnittstelle? Wie
+                ist der Quipsy-Server aufgebaut? Und so weiter.
+            </li>
+        </ol>
+    </details>
+</section>
