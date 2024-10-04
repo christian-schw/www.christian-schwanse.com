@@ -18,7 +18,7 @@ export function greetingsConsole() {
     greetings += "That was a really cool joke, wasn\"t it?\n";
     greetings += "\n";
     greetings += "If you want to find more Easter Eggs, have a look at my Github account!\n";
-    greetings += "https://github.com/CrazyChair69\n";
+    greetings += "https://github.com/christian-schw\n";
     greetings += "Maybe you\"ll find more...\n";
     greetings += "\n";
     greetings += "I am open to job offers!\n";
