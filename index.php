@@ -3,7 +3,7 @@
     This index.php serves as a placeholder. 
     Is only used for a redirect on the server side. 
 
-    If I select the directory on Strato (domain hoster) where the index.html is located (directory: /en/), 
+    If I select the directory on Strato (domain hoster) where the index.html is located (directory: /de/), 
     then the paths of the CSS and JS files are no longer correct. 
     Loading the files in HTML-head-tag therefore fails.
 
