@@ -5,7 +5,11 @@
  * @returns {boolean} Is URL valid or not
  */
 export function isURLValid(pageURL) {
-    const allowedRedirects = ["https://www.christian-schwanse.com", "http://www.christian-schwanse.com"];
+
+    // Add 'http://127.0.0.1:5500' to use Local LiveServer Extension in Visual Studio
+    const localLiveServerDomain = "http://127.0.0.1:5500";
+
+    const allowedRedirects = ["https://www.christian-schwanse.com", "http://www.christian-schwanse.com", localLiveServerDomain];
     let isValid = false;
 
     for (const redirect of allowedRedirects) {
