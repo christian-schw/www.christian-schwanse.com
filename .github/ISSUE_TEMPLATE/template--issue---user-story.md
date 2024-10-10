@@ -7,19 +7,19 @@ assignees: ''
 
 ---
 
-
 <br>
 
 > [!IMPORTANT]
-> Regarding 'Feature Description' and 'Acceptance Criteria':<br>
-> Always use same syntax!!! Consistency is key.<br>
+> Regarding 'Feature Description' and 'Acceptance Criteria':  
+> Always use same syntax!!! Consistency is key.
+> 
 > Makes testing easier.
 >
-> Use Gherkin-Syntax.<br>
+> Use Gherkin-Syntax.  
 > For example:
 > 
-> Given [some context]<br>
-> When [certain action is taken]<br>
+> Given [some context]  
+> When [certain action is taken]  
 > Then [the outcome of action is observed]
 >
 > Complete example at the end.
@@ -47,9 +47,9 @@ assignees: ''
 <br>
 
  ## Acceptance Criteria:
-1) Acceptance Criteria / Scenario:<br>
+1) Acceptance Criteria / Scenario:  
 [acceptance criteria / scenario]
-2) Acceptance Criteria / Scenario:<br>
+2) Acceptance Criteria / Scenario:  
 [acceptance criteria / scenario]
 
 <br>
