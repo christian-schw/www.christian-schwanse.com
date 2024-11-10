@@ -3,7 +3,7 @@
 
 # [www.christian-schwanse.com](http://www.christian-schwanse.com) - Portfolio Website
 <!-- TABLE OF CONTENTS -->
-<details>
+<details open>
   <summary>Table of Contents</summary>
   <ol>
     <li><a href="#introduction">Introduction</a></li>
