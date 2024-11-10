@@ -1,3 +1,6 @@
+<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
+<a id="readme-top"></a>
+
 # [www.christian-schwanse.com](http://www.christian-schwanse.com) - Portfolio Website
 On the website I present myself, my skills, professional experience and projects.<br>
 The portfolio website itself is also a project.<br>
@@ -72,6 +75,7 @@ The website has been optimized for all possible end devices and is therefore mob
 - Domain Hosting: Strato
 - FTP: FileZilla
 - Material Design
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 <br />
 <br />
 
@@ -114,6 +118,7 @@ Once it is clear what needs to be done, I use the Jest testing framework to crea
 <br />
 <br />
 After a sprint, I reflect on what could be done better. The next sprint is then planned and implemented.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 <br />
 <br />
 
@@ -129,6 +134,7 @@ I also had the thought that I would clearly see the advantages and compromises o
 === Update: 04/09/24 ===
 <br />
 Testing Framework Jest for unit testing added. I chose Jest because it is a well-known testing framework and I was told that it is easy to set up.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 <br />
 <br />
 
@@ -139,8 +145,10 @@ Testing Framework Jest for unit testing added. I chose Jest because it is a well
 3. It is very time-consuming to develop a website (including content) from scratch. Figma would make sense in the long term. A tool for designers and developers to create prototypes of UIs. This avoids the case of programming something for a long time and then discarding it in the end because you don't like it after all - I'd rather not say whether this happened to me during the project 😉 Todo management software such as Jira is also helpful.
 4. Testing Framework Jest: It was unclear to me how to carry out unit tests in JavaScript. So I familiarized myself with the topic from scratch.
 5. Kanban board in Github Projects: I didn't know that there was such a function in Github. It helps me to keep track of projects and todos. It also allows me to use BDD as well as document important notes.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 <br />
 
 
 ## Contact
 If you have any questions, please feel free to reach out via email: christian-schwanse (at) gmx.net
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
