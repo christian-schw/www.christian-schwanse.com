@@ -2,6 +2,29 @@
 <a id="readme-top"></a>
 
 # [www.christian-schwanse.com](http://www.christian-schwanse.com) - Portfolio Website
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li><a href="#introduction">Introduction</a></li>
+    <li>
+      <a href="#information-about-the-project">Information about the Project</a>
+      <ul>
+        <li><a href="#general">General</a></li>
+        <li><a href="#tech-stack">Tech Stack</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#how-i-worked-on-this-project">How I worked on this project</a></li>
+    </li>
+    <li><a href="#why-i-implemented-the-project-in-this-way">Why I implemented the project in this way</a></li>
+    <li><a href="#my-most-important-points-that-i-have-learned-from-this-project">My most important points that I have learned from this project</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ol>
+</details>
+<br>
+
+## Introduction
 On the website I present myself, my skills, professional experience and projects.<br>
 The portfolio website itself is also a project.<br>
 <br>
@@ -26,25 +49,8 @@ Another example: The language of the website can be changed to English.<br>
 
 ![image](https://github.com/user-attachments/assets/5830b66d-7afd-4e86-81be-8eb20e9f2390)
 
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#information-about-the-project">Information about the Project</a>
-      <ul>
-        <li><a href="#general">General</a></li>
-        <li><a href="#tech-stack">Tech Stack</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#how-i-worked-on-this-project">How I worked on this project</a></li>
-    </li>
-    <li><a href="#why-i-implemented-the-project-in-this-way">Why I implemented the project in this way</a></li>
-    <li><a href="#my-most-important-points-that-i-have-learned-from-this-project">My most important points that I have learned from this project</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ol>
-</details>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<br>
 <br>
 
 
