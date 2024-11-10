@@ -19,6 +19,7 @@
     </li>
     <li><a href="#why-i-implemented-the-project-in-this-way">Why I implemented the project in this way</a></li>
     <li><a href="#my-most-important-points-that-i-have-learned-from-this-project">My most important points that I have learned from this project</a></li>
+    <li><a href="#getting-started">Getting Started</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
@@ -65,7 +66,7 @@ Another example: The language of the website can be changed to English.<br>
 - Languages: German, English
 - Result: A website that can be found on the Internet by all kinds of interested parties all over the world.
 The website has been optimized for all possible end devices and is therefore mobile-friendly. In addition, a significant improvement in knowledge of front-end web development (HTML, CSS and JavaScript) as well as the Jest testing framework and domain hosting without a content management system (CMS). 
-<br />
+<br>
 
 ### Tech Stack
 - HTML
@@ -82,8 +83,8 @@ The website has been optimized for all possible end devices and is therefore mob
 - FTP: FileZilla
 - Material Design
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-<br />
-<br />
+<br>
+<br>
 
 
 ## How I worked on this project
@@ -92,7 +93,7 @@ Planning at the beginning. Answering questions such as:
 - What scope should the project have - taking into account that I work and have other commitments?
 - Which pages and content should the website contain?
 - Who should the website be aimed at and how should it be accessible / findable (e.g. marketing)?
-<br />
+<br>
 
 Once the planning was complete, it was time to get down to business - a cycle consisting of the following steps:
 - Planning a work step for a new functionality
@@ -101,48 +102,48 @@ Once the planning was complete, it was time to get down to business - a cycle co
 - If successful: Code Refactoring. If failed: Bug Fixing
 - Testing
 - Github Commit / Push
-<br />
+<br>
 
 As a final step, the website was fine-tuned: mobile responsiveness, code refactoring,
 user-friendliness and SEO.
-<br />
-<br />
+<br>
+<br>
 
 === Update: 04/09/24 ===
-<br />
+<br>
 As I have learned about new technologies, my usual approach has changed over time:
 I plan my projects with the Kanban board function in Github Projects.
-<br />
-<br />
+<br>
+<br>
 Desired changes are created with the help of a self-created Github issue template. Within the template, the Gherkin syntax for Behavior-Driven Development (BDD) is used.
-<br />
-<br />
+<br>
+<br>
 The issues are sorted by priority. I use the Scrum methodology and define the sprints for what should be done next in the near future. Issues with the highest priority are completed first.
-<br />
-<br />
+<br>
+<br>
 Once it is clear what needs to be done, I use the Jest testing framework to create the tests that need to be fulfilled afterwards (test-driven development, TDD).
-<br />
-<br />
+<br>
+<br>
 After a sprint, I reflect on what could be done better. The next sprint is then planned and implemented.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-<br />
-<br />
+<br>
+<br>
 
 
 ## Why I implemented the project in this way
 I developed this website without a framework - just the lovely triangle: HTML, CSS and JavaScript.
-<br />
+<br>
 Reason: It's my first real, self-programmed website. I'm generally a fan of practicing the basics first before venturing into new, "interesting" things.
-<br />
-I also had the thought that I would clearly see the advantages and compromises of frameworks in the future.<br />
-<br />
+<br>
+I also had the thought that I would clearly see the advantages and compromises of frameworks in the future.<br>
+<br>
 
 === Update: 04/09/24 ===
-<br />
+<br>
 Testing Framework Jest for unit testing added. I chose Jest because it is a well-known testing framework and I was told that it is easy to set up.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-<br />
-<br />
+<br>
+<br>
 
 
 ## My most important points that I have learned from this project
@@ -152,7 +153,32 @@ Testing Framework Jest for unit testing added. I chose Jest because it is a well
 4. Testing Framework Jest: It was unclear to me how to carry out unit tests in JavaScript. So I familiarized myself with the topic from scratch.
 5. Kanban board in Github Projects: I didn't know that there was such a function in Github. It helps me to keep track of projects and todos. It also allows me to use BDD as well as document important notes.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-<br />
+<br>
+<br>
+
+
+## Getting Started
+Visit the link at the top of the page.<br>
+<br>
+When cloning the repository, install the required dependencies with the following command:
+
+```
+npm install
+```
+
+Plugin was installed in MS Visual Studio for local Live Server. Install locally if needed.<br>
+<br>
+The following command executes the Jest unit tests:
+
+```
+npm test
+```
+
+An experimental mode of Jest is used, which enables testing of ES6 code.<br>
+Otherwise this is not possible or the code must be rewritten (as of: 10/11/2024, see Jest documentation).
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<br>
+<br>
 
 
 ## Contact
