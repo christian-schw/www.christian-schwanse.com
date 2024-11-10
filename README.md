@@ -13,7 +13,7 @@ The website is mobile responsive as well (e. g. burger menu):<br>
 ![image](https://github.com/user-attachments/assets/06cb14ae-5ff9-4fdc-9bb4-1b088776bf55)
 
 
-The website has also been optimized for accessibility (multilingual, motion sickness, screen reader, ...).<br>
+The website has also been optimized for accessibility (multilingual, motion sickness, ...).<br>
 
 Example: Preventing motion sickness by allowing the user to set whether animations should be used or not.<br>
 
@@ -23,7 +23,25 @@ Another example: The language of the website can be changed to English.<br>
 
 ![image](https://github.com/user-attachments/assets/5830b66d-7afd-4e86-81be-8eb20e9f2390)
 
-<br>
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#information-about-the-project">Information about the Project</a>
+      <ul>
+        <li><a href="#general">General</a></li>
+        <li><a href="#tech-stack">Tech Stack</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#how-i-worked-on-this-project">How I worked on this project</a></li>
+    </li>
+    <li><a href="#why-i-implemented-the-project-in-this-way">Why I implemented the project in this way</a></li>
+    <li><a href="#my-most-important-points-that-i-have-learned-from-this-project">My most important points that I have learned from this project</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ol>
+</details>
 <br>
 
 
