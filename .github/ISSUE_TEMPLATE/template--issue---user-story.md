@@ -1,7 +1,7 @@
 ---
-name: 'Template: Issue - User Story'
-about: Template for new issues. Uses Gherkin Syntax for BDD / User Stories.
-title: ''
+name: User Story Template
+about: Well-formatted Template for User Stories. Uses Gherkin Syntax.
+title: "[FEATURE] "
 labels: ''
 assignees: ''
 
@@ -48,23 +48,29 @@ assignees: ''
 
  ## Acceptance Criteria:
 1) Acceptance Criteria / Scenario:  
-[acceptance criteria / scenario]
+```gherkin
+Given code is ready to be merged
+When a pull request is created
+Then GitHub Actions should run linting and unit tests
+And the badge should show that the build is passing
+```
 2) Acceptance Criteria / Scenario:  
-[acceptance criteria / scenario]
+```gherkin
+Given code is ready to be merged
+When a pull request is created
+Then GitHub Actions should run linting and unit tests
+And the badge should show that the build is passing
+```
 
 <br>
 <br>
 
  ## Example:
- ```
-***********************************************
-********** Example (with Background) **********
-***********************************************
-
+ ```gherkin
 Feature: The product store service back-end
-    As a Product Store Owner
-    I need a RESTful catalog service
-    So that I can keep track of all my products
+    **As a** Product Store Owner
+    **I need** a RESTful catalog service
+    **So that** I can keep track of all my products
 
 Background:
     Given the following products
