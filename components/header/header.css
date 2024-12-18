@@ -64,7 +64,8 @@
   ============================= Header Logo ==============================
   ======================================================================== 
 */
-#header-logo {
+/* Header Logo in text form -> If pure text is to be used instead of an image! */
+#header-logo-text {
   font-family: "Whisper", cursive;
   font-weight: 700;
   font-style: normal;
@@ -74,7 +75,9 @@
   text-decoration: none;
 }
 
-
+#header-logo-image {
+  height: 66px;
+}
 
 /* 
   ========================================================================
@@ -93,6 +96,14 @@
   margin: 5px 0 0 0;
   opacity: 0.8;
   transition: all 0.3s ease-in-out;
+}
+
+/* 
+  First bar should not have a margin, otherwise height alignment with other elements 
+  in the nav does not match or is visible to users -> different height. Looks ugly. 
+*/
+#bar-nav-first {
+  margin: 0;
 }
 
 .page-header-nav--open {
@@ -114,7 +125,18 @@
 }
 
 
+@media (max-width: 1440px) {
+  #header-logo-image {
+    height: 50px;
+  }
+}
+
+
 @media (max-width: 906px) {
+  #header-logo-image {
+    height: 40px;
+  }
+  
   #page-header-nav {
     display: flex;
     align-items: center;
@@ -143,5 +165,15 @@
 
   #hamburger-nav {
     display: inline-block;
+  }
+}
+
+@media (max-width: 375px) {
+  #header-logo-image {
+    height: 32px;
+  }
+
+  #page-header-nav {
+    top: 40px;
   }
 }

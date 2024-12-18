@@ -1,0 +1,17 @@
+# There's a saying: Never add dependencies to source control!
+# Reasons are e. g.:
+# Size: Dependencies can significantly increase the size of the repository, 
+#       which leads to longer clone and pull times.
+# Redundance: If dependencies are managed in a package manager such as npm, pip or yarn, 
+#       it is redundant to also store them in the repository.
+# Conflicts: Changes to dependencies can cause conflicts if they are managed manually.
+# Security: Sensitive information such as API keys or passwords should never be 
+#       stored in a public repository.
+
+# Ignore dependencies through npm
+/node_modules/
+
+# Ignore Coverage Directory of Jest
+# If the “coverage” folder does not exist in the repo: 
+# Is created automatically when the Jest tests are executed if not available in the repo.
+/coverage/
