@@ -69,19 +69,19 @@ The website has been optimized for all possible end devices and is therefore mob
 <br>
 
 ### Tech Stack
-- HTML
-- CSS
-- JavaScript
-- PHP
+- Programming Language: HTML
+- Programming Language: CSS
+- Programming Language: JavaScript
+- Programming Language: PHP
 - Testing Framework: Jest
 - Static Code Analysis: ESLint (Same configuration used by the ESLint Team)
-- Inkscape
-- Gimp
-- Github
-- MS Visual Studio
+- Vector Graphics Software: Inkscape
+- Image Editing Software: Gimp
+- Version Control: Github
+- IDE: MS Visual Studio
 - Domain Hosting: Strato
 - FTP: FileZilla
-- Material Design
+- Design Tool: Material Design
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 <br>
 <br>
