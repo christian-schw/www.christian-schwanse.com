@@ -60,7 +60,7 @@ Another example: The language of the website can be changed to English.<br>
 - Client: Myself
 - Project Goal: Demonstrate my skills, professional experience, projects and learn frontend web development without a framework.
 - Number of Project Participants: 1
-- Time Period: May, 2024 - August, 2024 (+ new implementations from time to time)
+- Time Period: May, 2024 - Present (Completed, but new implementations from time to time)
 - Industry / Area: Web Development
 - Role: Lead Developer / Website Owner
 - Languages: German, English
@@ -69,19 +69,19 @@ The website has been optimized for all possible end devices and is therefore mob
 <br>
 
 ### Tech Stack
-- HTML
-- CSS
-- JavaScript
-- PHP
+- Programming Language: HTML
+- Programming Language: CSS
+- Programming Language: JavaScript
+- Programming Language: PHP
 - Testing Framework: Jest
 - Static Code Analysis: ESLint (Same configuration used by the ESLint Team)
-- Inkscape
-- Gimp
-- Github
-- MS Visual Studio
+- Vector Graphics Software: Inkscape
+- Image Editing Software: Gimp
+- Version Control: Github
+- IDE: MS Visual Studio
 - Domain Hosting: Strato
 - FTP: FileZilla
-- Material Design
+- Design Tool: Material Design
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 <br>
 <br>
