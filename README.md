@@ -69,8 +69,8 @@ The website has been optimized for all possible end devices and is therefore mob
 <br>
 
 ### Tech Stack
-- Programming Language: `HTML`
-- Programming Language: `CSS`
+- Markup Language: `HTML`
+- Stylesheet Language: `CSS`
 - Programming Language: `JavaScript`
 - Programming Language: `PHP`
 - Testing Framework: `Jest`
