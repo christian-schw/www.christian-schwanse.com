@@ -16,7 +16,7 @@ class Footer extends HTMLElement {
             this.innerHTML = `
             <footer id="page-footer">
                 <div id="page-footer-left">
-                    <p>&#169; 2024 Christian Schwanse</p>
+                    <p>&#169; 2025 Christian Schwanse</p>
                 </div>
             
                 <div id="page-footer-right">
@@ -32,7 +32,7 @@ class Footer extends HTMLElement {
             this.innerHTML = `
             <footer id="page-footer">
                 <div id="page-footer-left">
-                    <p>&#169; 2024 Christian Schwanse</p>
+                    <p>&#169; 2025 Christian Schwanse</p>
                 </div>
             
                 <div id="page-footer-right">
